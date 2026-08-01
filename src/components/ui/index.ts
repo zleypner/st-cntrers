@@ -13,3 +13,4 @@ export {
 export { Section, Container, SectionHeader } from "./section";
 export { Card, CardIcon, CardTitle, CardDescription } from "./card";
 export { StarRating } from "./star-rating";
+export { LanguageSwitcher } from "./language-switcher";

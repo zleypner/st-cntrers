@@ -1,16 +1,18 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
 import { siteConfig } from "@/config/site";
 import { Icons, Container } from "@/components/ui";
-import { Clock, MapPin, Phone, Mail, ExternalLink } from "lucide-react";
+import { Clock, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="border-t border-[#E5E7EB] bg-white">
-      <Container className="py-12 md:py-16">
-        <div className="grid gap-12 lg:grid-cols-2">
+      <Container className="py-8 sm:py-12 md:py-16">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-2">
           {/* Left side - Info */}
           <div className="grid gap-8 sm:grid-cols-2">
             {/* Logo and description */}
@@ -24,8 +26,7 @@ export function Footer() {
                 </span>
               </div>
               <p className="mb-6 max-w-xs text-sm text-[#526158]">
-                Odontología integral, holística y de emergencias en Costa Rica.
-                Pacientes tratados como personas, nunca como casos.
+                {t("footer.description")}
               </p>
               <div className="flex gap-3">
                 {siteConfig.links.instagram !== "[INSTAGRAM_URL]" && (
@@ -56,7 +57,7 @@ export function Footer() {
             {/* Contact */}
             <div>
               <h4 className="mb-4 text-sm font-medium tracking-wider text-[#16A34A] uppercase">
-                Contacto
+                {t("footer.contact")}
               </h4>
               <ul className="space-y-3">
                 <li>
@@ -66,15 +67,6 @@ export function Footer() {
                   >
                     <Phone className="h-4 w-4 text-[#16A34A]" />
                     {siteConfig.contact.phone}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={`mailto:${siteConfig.contact.email}`}
-                    className="flex items-center gap-3 text-sm text-[#526158] transition-colors hover:text-[#17231C]"
-                  >
-                    <Mail className="h-4 w-4 text-[#16A34A]" />
-                    {siteConfig.contact.email}
                   </a>
                 </li>
                 <li className="flex items-start gap-3 text-sm text-[#526158]">
@@ -91,20 +83,20 @@ export function Footer() {
             {/* Hours */}
             <div>
               <h4 className="mb-4 text-sm font-medium tracking-wider text-[#16A34A] uppercase">
-                Horarios
+                {t("footer.hours")}
               </h4>
               <ul className="space-y-2">
                 <li className="flex items-center gap-3 text-sm text-[#526158]">
                   <Clock className="h-4 w-4 text-[#16A34A]" />
-                  Lunes - Viernes · {siteConfig.schedule.weekdays}
+                  {t("contact.weekdays")} · {siteConfig.schedule.weekdays}
                 </li>
                 <li className="flex items-center gap-3 text-sm text-[#526158]">
                   <Clock className="h-4 w-4 text-[#16A34A]" />
-                  Sábado · {siteConfig.schedule.saturday}
+                  {t("contact.saturday")} · {siteConfig.schedule.saturday}
                 </li>
                 <li className="flex items-center gap-3 text-sm text-[#526158]">
                   <Clock className="h-4 w-4 text-[#16A34A]" />
-                  Emergencias · Mismo día
+                  {t("footer.emergencies")}
                 </li>
               </ul>
             </div>
@@ -112,9 +104,9 @@ export function Footer() {
 
           {/* Right side - Map */}
           <div className="relative">
-            <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-[#F3F4F6]">
+            <div className="flex h-full flex-col overflow-hidden rounded-xl border border-[#E5E7EB] bg-[#F3F4F6] sm:rounded-2xl">
               {/* Map image/embed area */}
-              <div className="relative min-h-[200px] flex-1">
+              <div className="relative min-h-[180px] flex-1 sm:min-h-[200px]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1965.5!2d-85.1614267!3d9.6371451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9f6ef104dd7c61%3A0xa6428cf7858fd07!2sClinica%20Dental%20dra%20Marcela%20Contreras!5e0!3m2!1ses!2scr!4v1700000000000!5m2!1ses!2scr"
                   width="100%"
@@ -127,23 +119,23 @@ export function Footer() {
                 />
               </div>
               {/* Navigation buttons */}
-              <div className="flex gap-2 bg-white p-3">
+              <div className="flex gap-2 bg-white p-2 sm:p-3">
                 <a
                   href={siteConfig.location.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#F3F4F6] px-3 py-2 text-sm font-medium text-[#17231C] transition-colors hover:bg-[#E5E7EB]"
+                  className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#F3F4F6] px-2 py-2.5 text-xs font-medium text-[#17231C] transition-colors hover:bg-[#E5E7EB] sm:gap-2 sm:px-3 sm:text-sm"
                 >
-                  <MapPin className="h-4 w-4 text-[#EA4335]" />
+                  <MapPin className="h-3.5 w-3.5 text-[#EA4335] sm:h-4 sm:w-4" />
                   Google Maps
                 </a>
                 <a
                   href={siteConfig.location.wazeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#F3F4F6] px-3 py-2 text-sm font-medium text-[#17231C] transition-colors hover:bg-[#E5E7EB]"
+                  className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#F3F4F6] px-2 py-2.5 text-xs font-medium text-[#17231C] transition-colors hover:bg-[#E5E7EB] sm:gap-2 sm:px-3 sm:text-sm"
                 >
-                  <MapPin className="h-4 w-4 text-[#33CCFF]" />
+                  <MapPin className="h-3.5 w-3.5 text-[#33CCFF] sm:h-4 sm:w-4" />
                   Waze
                 </a>
               </div>
@@ -152,10 +144,9 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#E5E7EB] pt-8 sm:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-[#E5E7EB] pt-6 sm:mt-12 sm:gap-4 sm:pt-8 md:flex-row">
           <p className="text-sm text-[#9CA3AF]">
-            &copy; {currentYear} {siteConfig.name}. Todos los derechos
-            reservados.
+            &copy; {currentYear} {siteConfig.name}. {t("footer.copyright")}
           </p>
           <p className="text-sm text-[#9CA3AF]">San José · Costa Rica</p>
         </div>

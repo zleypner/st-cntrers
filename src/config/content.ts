@@ -1,28 +1,40 @@
 /**
  * Contenido centralizado para la landing page
- * Preparado para internacionalización (i18n)
+ * Soporte para internacionalización (i18n) - Español e Inglés
  */
 
 export const content = {
   es: {
+    // Language
+    language: {
+      es: "Español",
+      en: "English",
+    },
+
     // Header
     header: {
       cta: "Agendar una cita",
+      nav: {
+        treatments: "Tratamientos",
+        whyUs: "Por qué elegirnos",
+        emergencies: "Emergencias",
+        about: "Sobre mí",
+        faq: "FAQ",
+      },
     },
 
     // Hero
     hero: {
-      title:
-        "Cuidamos tu sonrisa con experiencia, dedicación y atención personalizada",
+      badge: "Integral · Holística · Personal",
+      title: "Una sonrisa comienza con",
+      titleHighlight: "confianza.",
       subtitle:
-        "En la Clínica Dental Dra. Marcela Contreras combinamos experiencia, precisión y un trato humano para ayudarte a recuperar la salud, la confianza y la belleza de tu sonrisa.",
-      primaryCta: "Agendar una cita",
-      secondaryCta: "Consultar por WhatsApp",
-      trustBadges: [
-        "Atención personalizada",
-        "Amplia experiencia profesional",
-        "Tratamientos con dedicación",
-      ],
+        "Mereces atención dental integral de una profesional que entiende la salud oral como parte de tu bienestar general — consultas sin prisa y planes personalizados.",
+      primaryCta: "Agendar cita",
+      secondaryCta: "WhatsApp",
+      trustBadge1: "4.9 en Google Reviews",
+      trustBadge2: "Emergencias el mismo día",
+      yearsLabel: "años cuidando sonrisas",
     },
 
     // Sección de confianza
@@ -58,7 +70,6 @@ export const content = {
       subtitle:
         "Tratamientos dentales con atención personalizada y profesionalismo",
       cta: "Consultar tratamiento",
-      // TODO: Confirmar lista completa de servicios con la Dra. Marcela Contreras
     },
 
     // Sobre la doctora
@@ -69,7 +80,16 @@ export const content = {
         "Cada tratamiento se realiza escuchando las necesidades del paciente, explicando el proceso con claridad y cuidando cada detalle para alcanzar resultados naturales y funcionales.",
         "Sus pacientes destacan no solamente su habilidad profesional, sino también su empatía, adaptabilidad y capacidad para devolverles la confianza en su sonrisa.",
       ],
-      // TODO: Agregar formación, credenciales y especialidades
+    },
+
+    // Emergencias
+    emergencies: {
+      title: "Emergencias Dentales",
+      subtitle: "Atención urgente cuando más la necesitas",
+      description:
+        "Entendemos que las emergencias dentales no esperan. Ofrecemos atención el mismo día para dolor dental agudo, dientes rotos, infecciones y otras situaciones urgentes.",
+      cta: "Llamar ahora",
+      whatsappCta: "WhatsApp de emergencia",
     },
 
     // Testimonios
@@ -112,11 +132,11 @@ export const content = {
 
     // CTA
     cta: {
-      title: "Tu sonrisa merece atención profesional y personalizada",
+      title: "Tu sonrisa más saludable comienza hoy.",
       description:
-        "Agenda una consulta con la Dra. Marcela Contreras y conoce las opciones disponibles para cuidar tu salud dental y recuperar la confianza en tu sonrisa.",
-      primaryCta: "Agendar una cita",
-      secondaryCta: "Escribir por WhatsApp",
+        "Envía un mensaje y encontraremos un horario que funcione para ti — sin salas de espera, sin presión.",
+      primaryCta: "WhatsApp",
+      secondaryCta: "Llamar ahora",
     },
 
     // FAQ
@@ -126,12 +146,12 @@ export const content = {
         {
           question: "¿Cómo puedo agendar una cita?",
           answer:
-            "Puedes agendar tu cita contactándonos por WhatsApp, llamada telefónica o completando el formulario de contacto en esta página. Te responderemos a la brevedad para confirmar tu cita.", // TODO: Confirmar proceso
+            "Puedes agendar tu cita contactándonos por WhatsApp, llamada telefónica o completando el formulario de contacto en esta página. Te responderemos a la brevedad para confirmar tu cita.",
         },
         {
           question: "¿Qué tratamientos ofrece la clínica?",
           answer:
-            "Ofrecemos una amplia gama de tratamientos dentales, incluyendo limpiezas profesionales, tratamiento de caries, restauraciones dentales, puentes y cuidado general de la salud oral. Cada tratamiento se personaliza según las necesidades del paciente.", // TODO: Confirmar lista completa
+            "Ofrecemos una amplia gama de tratamientos dentales, incluyendo limpiezas profesionales, tratamiento de caries, restauraciones dentales, puentes y cuidado general de la salud oral. Cada tratamiento se personaliza según las necesidades del paciente.",
         },
         {
           question: "¿Cómo sé cuál tratamiento necesito?",
@@ -140,24 +160,13 @@ export const content = {
         },
         {
           question: "¿Atienden emergencias dentales?",
-          answer: "[INFORMACIÓN PENDIENTE]", // TODO: Confirmar si atienden emergencias
+          answer:
+            "Sí, atendemos emergencias dentales el mismo día. Contáctanos inmediatamente si tienes dolor dental agudo, un diente roto o cualquier otra situación urgente.",
         },
         {
           question: "¿Atienden pacientes internacionales?",
           answer:
-            "Sí, atendemos pacientes internacionales. La Dra. Marcela Contreras habla inglés y español, lo que facilita la comunicación con pacientes de diferentes países.", // Inferido de testimonios en inglés
-        },
-        {
-          question: "¿Qué debo llevar a mi primera consulta?",
-          answer: "[INFORMACIÓN PENDIENTE]", // TODO: Confirmar requisitos
-        },
-        {
-          question: "¿Cuánto dura una consulta?",
-          answer: "[INFORMACIÓN PENDIENTE]", // TODO: Confirmar duración
-        },
-        {
-          question: "¿Qué métodos de pago aceptan?",
-          answer: "[INFORMACIÓN PENDIENTE]", // TODO: Confirmar métodos de pago
+            "Sí, atendemos pacientes internacionales. La Dra. Marcela Contreras habla inglés y español, lo que facilita la comunicación con pacientes de diferentes países.",
         },
       ],
     },
@@ -182,19 +191,21 @@ export const content = {
         error:
           "Hubo un error al enviar tu solicitud. Por favor, intenta de nuevo.",
       },
+      professionalCode: "Código Profesional",
+      location: "Ubicación",
+      schedule: "Horario de atención",
+      weekdays: "Lunes - Viernes",
+      saturday: "Sábado",
+      sunday: "Domingo",
     },
 
     // Footer
     footer: {
       description:
-        "Cuidamos tu salud dental con experiencia, dedicación y atención personalizada.",
-      sections: {
-        services: "Servicios",
-        contact: "Contacto",
-        legal: "Legal",
-      },
-      privacy: "Aviso de Privacidad",
-      terms: "Términos y Condiciones",
+        "Odontología integral, holística y de emergencias en Costa Rica. Pacientes tratados como personas, nunca como casos.",
+      contact: "Contacto",
+      hours: "Horarios",
+      emergencies: "Emergencias · Mismo día",
       copyright: "Todos los derechos reservados.",
     },
 
@@ -209,6 +220,224 @@ export const content = {
       skipToContent: "Saltar al contenido principal",
       menuOpen: "Abrir menú",
       menuClose: "Cerrar menú",
+    },
+  },
+
+  en: {
+    // Language
+    language: {
+      es: "Español",
+      en: "English",
+    },
+
+    // Header
+    header: {
+      cta: "Book an appointment",
+      nav: {
+        treatments: "Treatments",
+        whyUs: "Why choose us",
+        emergencies: "Emergencies",
+        about: "About",
+        faq: "FAQ",
+      },
+    },
+
+    // Hero
+    hero: {
+      badge: "Holistic · Integrative · Personal",
+      title: "A smile begins with",
+      titleHighlight: "trust.",
+      subtitle:
+        "You deserve comprehensive dental care from a professional who understands oral health as part of your overall wellbeing — unhurried consultations and personalized treatment plans.",
+      primaryCta: "Book appointment",
+      secondaryCta: "WhatsApp",
+      trustBadge1: "4.9 on Google Reviews",
+      trustBadge2: "Same-day emergencies",
+      yearsLabel: "years caring for smiles",
+    },
+
+    // Trust section
+    trust: {
+      title: "Why choose us?",
+      items: [
+        {
+          title: "Truly personalized care",
+          description:
+            "Each patient receives treatment tailored to their needs, concerns, and goals.",
+        },
+        {
+          title: "Experience and dedication",
+          description:
+            "A careful approach that combines clinical knowledge, precision, and attention to detail.",
+        },
+        {
+          title: "Results that restore confidence",
+          description:
+            "The goal is not just to treat teeth, but to help each patient feel confident with their smile.",
+        },
+        {
+          title: "Warm and personal treatment",
+          description:
+            "A calm, respectful, and understandable experience throughout each stage of treatment.",
+        },
+      ],
+    },
+
+    // Services
+    services: {
+      title: "Our Services",
+      subtitle:
+        "Dental treatments with personalized attention and professionalism",
+      cta: "Inquire about treatment",
+    },
+
+    // About the doctor
+    about: {
+      title: "Professional experience with a personal touch",
+      paragraphs: [
+        "Dr. Marcela Contreras stands out for combining dental expertise, dedication, and deeply personalized care.",
+        "Each treatment is performed by listening to the patient's needs, clearly explaining the process, and paying attention to every detail to achieve natural and functional results.",
+        "Her patients highlight not only her professional skill, but also her empathy, adaptability, and ability to restore their confidence in their smile.",
+      ],
+    },
+
+    // Emergencies
+    emergencies: {
+      title: "Dental Emergencies",
+      subtitle: "Urgent care when you need it most",
+      description:
+        "We understand that dental emergencies don't wait. We offer same-day care for acute dental pain, broken teeth, infections, and other urgent situations.",
+      cta: "Call now",
+      whatsappCta: "Emergency WhatsApp",
+    },
+
+    // Testimonials
+    testimonials: {
+      title: "Smiles that tell our story",
+      subtitle: "Real experiences from satisfied patients",
+      cta: "See more reviews on Google",
+      translatedNote: "(Translated from Spanish)",
+    },
+
+    // Process
+    process: {
+      title: "Your path to a healthier smile",
+      steps: [
+        {
+          number: 1,
+          title: "Book your appointment",
+          description: "Contact us via WhatsApp, phone call, or form.",
+        },
+        {
+          number: 2,
+          title: "Personalized evaluation",
+          description:
+            "The doctor listens to your needs and reviews your dental health.",
+        },
+        {
+          number: 3,
+          title: "Clear treatment plan",
+          description:
+            "You receive an understandable explanation of available options.",
+        },
+        {
+          number: 4,
+          title: "Care and follow-up",
+          description:
+            "Each stage is performed with attention, precision, and support.",
+        },
+      ],
+    },
+
+    // CTA
+    cta: {
+      title: "Your healthiest smile starts today.",
+      description:
+        "Send a message and we'll find a time that works for you — no waiting rooms, no pressure.",
+      primaryCta: "WhatsApp",
+      secondaryCta: "Call now",
+    },
+
+    // FAQ
+    faq: {
+      title: "Frequently Asked Questions",
+      items: [
+        {
+          question: "How can I book an appointment?",
+          answer:
+            "You can book your appointment by contacting us via WhatsApp, phone call, or completing the contact form on this page. We'll respond promptly to confirm your appointment.",
+        },
+        {
+          question: "What treatments does the clinic offer?",
+          answer:
+            "We offer a wide range of dental treatments, including professional cleanings, cavity treatment, dental restorations, bridges, and general oral health care. Each treatment is personalized according to the patient's needs.",
+        },
+        {
+          question: "How do I know what treatment I need?",
+          answer:
+            "During the first consultation, Dr. Marcela Contreras will perform a complete evaluation of your dental health and explain the available treatment options in a clear and understandable manner.",
+        },
+        {
+          question: "Do you handle dental emergencies?",
+          answer:
+            "Yes, we handle dental emergencies the same day. Contact us immediately if you have acute dental pain, a broken tooth, or any other urgent situation.",
+        },
+        {
+          question: "Do you treat international patients?",
+          answer:
+            "Yes, we treat international patients. Dr. Marcela Contreras speaks English and Spanish, which facilitates communication with patients from different countries.",
+        },
+      ],
+    },
+
+    // Contact
+    contact: {
+      title: "Contact",
+      subtitle: "We're here to help",
+      form: {
+        name: "Name",
+        phone: "Phone",
+        email: "Email",
+        treatment: "Treatment of interest",
+        treatmentPlaceholder: "Select a treatment",
+        message: "Message",
+        messagePlaceholder: "How can we help you?",
+        consent: "I agree to be contacted for follow-up on my request",
+        submit: "Request an appointment",
+        submitting: "Sending...",
+        success:
+          "Thank you! Your request has been sent. We'll contact you soon.",
+        error: "There was an error sending your request. Please try again.",
+      },
+      professionalCode: "Professional Code",
+      location: "Location",
+      schedule: "Office hours",
+      weekdays: "Monday - Friday",
+      saturday: "Saturday",
+      sunday: "Sunday",
+    },
+
+    // Footer
+    footer: {
+      description:
+        "Holistic, integrative, and emergency dentistry in Costa Rica. Patients treated as people, never as cases.",
+      contact: "Contact",
+      hours: "Hours",
+      emergencies: "Emergencies · Same day",
+      copyright: "All rights reserved.",
+    },
+
+    // WhatsApp floating
+    whatsapp: {
+      tooltip: "Need help? Write to us",
+      ariaLabel: "Contact via WhatsApp",
+    },
+
+    // Accessibility
+    accessibility: {
+      skipToContent: "Skip to main content",
+      menuOpen: "Open menu",
+      menuClose: "Close menu",
     },
   },
 } as const;

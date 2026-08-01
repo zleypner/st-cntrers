@@ -2,22 +2,24 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import { siteConfig } from "@/config/site";
 import { useScrollHeader } from "@/hooks";
-import { Button, Icons } from "@/components/ui";
+import { Button, Icons, LanguageSwitcher } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
-const navigation = [
-  { label: "Tratamientos", href: "#servicios" },
-  { label: "Por qué elegirnos", href: "#por-que" },
-  { label: "Emergencias", href: "#emergencias" },
-  { label: "Sobre mí", href: "#sobre" },
-  { label: "FAQ", href: "#faq" },
-];
-
 export function Header() {
+  const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isScrolled = useScrollHeader(50);
+
+  const navigation = [
+    { label: t("header.nav.treatments"), href: "#servicios" },
+    { label: t("header.nav.whyUs"), href: "#por-que" },
+    { label: t("header.nav.emergencies"), href: "#emergencias" },
+    { label: t("header.nav.about"), href: "#sobre" },
+    { label: t("header.nav.faq"), href: "#faq" },
+  ];
 
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -37,7 +39,7 @@ export function Header() {
   return (
     <>
       <a href="#inicio" className="skip-link">
-        Ir al contenido principal
+        {t("accessibility.skipToContent")}
       </a>
 
       <header
@@ -86,8 +88,9 @@ export function Header() {
               ))}
             </nav>
 
-            {/* CTA Button */}
-            <div className="hidden items-center lg:flex">
+            {/* Desktop CTA and Language Switcher */}
+            <div className="hidden items-center gap-4 lg:flex">
+              <LanguageSwitcher />
               <a
                 href={siteConfig.contact.whatsappLink}
                 target="_blank"
@@ -95,7 +98,7 @@ export function Header() {
               >
                 <Button className="gap-2 rounded-full bg-[#16A34A] px-6 text-white hover:bg-[#14532D]">
                   <Icons.messageCircle className="h-4 w-4" />
-                  Agendar
+                  {t("header.cta")}
                 </Button>
               </a>
             </div>
@@ -106,7 +109,11 @@ export function Header() {
               className="rounded-lg p-2 text-[#17231C] transition-colors hover:bg-[#F0FDF4] lg:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-expanded={mobileMenuOpen}
-              aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-label={
+                mobileMenuOpen
+                  ? t("accessibility.menuClose")
+                  : t("accessibility.menuOpen")
+              }
             >
               {mobileMenuOpen ? (
                 <Icons.x className="h-6 w-6" />
@@ -140,6 +147,13 @@ export function Header() {
 
             <hr className="my-4 border-[#E5E7EB]" />
 
+            {/* Mobile Language Switcher */}
+            <div className="flex items-center justify-center gap-2 px-4 py-2">
+              <LanguageSwitcher />
+            </div>
+
+            <hr className="my-4 border-[#E5E7EB]" />
+
             <a
               href={siteConfig.contact.whatsappLink}
               target="_blank"
@@ -149,7 +163,7 @@ export function Header() {
             >
               <Button className="w-full gap-2 rounded-full bg-[#16A34A] text-white hover:bg-[#14532D]">
                 <Icons.messageCircle className="h-5 w-5" />
-                Agendar cita
+                {t("header.cta")}
               </Button>
             </a>
           </nav>

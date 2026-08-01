@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
 import { siteConfig } from "@/config/site";
 import {
   Button,
@@ -12,6 +13,8 @@ import {
 import { CheckCircle } from "lucide-react";
 
 export function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="inicio"
@@ -42,10 +45,10 @@ export function Hero() {
               easing="smooth"
             >
               {/* Badge */}
-              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#BBF7D0] bg-[#ECFDF5] px-4 py-2">
-                <CheckCircle className="h-4 w-4 text-[#16A34A]" />
-                <span className="text-sm font-medium tracking-wider text-[#16A34A] uppercase">
-                  Integral · Holística · Personal
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#BBF7D0] bg-[#ECFDF5] px-3 py-1.5 sm:mb-8 sm:px-4 sm:py-2">
+                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] sm:h-4 sm:w-4" />
+                <span className="text-xs font-medium tracking-wider text-[#16A34A] uppercase sm:text-sm">
+                  {t("hero.badge")}
                 </span>
               </div>
             </AnimateOnScroll>
@@ -57,11 +60,11 @@ export function Hero() {
               duration={800}
               easing="elastic"
             >
-              <h1 className="text-4xl leading-tight font-bold tracking-tight text-[#17231C] sm:text-5xl lg:text-6xl">
-                Una sonrisa comienza con{" "}
+              <h1 className="text-3xl leading-tight font-bold tracking-tight text-[#17231C] sm:text-4xl md:text-5xl lg:text-6xl">
+                {t("hero.title")}{" "}
                 <span className="relative text-[#16A34A] italic">
-                  confianza.
-                  <span className="absolute -bottom-2 left-0 h-1 w-full rounded-full bg-[#16A34A]/20" />
+                  {t("hero.titleHighlight")}
+                  <span className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full bg-[#16A34A]/20 sm:-bottom-2 sm:h-1" />
                 </span>
               </h1>
             </AnimateOnScroll>
@@ -73,11 +76,8 @@ export function Hero() {
               duration={600}
               easing="smooth"
             >
-              <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[#526158] sm:text-xl lg:mx-0">
-                Mereces atención dental integral de una profesional que entiende
-                la salud oral como parte de tu bienestar general — consultas sin
-                prisa, planes de tratamiento personalizados, y odontología
-                realizada con atención meticulosa al detalle.
+              <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#526158] sm:mt-6 sm:text-lg md:text-xl lg:mx-0">
+                {t("hero.subtitle")}
               </p>
             </AnimateOnScroll>
 
@@ -89,28 +89,29 @@ export function Hero() {
               duration={600}
               easing="spring"
             >
-              <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-                <a href="#contacto">
+              <div className="mt-6 flex flex-col justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4 lg:justify-start">
+                <a href="#contacto" className="w-full sm:w-auto">
                   <Button
                     size="lg"
-                    className="w-full gap-2 rounded-full bg-[#16A34A] px-8 py-6 text-base text-white shadow-lg transition-colors duration-200 hover:bg-[#14532D] active:bg-[#0F4024] sm:w-auto"
+                    className="w-full gap-2 rounded-full bg-[#16A34A] px-6 py-5 text-sm font-semibold text-white shadow-lg transition-colors duration-200 hover:bg-[#14532D] active:bg-[#0F4024] sm:px-8 sm:py-6 sm:text-base"
                   >
-                    <Icons.calendar className="h-5 w-5" />
-                    Agendar cita
+                    <Icons.calendar className="h-4 w-4 sm:h-5 sm:w-5" />
+                    {t("hero.primaryCta")}
                   </Button>
                 </a>
                 <a
                   href={siteConfig.contact.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
                 >
                   <Button
                     variant="outline"
                     size="lg"
-                    className="w-full gap-2 rounded-full border-[#D1D5DB] px-8 py-6 text-base text-[#17231C] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#F9FAFB] active:scale-95 sm:w-auto"
+                    className="w-full gap-2 rounded-full border-[#D1D5DB] px-6 py-5 text-sm font-semibold text-[#17231C] transition-colors duration-200 hover:bg-[#F9FAFB] active:bg-[#F3F4F6] sm:px-8 sm:py-6 sm:text-base"
                   >
-                    <Icons.whatsapp className="h-5 w-5" />
-                    WhatsApp
+                    <Icons.whatsapp className="h-4 w-4 sm:h-5 sm:w-5" />
+                    {t("hero.secondaryCta")}
                   </Button>
                 </a>
               </div>
@@ -124,21 +125,21 @@ export function Hero() {
               duration={500}
               easing="smooth"
             >
-              <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-[#526158] lg:justify-start">
+              <div className="mt-6 flex flex-col items-center gap-3 text-xs text-[#526158] sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-6 sm:text-sm lg:justify-start">
                 <div className="flex items-center gap-2">
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
                       <Icons.star
                         key={i}
-                        className="h-4 w-4 fill-[#16A34A] text-[#16A34A]"
+                        className="h-3.5 w-3.5 fill-[#16A34A] text-[#16A34A] sm:h-4 sm:w-4"
                       />
                     ))}
                   </div>
-                  <span>4.9 promedio en Google Reviews</span>
+                  <span>{t("hero.trustBadge1")}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Icons.clock className="h-4 w-4 text-[#16A34A]" />
-                  <span>Emergencias el mismo día</span>
+                  <Icons.clock className="h-3.5 w-3.5 text-[#16A34A] sm:h-4 sm:w-4" />
+                  <span>{t("hero.trustBadge2")}</span>
                 </div>
               </div>
             </AnimateOnScroll>
@@ -174,7 +175,7 @@ export function Hero() {
                     <Counter end={20} duration={2000} delay={1000} suffix="+" />
                   </p>
                   <p className="text-xs tracking-wider text-white/70 uppercase">
-                    años cuidando sonrisas
+                    {t("hero.yearsLabel")}
                   </p>
                 </div>
               </AnimateOnScroll>

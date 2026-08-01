@@ -2,6 +2,7 @@
 
 import { type ReactNode } from "react";
 import { QueryProvider } from "./query-provider";
+import { I18nProvider } from "./i18n-provider";
 import { Toaster } from "sonner";
 
 interface ProvidersProps {
@@ -10,11 +11,14 @@ interface ProvidersProps {
 
 export function Providers({ children }: ProvidersProps) {
   return (
-    <QueryProvider>
-      {children}
-      <Toaster richColors position="top-right" />
-    </QueryProvider>
+    <I18nProvider>
+      <QueryProvider>
+        {children}
+        <Toaster richColors position="top-right" />
+      </QueryProvider>
+    </I18nProvider>
   );
 }
 
 export { QueryProvider } from "./query-provider";
+export { I18nProvider } from "./i18n-provider";
