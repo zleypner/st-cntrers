@@ -307,23 +307,19 @@ export function Contact() {
                   <Icons.arrowRight className="ml-auto h-5 w-5 text-[#526158] transition-all group-hover:translate-x-1 group-hover:text-[#16A34A]" />
                 </a>
 
-                <a
-                  href={`mailto:${siteConfig.contact.email}`}
-                  className="group flex items-center gap-4 rounded-xl border border-[#BBF7D0] bg-white p-5 transition-all hover:border-[#22C55E] hover:shadow-md"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#16A34A] text-white">
-                    <Icons.mail className="h-6 w-6" />
+                <div className="flex items-center gap-4 rounded-xl border border-[#BBF7D0] bg-white p-5">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#ECFDF5] text-[#16A34A]">
+                    <Icons.shield className="h-6 w-6" />
                   </div>
                   <div>
-                    <p className="font-medium text-[#17231C] transition-colors group-hover:text-[#16A34A]">
-                      Correo electrónico
+                    <p className="font-medium text-[#17231C]">
+                      Código Profesional
                     </p>
                     <p className="text-sm text-[#526158]">
-                      {siteConfig.contact.email}
+                      {siteConfig.doctorCode}
                     </p>
                   </div>
-                  <Icons.arrowRight className="ml-auto h-5 w-5 text-[#526158] transition-all group-hover:translate-x-1 group-hover:text-[#16A34A]" />
-                </a>
+                </div>
               </div>
 
               {/* Ubicación */}
@@ -339,18 +335,32 @@ export function Contact() {
                         {siteConfig.location.address}
                       </p>
                       <p className="text-sm text-[#526158]">
-                        {siteConfig.location.city}
+                        {siteConfig.location.city},{" "}
+                        {siteConfig.location.country}
                       </p>
                     </div>
                   </div>
                 </div>
-                {/* Placeholder para mapa */}
-                <div className="flex h-48 items-center justify-center border-t border-[#BBF7D0] bg-[#F0FDF4]">
-                  <div className="text-center text-[#526158]">
-                    <Icons.mapPin className="mx-auto mb-2 h-8 w-8 text-[#16A34A]" />
-                    <p className="text-sm">Google Maps</p>
-                    <p className="text-xs">[Mapa pendiente]</p>
-                  </div>
+                {/* Botones de navegación */}
+                <div className="flex gap-3 border-t border-[#BBF7D0] bg-[#F0FDF4] p-4">
+                  <a
+                    href={siteConfig.location.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-medium text-[#17231C] shadow-sm transition-all hover:shadow-md"
+                  >
+                    <Icons.googleMaps className="h-5 w-5 text-[#EA4335]" />
+                    Google Maps
+                  </a>
+                  <a
+                    href={siteConfig.location.wazeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-medium text-[#17231C] shadow-sm transition-all hover:shadow-md"
+                  >
+                    <Icons.waze className="h-5 w-5 text-[#33CCFF]" />
+                    Waze
+                  </a>
                 </div>
               </div>
 

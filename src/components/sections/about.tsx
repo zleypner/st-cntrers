@@ -26,16 +26,12 @@ export function About() {
           >
             <div className="relative">
               <Parallax speed={0.3} direction="up">
-                <div className="aspect-[3/4] overflow-hidden rounded-2xl bg-gradient-to-br from-[#F3F4F6] to-[#E5E7EB] shadow-lg transition-shadow duration-500 hover:shadow-2xl">
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                    <Icons.user className="mb-4 h-24 w-24 text-[#16A34A]/50" />
-                    <p className="font-medium text-[#526158]">
-                      Fotografía de la Dra. Marcela Contreras
-                    </p>
-                    <p className="mt-2 text-sm text-[#9CA3AF]">
-                      [Imagen pendiente]
-                    </p>
-                  </div>
+                <div className="aspect-[3/4] overflow-hidden rounded-2xl shadow-lg transition-shadow duration-500 hover:shadow-2xl">
+                  <img
+                    src="/assets/test/img4.jpg"
+                    alt="Dra. Marcela Contreras explicando tratamiento dental"
+                    className="h-full w-full object-cover"
+                  />
                 </div>
               </Parallax>
 

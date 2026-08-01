@@ -112,24 +112,42 @@ export function Footer() {
 
           {/* Right side - Map */}
           <div className="relative">
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-[#E5E7EB] bg-[#F3F4F6] lg:aspect-auto lg:h-full">
-              {/* Map placeholder */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                <MapPin className="mb-4 h-12 w-12 text-[#16A34A]/50" />
-                <p className="text-[#526158]">Google Maps</p>
-                <p className="text-sm text-[#9CA3AF]">[Mapa pendiente]</p>
+            <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-[#F3F4F6]">
+              {/* Map image/embed area */}
+              <div className="relative min-h-[200px] flex-1">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1965.5!2d-85.1614267!3d9.6371451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9f6ef104dd7c61%3A0xa6428cf7858fd07!2sClinica%20Dental%20dra%20Marcela%20Contreras!5e0!3m2!1ses!2scr!4v1700000000000!5m2!1ses!2scr"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, position: "absolute", top: 0, left: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Ubicación de la clínica"
+                />
+              </div>
+              {/* Navigation buttons */}
+              <div className="flex gap-2 bg-white p-3">
+                <a
+                  href={siteConfig.location.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#F3F4F6] px-3 py-2 text-sm font-medium text-[#17231C] transition-colors hover:bg-[#E5E7EB]"
+                >
+                  <MapPin className="h-4 w-4 text-[#EA4335]" />
+                  Google Maps
+                </a>
+                <a
+                  href={siteConfig.location.wazeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#F3F4F6] px-3 py-2 text-sm font-medium text-[#17231C] transition-colors hover:bg-[#E5E7EB]"
+                >
+                  <MapPin className="h-4 w-4 text-[#33CCFF]" />
+                  Waze
+                </a>
               </div>
             </div>
-            {/* Open in Maps link */}
-            <a
-              href={siteConfig.location.mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute top-4 right-4 inline-flex items-center gap-2 rounded-lg border border-[#E5E7EB] bg-white px-3 py-1.5 text-sm text-[#526158] shadow-sm transition-colors hover:text-[#17231C]"
-            >
-              Abrir en Maps
-              <ExternalLink className="h-3.5 w-3.5" />
-            </a>
           </div>
         </div>
 

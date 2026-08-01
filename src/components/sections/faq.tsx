@@ -8,7 +8,6 @@ import {
   Icons,
   Button,
   AnimateOnScroll,
-  PulseGlow,
 } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
@@ -78,26 +77,24 @@ export function FAQ() {
             </AnimateOnScroll>
 
             <AnimateOnScroll
-              animation="scale-up"
+              animation="fade-up"
               mobileAnimation="fade-up"
               delay={200}
               duration={500}
-              easing="spring"
+              easing="smooth"
             >
               <a
                 href={siteConfig.contact.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <PulseGlow>
-                  <Button
-                    variant="outline"
-                    className="gap-2 rounded-full border-[#16A34A] text-[#16A34A] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#F0FDF4] active:scale-95"
-                  >
-                    <Icons.whatsapp className="h-4 w-4" />
-                    Enviar mensaje
-                  </Button>
-                </PulseGlow>
+                <Button
+                  variant="outline"
+                  className="gap-2 rounded-full border-[#16A34A] text-[#16A34A] transition-colors duration-200 hover:bg-[#F0FDF4] active:bg-[#ECFDF5]"
+                >
+                  <Icons.whatsapp className="h-4 w-4" />
+                  Enviar mensaje
+                </Button>
               </a>
             </AnimateOnScroll>
           </div>

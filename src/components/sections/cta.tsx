@@ -5,19 +5,14 @@ import { Container, Button, Icons, AnimateOnScroll } from "@/components/ui";
 
 export function CTA() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-28">
-      {/* Background with animated gradient overlay */}
-      <div className="animate-gradient absolute inset-0 bg-gradient-to-br from-[#14532D] via-[#16A34A] to-[#22C55E]">
-        {/* Decorative elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 h-full w-full bg-[url('/grid.svg')] bg-repeat" />
-        </div>
-        <div className="absolute top-1/4 right-0 h-96 w-96 animate-pulse rounded-full bg-white/5 blur-3xl" />
-        <div
-          className="absolute bottom-0 left-1/4 h-64 w-64 animate-pulse rounded-full bg-white/5 blur-3xl"
-          style={{ animationDelay: "1s" }}
-        />
-      </div>
+    <section className="relative flex min-h-[80vh] items-center overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/assets/test/img3.jpg')" }}
+      />
+      {/* Overlay for text readability */}
+      <div className="absolute inset-0 bg-green-600/80" />
 
       <Container className="relative z-10">
         <div className="mx-auto max-w-3xl text-center">
@@ -68,12 +63,11 @@ export function CTA() {
               </a>
               <a href={`tel:${siteConfig.contact.phone}`}>
                 <Button
-                  variant="outline"
                   size="lg"
-                  className="w-full gap-2 rounded-full border-white/30 px-8 py-6 text-base text-white transition-transform hover:bg-white/10 active:scale-95 sm:w-auto"
+                  className="w-full gap-2 rounded-full bg-white px-8 py-6 text-base text-[#16A34A] shadow-lg transition-colors hover:bg-white/90 active:bg-white/80 sm:w-auto"
                 >
                   <Icons.phone className="h-5 w-5" />
-                  {siteConfig.contact.phone}
+                  Llamar ahora
                 </Button>
               </a>
             </div>

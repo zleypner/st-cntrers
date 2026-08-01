@@ -1,7 +1,7 @@
 /**
- * Configuración central de la Clínica Dental Dra. Marcela Contreras
+ * Configuración central de Clínica Dental Santa Teresa Más Sonrisas
  *
- * TODO: Confirmar con la Dra. Marcela Contreras:
+ * TODO: Confirmar:
  * - Años exactos de experiencia profesional
  * - Lista completa de servicios y nombres oficiales
  * - Dirección exacta de la clínica
@@ -13,40 +13,42 @@
 
 export const siteConfig = {
   // Información básica
-  name: "Clínica Dental Dra. Marcela Contreras",
-  shortName: "Dra. Marcela Contreras",
+  name: "Clínica Dental Santa Teresa Más Sonrisas",
+  shortName: "Santa Teresa Más Sonrisas",
   doctorName: "Dra. Marcela Contreras",
   doctorFirstName: "Marcela",
+  doctorCode: "486513", // Código profesional
 
   // Descripción
   description:
-    "Cuida tu salud dental con la experiencia, dedicación y atención personalizada de la Dra. Marcela Contreras. Agenda tu consulta y recupera la confianza en tu sonrisa.",
+    "Cuida tu salud dental con la experiencia, dedicación y atención personalizada de Clínica Dental Santa Teresa Más Sonrisas. Agenda tu consulta y recupera la confianza en tu sonrisa.",
 
   // TODO: Confirmar años exactos de experiencia
   yearsOfExperience: "20+", // Referencia de testimonio - pendiente confirmar
 
-  // Contacto - TODO: Agregar datos reales
+  // Contacto
   contact: {
-    phone: "[TELÉFONO]", // TODO: Agregar número de teléfono
-    whatsapp: "[WHATSAPP]", // TODO: Agregar número de WhatsApp
-    whatsappLink: "https://wa.me/[NÚMERO]", // TODO: Agregar enlace de WhatsApp
+    phone: "8842 1641",
+    whatsapp: "8842 1641",
+    whatsappLink: "https://wa.me/50688421641",
     email: "[EMAIL]", // TODO: Agregar correo electrónico
   },
 
-  // Ubicación - TODO: Agregar datos reales
+  // Ubicación
   location: {
-    address: "[DIRECCIÓN]", // TODO: Agregar dirección
-    city: "[CIUDAD]", // TODO: Agregar ciudad
-    country: "[PAÍS]", // TODO: Agregar país
-    mapsUrl: "[GOOGLE_MAPS_URL]", // TODO: Agregar enlace de Google Maps
-    mapsEmbed: "[GOOGLE_MAPS_EMBED]", // TODO: Agregar embed de Google Maps
+    address: "Santa Teresa, Cobano",
+    city: "Puntarenas",
+    country: "Costa Rica",
+    mapsUrl:
+      "https://www.google.com/maps/place/Clinica+Dental+dra+Marcela+Contreras/@9.6371451,-85.1614267,17z",
+    wazeUrl: "https://waze.com/ul?ll=9.6371451,-85.1614267&navigate=yes",
   },
 
-  // Horarios - TODO: Confirmar horarios reales
+  // Horarios
   schedule: {
-    weekdays: "[HORARIO_SEMANA]", // TODO: Agregar horario entre semana
-    saturday: "[HORARIO_SÁBADO]", // TODO: Agregar horario sábado
-    sunday: "Cerrado", // TODO: Confirmar
+    weekdays: "9:30am - 5:00pm",
+    saturday: "Cerrado",
+    sunday: "Cerrado",
   },
 
   // Enlaces externos
@@ -60,13 +62,14 @@ export const siteConfig = {
   // SEO
   seo: {
     title:
-      "Clínica Dental Dra. Marcela Contreras | Atención Dental Personalizada",
+      "Clínica Dental Santa Teresa Más Sonrisas | Atención Dental Personalizada",
     description:
-      "Cuida tu salud dental con la experiencia, dedicación y atención personalizada de la Dra. Marcela Contreras. Agenda tu consulta y recupera la confianza en tu sonrisa.",
+      "Cuida tu salud dental con la experiencia, dedicación y atención personalizada de Clínica Dental Santa Teresa Más Sonrisas. Agenda tu consulta y recupera la confianza en tu sonrisa.",
     keywords: [
       "clínica dental",
       "dentista",
-      "Dra. Marcela Contreras",
+      "Santa Teresa",
+      "Más Sonrisas",
       "limpieza dental",
       "tratamiento de caries",
       "puentes dentales",

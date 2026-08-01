@@ -8,7 +8,6 @@ import {
   Icons,
   AnimateOnScroll,
   Floating,
-  PulseGlow,
 } from "@/components/ui";
 import { Siren } from "lucide-react";
 
@@ -91,26 +90,24 @@ export function Emergencies() {
 
             {/* CTA */}
             <AnimateOnScroll
-              animation="bounce-in"
+              animation="fade-up"
               mobileAnimation="fade-up"
               delay={400}
-              duration={600}
-              easing="bounce"
+              duration={500}
+              easing="smooth"
             >
               <a
                 href={siteConfig.contact.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <PulseGlow color="rgba(255,255,255,0.3)">
-                  <Button
-                    size="lg"
-                    className="gap-2 rounded-full bg-white px-8 text-[#16A34A] transition-all duration-300 hover:-translate-y-1 hover:bg-white/90 hover:shadow-xl active:scale-95"
-                  >
-                    <Icons.whatsapp className="h-5 w-5" />
-                    Contactar ahora
-                  </Button>
-                </PulseGlow>
+                <Button
+                  size="lg"
+                  className="gap-2 rounded-full bg-white px-8 text-[#16A34A] transition-colors duration-200 hover:bg-white/90 active:bg-white/80"
+                >
+                  <Icons.whatsapp className="h-5 w-5" />
+                  Contactar ahora
+                </Button>
               </a>
             </AnimateOnScroll>
           </div>
@@ -124,14 +121,12 @@ export function Emergencies() {
             easing="spring"
           >
             <div className="relative">
-              <div className="hover:shadow-3xl aspect-[4/3] overflow-hidden rounded-2xl bg-white/10 shadow-2xl backdrop-blur-sm transition-shadow duration-500">
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                  <Icons.user className="mb-4 h-20 w-20 text-white/50" />
-                  <p className="text-white/70">
-                    Imagen de atención de emergencia
-                  </p>
-                  <p className="text-sm text-white/50">[Pendiente]</p>
-                </div>
+              <div className="hover:shadow-3xl aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl transition-shadow duration-500">
+                <img
+                  src="/assets/test/img3.jpg"
+                  alt="Consultorio dental moderno"
+                  className="h-full w-full object-cover"
+                />
               </div>
 
               {/* Decorative badge */}

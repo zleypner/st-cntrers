@@ -8,7 +8,6 @@ import {
   Container,
   Floating,
   Counter,
-  PulseGlow,
 } from "@/components/ui";
 import { CheckCircle } from "lucide-react";
 
@@ -92,15 +91,13 @@ export function Hero() {
             >
               <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
                 <a href="#contacto">
-                  <PulseGlow>
-                    <Button
-                      size="lg"
-                      className="w-full gap-2 rounded-full bg-[#16A34A] px-8 py-6 text-base text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#14532D] hover:shadow-xl active:scale-95 sm:w-auto"
-                    >
-                      <Icons.calendar className="h-5 w-5" />
-                      Agendar cita
-                    </Button>
-                  </PulseGlow>
+                  <Button
+                    size="lg"
+                    className="w-full gap-2 rounded-full bg-[#16A34A] px-8 py-6 text-base text-white shadow-lg transition-colors duration-200 hover:bg-[#14532D] active:bg-[#0F4024] sm:w-auto"
+                  >
+                    <Icons.calendar className="h-5 w-5" />
+                    Agendar cita
+                  </Button>
                 </a>
                 <a
                   href={siteConfig.contact.whatsappLink}
@@ -156,20 +153,13 @@ export function Hero() {
             easing="spring"
           >
             <div className="relative">
-              {/* Main image placeholder */}
-              <div className="hover:shadow-3xl relative aspect-[4/5] overflow-hidden rounded-3xl bg-gradient-to-br from-[#F3F4F6] to-[#E5E7EB] shadow-2xl transition-shadow duration-500">
-                {/* Placeholder for doctor image */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                  <div className="mb-6 flex h-32 w-32 items-center justify-center rounded-full bg-[#16A34A]/10">
-                    <Icons.user className="h-16 w-16 text-[#16A34A]" />
-                  </div>
-                  <p className="font-medium text-[#526158]">
-                    Fotografía de la Dra. Marcela Contreras
-                  </p>
-                  <p className="mt-2 text-sm text-[#9CA3AF]">
-                    [Imagen pendiente]
-                  </p>
-                </div>
+              {/* Main image */}
+              <div className="hover:shadow-3xl relative aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl transition-shadow duration-500">
+                <img
+                  src="/assets/test/img4.jpg"
+                  alt="Dra. Marcela Contreras explicando tratamiento dental"
+                  className="h-full w-full object-cover"
+                />
               </div>
 
               {/* Years badge with counter animation */}
