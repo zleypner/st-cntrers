@@ -49,8 +49,6 @@ export function Contact() {
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
-    // TODO: Implementar envío real del formulario
-    // Simulación de envío
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500));
       console.log("Form data:", data);
@@ -75,14 +73,14 @@ export function Contact() {
           <AnimateOnScroll animation="fade-up" delay={100}>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="rounded-2xl border border-[#BBF7D0] bg-white p-6 shadow-sm md:p-8"
+              className="rounded-2xl border border-[#38BDF8]/30 bg-white p-6 shadow-sm md:p-8"
             >
               <div className="space-y-5">
                 {/* Nombre */}
                 <div>
                   <label
                     htmlFor="name"
-                    className="mb-2 block text-sm font-medium text-[#17231C]"
+                    className="mb-2 block text-sm font-medium text-[#1E3A5F]"
                   >
                     {t.form.name} *
                   </label>
@@ -91,10 +89,10 @@ export function Contact() {
                     id="name"
                     {...register("name")}
                     className={cn(
-                      "w-full rounded-xl border bg-white px-4 py-3 text-[#17231C] placeholder-[#526158]/50 transition-colors",
+                      "w-full rounded-xl border bg-white px-4 py-3 text-[#1E3A5F] placeholder-[#1E3A5F]/50 transition-colors",
                       errors.name
                         ? "border-red-500 focus:ring-red-500"
-                        : "border-[#BBF7D0] focus:border-[#16A34A] focus:ring-[#16A34A]"
+                        : "border-[#38BDF8]/30 focus:border-[#38BDF8] focus:ring-[#38BDF8]"
                     )}
                     placeholder="Tu nombre"
                   />
@@ -110,7 +108,7 @@ export function Contact() {
                   <div>
                     <label
                       htmlFor="phone"
-                      className="mb-2 block text-sm font-medium text-[#17231C]"
+                      className="mb-2 block text-sm font-medium text-[#1E3A5F]"
                     >
                       {t.form.phone} *
                     </label>
@@ -119,10 +117,10 @@ export function Contact() {
                       id="phone"
                       {...register("phone")}
                       className={cn(
-                        "w-full rounded-xl border bg-white px-4 py-3 text-[#17231C] placeholder-[#526158]/50 transition-colors",
+                        "w-full rounded-xl border bg-white px-4 py-3 text-[#1E3A5F] placeholder-[#1E3A5F]/50 transition-colors",
                         errors.phone
                           ? "border-red-500 focus:ring-red-500"
-                          : "border-[#BBF7D0] focus:border-[#16A34A] focus:ring-[#16A34A]"
+                          : "border-[#38BDF8]/30 focus:border-[#38BDF8] focus:ring-[#38BDF8]"
                       )}
                       placeholder="+506 0000 0000"
                     />
@@ -136,7 +134,7 @@ export function Contact() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="mb-2 block text-sm font-medium text-[#17231C]"
+                      className="mb-2 block text-sm font-medium text-[#1E3A5F]"
                     >
                       {t.form.email} *
                     </label>
@@ -145,10 +143,10 @@ export function Contact() {
                       id="email"
                       {...register("email")}
                       className={cn(
-                        "w-full rounded-xl border bg-white px-4 py-3 text-[#17231C] placeholder-[#526158]/50 transition-colors",
+                        "w-full rounded-xl border bg-white px-4 py-3 text-[#1E3A5F] placeholder-[#1E3A5F]/50 transition-colors",
                         errors.email
                           ? "border-red-500 focus:ring-red-500"
-                          : "border-[#BBF7D0] focus:border-[#16A34A] focus:ring-[#16A34A]"
+                          : "border-[#38BDF8]/30 focus:border-[#38BDF8] focus:ring-[#38BDF8]"
                       )}
                       placeholder="tu@email.com"
                     />
@@ -164,14 +162,14 @@ export function Contact() {
                 <div>
                   <label
                     htmlFor="treatment"
-                    className="mb-2 block text-sm font-medium text-[#17231C]"
+                    className="mb-2 block text-sm font-medium text-[#1E3A5F]"
                   >
                     {t.form.treatment}
                   </label>
                   <select
                     id="treatment"
                     {...register("treatment")}
-                    className="w-full rounded-xl border border-[#BBF7D0] bg-white px-4 py-3 text-[#17231C] transition-colors focus:border-[#16A34A] focus:ring-[#16A34A]"
+                    className="w-full rounded-xl border border-[#38BDF8]/30 bg-white px-4 py-3 text-[#1E3A5F] transition-colors focus:border-[#38BDF8] focus:ring-[#38BDF8]"
                   >
                     <option value="">{t.form.treatmentPlaceholder}</option>
                     {siteConfig.services.map((service) => (
@@ -187,7 +185,7 @@ export function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="mb-2 block text-sm font-medium text-[#17231C]"
+                    className="mb-2 block text-sm font-medium text-[#1E3A5F]"
                   >
                     {t.form.message} *
                   </label>
@@ -196,10 +194,10 @@ export function Contact() {
                     {...register("message")}
                     rows={4}
                     className={cn(
-                      "w-full resize-none rounded-xl border bg-white px-4 py-3 text-[#17231C] placeholder-[#526158]/50 transition-colors",
+                      "w-full resize-none rounded-xl border bg-white px-4 py-3 text-[#1E3A5F] placeholder-[#1E3A5F]/50 transition-colors",
                       errors.message
                         ? "border-red-500 focus:ring-red-500"
-                        : "border-[#BBF7D0] focus:border-[#16A34A] focus:ring-[#16A34A]"
+                        : "border-[#38BDF8]/30 focus:border-[#38BDF8] focus:ring-[#38BDF8]"
                     )}
                     placeholder={t.form.messagePlaceholder}
                   />
@@ -216,9 +214,12 @@ export function Contact() {
                     type="checkbox"
                     id="consent"
                     {...register("consent")}
-                    className="mt-1 h-4 w-4 rounded border-[#BBF7D0] text-[#16A34A] focus:ring-[#16A34A]"
+                    className="mt-1 h-4 w-4 rounded border-[#38BDF8]/30 text-[#38BDF8] focus:ring-[#38BDF8]"
                   />
-                  <label htmlFor="consent" className="text-sm text-[#526158]">
+                  <label
+                    htmlFor="consent"
+                    className="text-sm text-[#1E3A5F]/70"
+                  >
                     {t.form.consent} *
                   </label>
                 </div>
@@ -232,7 +233,7 @@ export function Contact() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full gap-2 bg-[#16A34A] text-white hover:bg-[#14532D]"
+                  className="w-full gap-2 bg-[#38BDF8] text-white hover:bg-[#0EA5E9]"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -250,7 +251,7 @@ export function Contact() {
 
                 {/* Mensajes de estado */}
                 {submitStatus === "success" && (
-                  <div className="rounded-xl border border-[#BBF7D0] bg-[#ECFDF5] p-4 text-sm text-[#14532D]">
+                  <div className="rounded-xl border border-[#38BDF8]/30 bg-[#38BDF8]/10 p-4 text-sm text-[#1E3A5F]">
                     <Icons.check className="mr-2 inline h-4 w-4" />
                     {t.form.success}
                   </div>
@@ -273,49 +274,49 @@ export function Contact() {
                   href={siteConfig.contact.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 rounded-xl border border-[#BBF7D0] bg-white p-5 transition-all hover:border-[#22C55E] hover:shadow-md"
+                  className="group flex items-center gap-4 rounded-xl border border-[#38BDF8]/30 bg-white p-5 transition-all hover:border-[#25D366] hover:shadow-md"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#25D366] text-white">
                     <Icons.whatsapp className="h-6 w-6" />
                   </div>
                   <div>
-                    <p className="font-medium text-[#17231C] transition-colors group-hover:text-[#16A34A]">
+                    <p className="font-medium text-[#1E3A5F] transition-colors group-hover:text-[#25D366]">
                       WhatsApp
                     </p>
-                    <p className="text-sm text-[#526158]">
+                    <p className="text-sm text-[#1E3A5F]/70">
                       {siteConfig.contact.whatsapp}
                     </p>
                   </div>
-                  <Icons.arrowRight className="ml-auto h-5 w-5 text-[#526158] transition-all group-hover:translate-x-1 group-hover:text-[#16A34A]" />
+                  <Icons.arrowRight className="ml-auto h-5 w-5 text-[#1E3A5F]/70 transition-all group-hover:translate-x-1 group-hover:text-[#25D366]" />
                 </a>
 
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
-                  className="group flex items-center gap-4 rounded-xl border border-[#BBF7D0] bg-white p-5 transition-all hover:border-[#22C55E] hover:shadow-md"
+                  className="group flex items-center gap-4 rounded-xl border border-[#38BDF8]/30 bg-white p-5 transition-all hover:border-[#38BDF8] hover:shadow-md"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#16A34A] text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1E3A5F] text-white">
                     <Icons.phone className="h-6 w-6" />
                   </div>
                   <div>
-                    <p className="font-medium text-[#17231C] transition-colors group-hover:text-[#16A34A]">
+                    <p className="font-medium text-[#1E3A5F] transition-colors group-hover:text-[#38BDF8]">
                       Teléfono
                     </p>
-                    <p className="text-sm text-[#526158]">
+                    <p className="text-sm text-[#1E3A5F]/70">
                       {siteConfig.contact.phone}
                     </p>
                   </div>
-                  <Icons.arrowRight className="ml-auto h-5 w-5 text-[#526158] transition-all group-hover:translate-x-1 group-hover:text-[#16A34A]" />
+                  <Icons.arrowRight className="ml-auto h-5 w-5 text-[#1E3A5F]/70 transition-all group-hover:translate-x-1 group-hover:text-[#38BDF8]" />
                 </a>
 
-                <div className="flex items-center gap-4 rounded-xl border border-[#BBF7D0] bg-white p-5">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#ECFDF5] text-[#16A34A]">
+                <div className="flex items-center gap-4 rounded-xl border border-[#38BDF8]/30 bg-white p-5">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#38BDF8]/10 text-[#38BDF8]">
                     <Icons.shield className="h-6 w-6" />
                   </div>
                   <div>
-                    <p className="font-medium text-[#17231C]">
+                    <p className="font-medium text-[#1E3A5F]">
                       Código Profesional
                     </p>
-                    <p className="text-sm text-[#526158]">
+                    <p className="text-sm text-[#1E3A5F]/70">
                       {siteConfig.doctorCode}
                     </p>
                   </div>
@@ -323,18 +324,18 @@ export function Contact() {
               </div>
 
               {/* Ubicación */}
-              <div className="overflow-hidden rounded-xl border border-[#BBF7D0] bg-white">
+              <div className="overflow-hidden rounded-xl border border-[#38BDF8]/30 bg-white">
                 <div className="p-5">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#ECFDF5] text-[#16A34A]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#38BDF8]/10 text-[#38BDF8]">
                       <Icons.mapPin className="h-6 w-6" />
                     </div>
                     <div>
-                      <p className="font-medium text-[#17231C]">Ubicación</p>
-                      <p className="mt-1 text-sm text-[#526158]">
+                      <p className="font-medium text-[#1E3A5F]">Ubicación</p>
+                      <p className="mt-1 text-sm text-[#1E3A5F]/70">
                         {siteConfig.location.address}
                       </p>
-                      <p className="text-sm text-[#526158]">
+                      <p className="text-sm text-[#1E3A5F]/70">
                         {siteConfig.location.city},{" "}
                         {siteConfig.location.country}
                       </p>
@@ -342,12 +343,12 @@ export function Contact() {
                   </div>
                 </div>
                 {/* Botones de navegación */}
-                <div className="flex gap-3 border-t border-[#BBF7D0] bg-[#F0FDF4] p-4">
+                <div className="flex gap-3 border-t border-[#38BDF8]/30 bg-[#F5F5F5] p-4">
                   <a
                     href={siteConfig.location.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-medium text-[#17231C] shadow-sm transition-all hover:shadow-md"
+                    className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-medium text-[#1E3A5F] shadow-sm transition-all hover:shadow-md"
                   >
                     <Icons.googleMaps className="h-5 w-5 text-[#EA4335]" />
                     Google Maps
@@ -356,7 +357,7 @@ export function Contact() {
                     href={siteConfig.location.wazeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-medium text-[#17231C] shadow-sm transition-all hover:shadow-md"
+                    className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-medium text-[#1E3A5F] shadow-sm transition-all hover:shadow-md"
                   >
                     <Icons.waze className="h-5 w-5 text-[#33CCFF]" />
                     Waze
@@ -365,29 +366,29 @@ export function Contact() {
               </div>
 
               {/* Horarios */}
-              <div className="rounded-xl border border-[#BBF7D0] bg-white p-5">
+              <div className="rounded-xl border border-[#38BDF8]/30 bg-white p-5">
                 <div className="mb-4 flex items-center gap-3">
-                  <Icons.clock className="h-5 w-5 text-[#16A34A]" />
-                  <p className="font-medium text-[#17231C]">
+                  <Icons.clock className="h-5 w-5 text-[#38BDF8]" />
+                  <p className="font-medium text-[#1E3A5F]">
                     Horario de atención
                   </p>
                 </div>
-                <div className="space-y-2 text-sm text-[#526158]">
+                <div className="space-y-2 text-sm text-[#1E3A5F]/70">
                   <div className="flex justify-between">
                     <span>Lunes - Viernes</span>
-                    <span className="font-medium text-[#17231C]">
+                    <span className="font-medium text-[#1E3A5F]">
                       {siteConfig.schedule.weekdays}
                     </span>
                   </div>
                   <div className="flex justify-between">
                     <span>Sábado</span>
-                    <span className="font-medium text-[#17231C]">
+                    <span className="font-medium text-[#1E3A5F]">
                       {siteConfig.schedule.saturday}
                     </span>
                   </div>
                   <div className="flex justify-between">
                     <span>Domingo</span>
-                    <span className="font-medium text-[#17231C]">
+                    <span className="font-medium text-[#1E3A5F]">
                       {siteConfig.schedule.sunday}
                     </span>
                   </div>

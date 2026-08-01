@@ -15,7 +15,7 @@ export function CTA() {
         style={{ backgroundImage: "url('/assets/test/img3.jpg')" }}
       />
       {/* Overlay for text readability */}
-      <div className="absolute inset-0 bg-green-600/80" />
+      <div className="absolute inset-0 bg-[#1E3A5F]/85" />
 
       <Container className="relative z-10">
         <div className="mx-auto max-w-3xl text-center">
@@ -70,7 +70,7 @@ export function CTA() {
               >
                 <Button
                   size="lg"
-                  className="w-full gap-2 rounded-full bg-white px-6 py-5 text-sm font-semibold text-[#16A34A] shadow-lg transition-colors hover:bg-white/90 active:bg-white/80 sm:px-8 sm:py-6 sm:text-base"
+                  className="w-full gap-2 rounded-full bg-[#38BDF8] px-6 py-5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-[#0EA5E9] active:bg-[#0284C7] sm:px-8 sm:py-6 sm:text-base"
                 >
                   <Icons.phone className="h-4 w-4 sm:h-5 sm:w-5" />
                   {t("cta.secondaryCta")}

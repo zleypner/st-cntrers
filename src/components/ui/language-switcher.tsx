@@ -22,8 +22,8 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
         className={cn(
           "rounded-md px-2 py-1 text-sm font-medium transition-colors",
           i18n.language === "es"
-            ? "bg-[#16A34A] text-white"
-            : "text-[#526158] hover:bg-[#F0FDF4] hover:text-[#17231C]"
+            ? "bg-[#1E3A5F] text-white"
+            : "text-[#1E3A5F]/70 hover:bg-[#F5F5F5] hover:text-[#1E3A5F]"
         )}
         aria-label="Español"
       >
@@ -36,8 +36,8 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
         className={cn(
           "rounded-md px-2 py-1 text-sm font-medium transition-colors",
           i18n.language === "en"
-            ? "bg-[#16A34A] text-white"
-            : "text-[#526158] hover:bg-[#F0FDF4] hover:text-[#17231C]"
+            ? "bg-[#1E3A5F] text-white"
+            : "text-[#1E3A5F]/70 hover:bg-[#F5F5F5] hover:text-[#1E3A5F]"
         )}
         aria-label="English"
       >

@@ -43,14 +43,14 @@ export function WhatsAppButton() {
       {/* Tooltip */}
       <div
         className={cn(
-          "absolute right-0 bottom-full mb-3 rounded-lg border border-[#BBF7D0] bg-white px-4 py-2 text-sm whitespace-nowrap text-[#17231C] shadow-lg transition-all duration-300",
+          "absolute right-0 bottom-full mb-3 rounded-lg border border-[#38BDF8]/30 bg-white px-4 py-2 text-sm whitespace-nowrap text-[#1E3A5F] shadow-lg transition-all duration-300",
           showTooltip
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-2 opacity-0"
         )}
       >
         {t.tooltip}
-        <div className="absolute right-6 -bottom-2 h-4 w-4 rotate-45 transform border-r border-b border-[#BBF7D0] bg-white" />
+        <div className="absolute right-6 -bottom-2 h-4 w-4 rotate-45 transform border-r border-b border-[#38BDF8]/30 bg-white" />
       </div>
 
       {/* Botón */}

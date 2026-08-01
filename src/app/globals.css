@@ -4,17 +4,20 @@
 @custom-variant dark (&:is(.dark *));
 
 /* Paleta de colores - Clínica Dental Santa Teresa Más Sonrisas */
+/* Siguiendo la regla 60-30-10: */
+/* 60% - #F5F5F5 (light gray) - dominant/background */
+/* 30% - #1E3A5F (dark blue) - secondary */
+/* 10% - #38BDF8 (celeste/sky blue) - accent */
 :root {
   /* Colores principales */
-  --green-primary: #16a34a;
-  --green-secondary: #22c55e;
-  --green-dark: #14532d;
-  --green-soft: #ecfdf5;
-  --green-lighter: #f0fdf4;
+  --blue-primary: #1e3a5f;
+  --celeste-accent: #38bdf8;
+  --gray-soft: #f5f5f5;
+  --gray-lighter: #fafafa;
   --white: #ffffff;
-  --text-primary: #17231c;
-  --text-secondary: #526158;
-  --border-green: #bbf7d0;
+  --text-primary: #1e3a5f;
+  --text-secondary: rgba(30, 58, 95, 0.7);
+  --border-celeste: rgba(56, 189, 248, 0.3);
 
   /* Variables del sistema de diseño */
   --background: var(--white);
@@ -23,18 +26,18 @@
   --card-foreground: var(--text-primary);
   --popover: var(--white);
   --popover-foreground: var(--text-primary);
-  --primary: var(--green-primary);
+  --primary: var(--blue-primary);
   --primary-foreground: var(--white);
-  --secondary: var(--green-soft);
-  --secondary-foreground: var(--green-dark);
-  --muted: var(--green-lighter);
+  --secondary: var(--gray-soft);
+  --secondary-foreground: var(--blue-primary);
+  --muted: var(--gray-lighter);
   --muted-foreground: var(--text-secondary);
-  --accent: var(--green-soft);
-  --accent-foreground: var(--green-dark);
+  --accent: var(--celeste-accent);
+  --accent-foreground: var(--white);
   --destructive: #ef4444;
-  --border: var(--border-green);
-  --input: var(--border-green);
-  --ring: var(--green-primary);
+  --border: var(--border-celeste);
+  --input: var(--border-celeste);
+  --ring: var(--celeste-accent);
   --radius: 0.75rem;
 
   /* Tipografía */
@@ -68,14 +71,13 @@
   --radius-2xl: calc(var(--radius) * 1.8);
 
   /* Colores personalizados */
-  --color-green-primary: var(--green-primary);
-  --color-green-secondary: var(--green-secondary);
-  --color-green-dark: var(--green-dark);
-  --color-green-soft: var(--green-soft);
-  --color-green-lighter: var(--green-lighter);
+  --color-blue-primary: var(--blue-primary);
+  --color-celeste-accent: var(--celeste-accent);
+  --color-gray-soft: var(--gray-soft);
+  --color-gray-lighter: var(--gray-lighter);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
-  --color-border-green: var(--border-green);
+  --color-border-celeste: var(--border-celeste);
 
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
@@ -97,7 +99,8 @@
 
   /* Mejor accesibilidad para focus */
   :focus-visible {
-    @apply outline-green-primary outline-2 outline-offset-2;
+    @apply outline-2 outline-offset-2;
+    outline-color: #38bdf8;
   }
 
   /* Scroll suave con preferencia del usuario */
@@ -210,11 +213,11 @@
   0%,
   100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4);
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4);
   }
   50% {
     transform: scale(1.02);
-    box-shadow: 0 0 0 8px rgba(22, 163, 74, 0);
+    box-shadow: 0 0 0 8px rgba(56, 189, 248, 0);
   }
 }
 
@@ -247,10 +250,10 @@
 @keyframes pulseGlow {
   0%,
   100% {
-    box-shadow: 0 0 0 0 var(--glow-color, rgba(22, 163, 74, 0.5));
+    box-shadow: 0 0 0 0 var(--glow-color, rgba(56, 189, 248, 0.5));
   }
   50% {
-    box-shadow: 0 0 20px 5px var(--glow-color, rgba(22, 163, 74, 0.3));
+    box-shadow: 0 0 20px 5px var(--glow-color, rgba(56, 189, 248, 0.3));
   }
 }
 
@@ -342,5 +345,6 @@
 
 /* Skip link */
 .skip-link {
-  @apply bg-green-primary fixed top-4 left-4 z-[100] -translate-y-full rounded-lg px-4 py-2 text-white transition-transform focus:translate-y-0;
+  @apply fixed top-4 left-4 z-[100] -translate-y-full rounded-lg px-4 py-2 text-white transition-transform focus:translate-y-0;
+  background-color: #1e3a5f;
 }

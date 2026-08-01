@@ -16,8 +16,8 @@ export function Section({
 }: SectionProps) {
   const bgClasses = {
     white: "bg-white",
-    soft: "bg-[#ECFDF5]",
-    lighter: "bg-[#F0FDF4]",
+    soft: "bg-[#F5F5F5]",
+    lighter: "bg-[#FAFAFA]",
   };
 
   return (
@@ -81,11 +81,11 @@ export function SectionHeader({
         className
       )}
     >
-      <h2 className="text-3xl font-bold tracking-tight text-[#17231C] sm:text-4xl">
+      <h2 className="text-3xl font-bold tracking-tight text-[#1E3A5F] sm:text-4xl">
         {title}
       </h2>
       {subtitle && (
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-[#526158]">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-[#1E3A5F]/70">
           {subtitle}
         </p>
       )}

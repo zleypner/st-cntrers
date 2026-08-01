@@ -53,7 +53,7 @@ export function FAQ() {
   };
 
   return (
-    <Section id="faq" className="bg-[#F9FAFB]">
+    <Section id="faq" className="bg-[#F5F5F5]">
       <Container>
         <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
           {/* Left column - Title */}
@@ -64,13 +64,13 @@ export function FAQ() {
               duration={600}
               easing="smooth"
             >
-              <p className="mb-4 text-sm font-medium tracking-wider text-[#16A34A] uppercase">
+              <p className="mb-4 text-sm font-medium tracking-wider text-[#38BDF8] uppercase">
                 FAQ
               </p>
-              <h2 className="mb-6 text-3xl font-bold text-[#17231C] sm:text-4xl">
+              <h2 className="mb-6 text-3xl font-bold text-[#1E3A5F] sm:text-4xl">
                 Respuestas antes de tu primera visita.
               </h2>
-              <p className="mb-6 text-[#526158]">
+              <p className="mb-6 text-[#1E3A5F]/70">
                 ¿Aún tienes dudas? Un mensaje corto de WhatsApp es todo lo que
                 necesitas.
               </p>
@@ -88,10 +88,7 @@ export function FAQ() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button
-                  variant="outline"
-                  className="gap-2 rounded-full border-[#16A34A] text-[#16A34A] transition-colors duration-200 hover:bg-[#F0FDF4] active:bg-[#ECFDF5]"
-                >
+                <Button className="gap-2 rounded-full bg-[#25D366] text-white transition-colors duration-200 hover:bg-[#20BD5A] active:bg-[#1DA851]">
                   <Icons.whatsapp className="h-4 w-4" />
                   Enviar mensaje
                 </Button>
@@ -115,8 +112,8 @@ export function FAQ() {
                   className={cn(
                     "overflow-hidden rounded-2xl border transition-all duration-300",
                     openIndex === index
-                      ? "border-[#16A34A] bg-white shadow-md"
-                      : "border-[#E5E7EB] bg-white hover:border-[#BBF7D0] hover:shadow-sm"
+                      ? "border-[#38BDF8] bg-white shadow-md"
+                      : "border-[#E5E7EB] bg-white hover:border-[#38BDF8]/50 hover:shadow-sm"
                   )}
                 >
                   <button
@@ -130,8 +127,8 @@ export function FAQ() {
                       className={cn(
                         "pr-4 font-medium transition-colors duration-300",
                         openIndex === index
-                          ? "text-[#16A34A]"
-                          : "text-[#17231C] group-hover:text-[#16A34A]"
+                          ? "text-[#38BDF8]"
+                          : "text-[#1E3A5F] group-hover:text-[#38BDF8]"
                       )}
                     >
                       {faq.question}
@@ -140,8 +137,8 @@ export function FAQ() {
                       className={cn(
                         "flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full transition-all duration-300",
                         openIndex === index
-                          ? "rotate-180 bg-[#16A34A] text-white"
-                          : "bg-[#F3F4F6] text-[#526158] group-hover:bg-[#ECFDF5]"
+                          ? "rotate-180 bg-[#38BDF8] text-white"
+                          : "bg-[#F5F5F5] text-[#1E3A5F]/70 group-hover:bg-[#38BDF8]/10"
                       )}
                     >
                       <ChevronDown className="h-4 w-4" />
@@ -158,7 +155,7 @@ export function FAQ() {
                     )}
                   >
                     <div className="overflow-hidden">
-                      <div className="px-5 pb-5 leading-relaxed text-[#526158]">
+                      <div className="px-5 pb-5 leading-relaxed text-[#1E3A5F]/70">
                         {faq.answer}
                       </div>
                     </div>

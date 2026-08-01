@@ -339,7 +339,7 @@ interface PulseGlowProps {
 export function PulseGlow({
   children,
   className,
-  color = "#16A34A",
+  color = "#38BDF8",
   disableOnMobile = false,
 }: PulseGlowProps) {
   const isMobile = useIsMobile();

@@ -52,7 +52,7 @@ export function Trust() {
               {/* Main image - Doctora */}
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg transition-shadow duration-500 hover:shadow-xl">
                 <img
-                  src="/assets/test/img4.jpg"
+                  src="/assets/dentist/drax7.png"
                   alt="Dra. Marcela Contreras"
                   className="h-full w-full object-cover"
                 />
@@ -62,7 +62,7 @@ export function Trust() {
               <Floating amplitude={6} duration={4} delay={0.5}>
                 <div className="absolute -right-8 -bottom-8 hidden h-48 w-48 overflow-hidden rounded-2xl border-4 border-white shadow-xl transition-transform duration-300 hover:scale-105 md:block">
                   <img
-                    src="/assets/test/img3.jpg"
+                    src="/assets/dentist/drax8.png"
                     alt="Consultorio dental"
                     className="h-full w-full object-cover"
                   />
@@ -79,13 +79,13 @@ export function Trust() {
               duration={600}
               easing="smooth"
             >
-              <p className="mb-4 text-sm font-medium tracking-wider text-[#16A34A] uppercase">
+              <p className="mb-4 text-sm font-medium tracking-wider text-[#38BDF8] uppercase">
                 Por qué elegirnos
               </p>
-              <h2 className="mb-6 text-3xl font-bold text-[#17231C] sm:text-4xl">
+              <h2 className="mb-6 text-3xl font-bold text-[#1E3A5F] sm:text-4xl">
                 Cuidado integral que considera tu bienestar completo.
               </h2>
-              <p className="mb-10 text-lg text-[#526158]">
+              <p className="mb-10 text-lg text-[#1E3A5F]/70">
                 La salud oral está profundamente conectada con el sueño, la
                 nutrición, la postura y el estrés. Por eso cada plan aquí
                 comienza con el panorama completo — y luego se enfoca en lo que
@@ -107,15 +107,15 @@ export function Trust() {
                     duration={500}
                     easing="spring"
                   >
-                    <div className="group -m-3 flex cursor-pointer gap-4 rounded-xl p-3 transition-all duration-300 hover:bg-[#F9FAFB] active:scale-[0.98]">
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#ECFDF5] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#16A34A]">
-                        <Icon className="h-5 w-5 text-[#16A34A] transition-colors group-hover:text-white" />
+                    <div className="group -m-3 flex cursor-pointer gap-4 rounded-xl p-3 transition-all duration-300 hover:bg-[#F5F5F5] active:scale-[0.98]">
+                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#38BDF8]/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-[#38BDF8]">
+                        <Icon className="h-5 w-5 text-[#38BDF8] transition-colors group-hover:text-white" />
                       </div>
                       <div>
-                        <h3 className="mb-1 font-semibold text-[#17231C]">
+                        <h3 className="mb-1 font-semibold text-[#1E3A5F]">
                           {feature.title}
                         </h3>
-                        <p className="text-sm text-[#526158]">
+                        <p className="text-sm text-[#1E3A5F]/70">
                           {feature.description}
                         </p>
                       </div>

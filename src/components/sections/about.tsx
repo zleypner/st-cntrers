@@ -28,7 +28,7 @@ export function About() {
               <Parallax speed={0.3} direction="up">
                 <div className="aspect-[3/4] overflow-hidden rounded-2xl shadow-lg transition-shadow duration-500 hover:shadow-2xl">
                   <img
-                    src="/assets/test/img4.jpg"
+                    src="/assets/dentist/drax3.png"
                     alt="Dra. Marcela Contreras explicando tratamiento dental"
                     className="h-full w-full object-cover"
                   />
@@ -37,10 +37,10 @@ export function About() {
 
               {/* Decorative elements */}
               <Floating amplitude={8} duration={5} delay={0}>
-                <div className="absolute -top-6 -right-6 hidden h-24 w-24 rounded-2xl bg-[#16A34A]/10 lg:block" />
+                <div className="absolute -top-6 -right-6 hidden h-24 w-24 rounded-2xl bg-[#38BDF8]/10 lg:block" />
               </Floating>
               <Floating amplitude={6} duration={4} delay={0.5}>
-                <div className="absolute -bottom-4 -left-4 hidden h-16 w-16 rounded-xl bg-[#16A34A] lg:block" />
+                <div className="absolute -bottom-4 -left-4 hidden h-16 w-16 rounded-xl bg-[#38BDF8] lg:block" />
               </Floating>
             </div>
           </AnimateOnScroll>
@@ -53,15 +53,15 @@ export function About() {
               duration={600}
               easing="smooth"
             >
-              <p className="mb-4 text-sm font-medium tracking-wider text-[#16A34A] uppercase">
+              <p className="mb-4 text-sm font-medium tracking-wider text-[#38BDF8] uppercase">
                 Sobre la Doctora
               </p>
 
-              <h2 className="mb-4 text-4xl font-bold text-[#17231C] sm:text-5xl">
+              <h2 className="mb-4 text-4xl font-bold text-[#1E3A5F] sm:text-5xl">
                 Dra. Marcela Contreras
               </h2>
 
-              <p className="mb-8 text-sm tracking-wider text-[#526158] uppercase">
+              <p className="mb-8 text-sm tracking-wider text-[#1E3A5F]/70 uppercase">
                 Doctora en Cirugía Dental · Odontología Integral y de
                 Emergencias
               </p>
@@ -74,7 +74,7 @@ export function About() {
               duration={500}
               easing="smooth"
             >
-              <div className="mb-8 space-y-4 text-[#526158]">
+              <div className="mb-8 space-y-4 text-[#1E3A5F]/70">
                 <p>
                   La Dra. Contreras fundó su práctica en Costa Rica con una
                   simple convicción: la odontología debe sentirse humana. Quince
@@ -99,12 +99,12 @@ export function About() {
               duration={600}
               easing="spring"
             >
-              <div className="group rounded-2xl border border-[#BBF7D0] bg-[#F0FDF4] p-6 transition-all duration-300 hover:border-[#16A34A]/30 hover:shadow-lg">
-                <blockquote className="mb-3 text-xl font-medium text-[#17231C] transition-colors duration-300 group-hover:text-[#16A34A]">
+              <div className="group rounded-2xl border border-[#38BDF8]/30 bg-[#38BDF8]/5 p-6 transition-all duration-300 hover:border-[#38BDF8]/50 hover:shadow-lg">
+                <blockquote className="mb-3 text-xl font-medium text-[#1E3A5F] transition-colors duration-300 group-hover:text-[#38BDF8]">
                   &ldquo;No trato dientes. Cuido a la persona a quien
                   pertenecen.&rdquo;
                 </blockquote>
-                <p className="text-sm text-[#526158]">
+                <p className="text-sm text-[#1E3A5F]/70">
                   — Dra. Marcela Contreras, sobre su filosofía de práctica
                 </p>
               </div>

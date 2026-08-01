@@ -24,7 +24,7 @@ export function Emergencies() {
   return (
     <Section
       id="emergencias"
-      className="relative overflow-hidden bg-[#16A34A] text-white"
+      className="relative overflow-hidden bg-[#1E3A5F] text-white"
     >
       {/* Floating background elements */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -32,7 +32,7 @@ export function Emergencies() {
           <div className="absolute -top-20 -right-20 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
         </Floating>
         <Floating amplitude={15} duration={6} delay={1}>
-          <div className="absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-white/5 blur-3xl" />
+          <div className="absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-[#38BDF8]/10 blur-3xl" />
         </Floating>
       </div>
 
@@ -47,9 +47,9 @@ export function Emergencies() {
               easing="smooth"
             >
               {/* Badge */}
-              <div className="animate-pulse-soft mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
-                <Siren className="h-4 w-4" />
-                <span className="text-sm font-medium tracking-wider uppercase">
+              <div className="animate-pulse-soft mb-6 inline-flex items-center gap-2 rounded-full bg-[#38BDF8]/20 px-4 py-2">
+                <Siren className="h-4 w-4 text-[#38BDF8]" />
+                <span className="text-sm font-medium tracking-wider text-[#38BDF8] uppercase">
                   Emergencias Dentales
                 </span>
               </div>
@@ -79,7 +79,7 @@ export function Emergencies() {
                   easing="snappy"
                 >
                   <div className="group flex cursor-default items-start gap-3">
-                    <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-white/60 transition-all duration-300 group-hover:scale-125 group-hover:bg-white" />
+                    <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#38BDF8]/60 transition-all duration-300 group-hover:scale-125 group-hover:bg-[#38BDF8]" />
                     <span className="text-white/90 transition-colors group-hover:text-white">
                       {item}
                     </span>
@@ -103,7 +103,7 @@ export function Emergencies() {
               >
                 <Button
                   size="lg"
-                  className="gap-2 rounded-full bg-white px-8 text-[#16A34A] transition-colors duration-200 hover:bg-white/90 active:bg-white/80"
+                  className="gap-2 rounded-full bg-[#25D366] px-8 text-white transition-colors duration-200 hover:bg-[#20BD5A] active:bg-[#1DA851]"
                 >
                   <Icons.whatsapp className="h-5 w-5" />
                   Contactar ahora
@@ -123,7 +123,7 @@ export function Emergencies() {
             <div className="relative">
               <div className="hover:shadow-3xl aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl transition-shadow duration-500">
                 <img
-                  src="/assets/test/img3.jpg"
+                  src="/assets/dentist/drax8.png"
                   alt="Consultorio dental moderno"
                   className="h-full w-full object-cover"
                 />
@@ -131,7 +131,7 @@ export function Emergencies() {
 
               {/* Decorative badge */}
               <Floating amplitude={5} duration={3} delay={0.3}>
-                <div className="absolute -top-4 -left-4 flex hidden h-16 w-16 rotate-[-8deg] items-center justify-center rounded-xl bg-white text-[#16A34A] shadow-lg md:top-6 md:left-6 md:flex">
+                <div className="absolute -top-4 -left-4 flex hidden h-16 w-16 rotate-[-8deg] items-center justify-center rounded-xl bg-[#38BDF8] text-white shadow-lg md:top-6 md:left-6 md:flex">
                   <Siren className="h-8 w-8" />
                 </div>
               </Floating>

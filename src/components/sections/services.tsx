@@ -59,11 +59,11 @@ export function Services() {
   return (
     <Section
       id="servicios"
-      className="bg-gradient-to-b from-white to-[#F9FAFB]"
+      className="bg-gradient-to-b from-white to-[#F5F5F5]"
     >
       <Container>
         <AnimateOnScroll animation="blur-in" easing="smooth" duration={600}>
-          <p className="mb-12 max-w-3xl text-lg text-[#526158]">
+          <p className="mb-12 max-w-3xl text-lg text-[#1E3A5F]/70">
             Desde visitas preventivas hasta trauma complejo, cada tratamiento es
             planificado personalmente por la Dra. Contreras.
           </p>
@@ -81,30 +81,31 @@ export function Services() {
                 staggerDelay={100}
                 duration={600}
                 easing="spring"
+                className="h-full"
               >
                 <div
-                  className={`group relative cursor-pointer rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl active:scale-[0.98] ${
+                  className={`group relative h-full cursor-pointer rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl active:scale-[0.98] ${
                     service.featured
-                      ? "border-[#16A34A] bg-white shadow-md"
-                      : "border-[#E5E7EB] bg-white hover:border-[#BBF7D0]"
+                      ? "border-[#38BDF8] bg-white shadow-md"
+                      : "border-[#E5E7EB] bg-white hover:border-[#38BDF8]/50"
                   }`}
                 >
                   {/* Icon */}
                   <div
                     className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl transition-colors ${
                       service.featured
-                        ? "bg-[#16A34A] text-white"
-                        : "bg-[#ECFDF5] text-[#16A34A] group-hover:bg-[#16A34A] group-hover:text-white"
+                        ? "bg-[#38BDF8] text-white"
+                        : "bg-[#38BDF8]/10 text-[#38BDF8] group-hover:bg-[#38BDF8] group-hover:text-white"
                     }`}
                   >
                     <Icon className="h-6 w-6" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="mb-2 text-xl font-semibold text-[#17231C]">
+                  <h3 className="mb-2 text-xl font-semibold text-[#1E3A5F]">
                     {service.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-[#526158]">
+                  <p className="text-sm leading-relaxed text-[#1E3A5F]/70">
                     {service.description}
                   </p>
                 </div>

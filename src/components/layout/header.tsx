@@ -59,14 +59,14 @@ export function Header() {
               onClick={handleNavClick}
             >
               {/* Circular M Logo */}
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#16A34A] text-xl font-bold text-white">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1E3A5F] text-xl font-bold text-white">
                 M
               </div>
               <div className="hidden sm:block">
-                <p className="text-lg leading-tight font-semibold text-[#17231C]">
+                <p className="text-lg leading-tight font-semibold text-[#1E3A5F]">
                   Dra. Marcela Contreras
                 </p>
-                <p className="text-xs tracking-wider text-[#526158] uppercase">
+                <p className="text-xs tracking-wider text-[#1E3A5F]/70 uppercase">
                   Odontología Integral · Costa Rica
                 </p>
               </div>
@@ -80,7 +80,7 @@ export function Header() {
                   href={item.href}
                   className={cn(
                     "rounded-lg px-4 py-2 text-sm font-medium transition-colors",
-                    "text-[#526158] hover:bg-[#F0FDF4] hover:text-[#17231C]"
+                    "text-[#1E3A5F]/70 hover:bg-[#F5F5F5] hover:text-[#1E3A5F]"
                   )}
                 >
                   {item.label}
@@ -96,7 +96,7 @@ export function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="gap-2 rounded-full bg-[#16A34A] px-6 text-white hover:bg-[#14532D]">
+                <Button className="gap-2 rounded-full bg-[#25D366] px-6 text-white hover:bg-[#20BD5A]">
                   <Icons.messageCircle className="h-4 w-4" />
                   {t("header.cta")}
                 </Button>
@@ -106,7 +106,7 @@ export function Header() {
             {/* Mobile Menu Button */}
             <button
               type="button"
-              className="rounded-lg p-2 text-[#17231C] transition-colors hover:bg-[#F0FDF4] lg:hidden"
+              className="rounded-lg p-2 text-[#1E3A5F] transition-colors hover:bg-[#F5F5F5] lg:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-expanded={mobileMenuOpen}
               aria-label={
@@ -138,7 +138,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-lg px-4 py-3 text-base font-medium text-[#17231C] transition-colors hover:bg-[#F0FDF4]"
+                className="rounded-lg px-4 py-3 text-base font-medium text-[#1E3A5F] transition-colors hover:bg-[#F5F5F5]"
                 onClick={handleNavClick}
               >
                 {item.label}
@@ -161,7 +161,7 @@ export function Header() {
               onClick={handleNavClick}
               className="px-4"
             >
-              <Button className="w-full gap-2 rounded-full bg-[#16A34A] text-white hover:bg-[#14532D]">
+              <Button className="w-full gap-2 rounded-full bg-[#25D366] text-white hover:bg-[#20BD5A]">
                 <Icons.messageCircle className="h-5 w-5" />
                 {t("header.cta")}
               </Button>
