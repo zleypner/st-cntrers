@@ -1,0 +1,346 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Paleta de colores - Clínica Dental Dra. Marcela Contreras */
+:root {
+  /* Colores principales */
+  --green-primary: #16a34a;
+  --green-secondary: #22c55e;
+  --green-dark: #14532d;
+  --green-soft: #ecfdf5;
+  --green-lighter: #f0fdf4;
+  --white: #ffffff;
+  --text-primary: #17231c;
+  --text-secondary: #526158;
+  --border-green: #bbf7d0;
+
+  /* Variables del sistema de diseño */
+  --background: var(--white);
+  --foreground: var(--text-primary);
+  --card: var(--white);
+  --card-foreground: var(--text-primary);
+  --popover: var(--white);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--green-primary);
+  --primary-foreground: var(--white);
+  --secondary: var(--green-soft);
+  --secondary-foreground: var(--green-dark);
+  --muted: var(--green-lighter);
+  --muted-foreground: var(--text-secondary);
+  --accent: var(--green-soft);
+  --accent-foreground: var(--green-dark);
+  --destructive: #ef4444;
+  --border: var(--border-green);
+  --input: var(--border-green);
+  --ring: var(--green-primary);
+  --radius: 0.75rem;
+
+  /* Tipografía */
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-heading: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+
+  /* Colores personalizados */
+  --color-green-primary: var(--green-primary);
+  --color-green-secondary: var(--green-secondary);
+  --color-green-dark: var(--green-dark);
+  --color-green-soft: var(--green-soft);
+  --color-green-lighter: var(--green-lighter);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-green: var(--border-green);
+
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Mejor accesibilidad para focus */
+  :focus-visible {
+    @apply outline-green-primary outline-2 outline-offset-2;
+  }
+
+  /* Scroll suave con preferencia del usuario */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 767px) {
+    /* Faster transitions on mobile */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Improve touch targets */
+    button,
+    a,
+    [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    /* Disable hover effects on touch devices */
+    @media (hover: none) {
+      .hover\:scale-105:hover {
+        transform: none;
+      }
+      .hover\:-translate-y-1:hover {
+        transform: none;
+      }
+      .hover\:-translate-y-2:hover {
+        transform: none;
+      }
+    }
+  }
+}
+
+/* Animaciones personalizadas */
+@layer utilities {
+  /* Fade in desde abajo */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  /* Fade in */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  /* Escalonado */
+  .animate-stagger-1 {
+    animation-delay: 0.1s;
+  }
+  .animate-stagger-2 {
+    animation-delay: 0.2s;
+  }
+  .animate-stagger-3 {
+    animation-delay: 0.3s;
+  }
+  .animate-stagger-4 {
+    animation-delay: 0.4s;
+  }
+  .animate-stagger-5 {
+    animation-delay: 0.5s;
+  }
+
+  /* Pulso suave para WhatsApp */
+  .animate-pulse-soft {
+    animation: pulseSoft 2s ease-in-out infinite;
+  }
+
+  /* Atención suave */
+  .animate-attention {
+    animation: attention 0.6s ease-in-out;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulseSoft {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 8px rgba(22, 163, 74, 0);
+  }
+}
+
+@keyframes attention {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Floating animation */
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(calc(var(--float-amplitude, 10px) * -1));
+  }
+}
+
+.animate-floating {
+  animation: floating var(--float-duration, 3s) ease-in-out infinite;
+}
+
+/* Pulse glow animation */
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 var(--glow-color, rgba(22, 163, 74, 0.5));
+  }
+  50% {
+    box-shadow: 0 0 20px 5px var(--glow-color, rgba(22, 163, 74, 0.3));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Shimmer effect for loading states */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Bounce subtle */
+@keyframes bounceSubtle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounceSubtle 2s ease-in-out infinite;
+}
+
+/* Scale pulse for buttons */
+@keyframes scalePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.animate-scale-pulse {
+  animation: scalePulse 2s ease-in-out infinite;
+}
+
+/* Gradient shift for backgrounds */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Ocultar contenido visualmente pero mantenerlo accesible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Skip link */
+.skip-link {
+  @apply bg-green-primary fixed top-4 left-4 z-[100] -translate-y-full rounded-lg px-4 py-2 text-white transition-transform focus:translate-y-0;
+}
