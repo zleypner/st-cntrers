@@ -96,8 +96,8 @@ export function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="gap-2 rounded-full bg-[#25D366] px-6 text-white hover:bg-[#20BD5A]">
-                  <Icons.whatsapp className="h-4 w-4" />
+                <Button variant="whatsapp" size="compact">
+                  <Icons.whatsapp />
                   {t("header.cta")}
                 </Button>
               </a>
@@ -166,8 +166,8 @@ export function Header() {
               onClick={handleNavClick}
               className="px-4"
             >
-              <Button className="w-full gap-2 rounded-full bg-[#25D366] text-white hover:bg-[#20BD5A]">
-                <Icons.whatsapp className="h-5 w-5" />
+              <Button variant="whatsapp" size="full">
+                <Icons.whatsapp />
                 {t("header.cta")}
               </Button>
             </a>

@@ -11,6 +11,8 @@ import {
   Floating,
   Parallax,
   Button,
+  ButtonMicrocopy,
+  ButtonGroup,
 } from "@/components/ui";
 
 export function About() {
@@ -116,8 +118,8 @@ export function About() {
               duration={500}
               easing="smooth"
             >
-              <div className="mt-8">
-                <p className="mb-4 text-sm font-medium text-[#1E3A5F]/80 sm:text-base">
+              <ButtonGroup className="mt-8">
+                <p className="mb-6 text-base font-medium text-[#1E3A5F]/80">
                   {t("about.ctaPreText")}
                 </p>
                 <a
@@ -125,15 +127,15 @@ export function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button className="gap-3 rounded-full bg-[#25D366] px-8 py-6 text-base font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-[#20BD5A] hover:shadow-2xl active:scale-100 active:bg-[#1DA851] sm:px-10 sm:py-7 sm:text-lg">
-                    <Icons.whatsapp className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <Button variant="whatsapp">
+                    <Icons.whatsapp />
                     {t("about.cta")}
                   </Button>
                 </a>
-                <p className="mt-3 text-xs text-[#1E3A5F]/60">
+                <ButtonMicrocopy align="left">
                   {t("about.ctaMicrocopy")}
-                </p>
-              </div>
+                </ButtonMicrocopy>
+              </ButtonGroup>
             </AnimateOnScroll>
           </div>
         </div>

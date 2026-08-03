@@ -9,6 +9,8 @@ import {
   AnimateOnScroll,
   Floating,
   Button,
+  ButtonMicrocopy,
+  ButtonGroup,
 } from "@/components/ui";
 
 export function Testimonials() {
@@ -125,8 +127,8 @@ export function Testimonials() {
           duration={500}
           easing="smooth"
         >
-          <div className="mt-12 text-center">
-            <p className="mb-4 text-sm font-medium text-[#1E3A5F]/80 sm:text-base">
+          <ButtonGroup className="mt-12 flex flex-col items-center text-center">
+            <p className="mb-6 text-base font-medium text-[#1E3A5F]/80">
               {t("testimonials.ctaPreText")}
             </p>
             <a
@@ -134,15 +136,13 @@ export function Testimonials() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="gap-3 rounded-full bg-[#25D366] px-8 py-6 text-base font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-[#20BD5A] hover:shadow-2xl active:scale-100 active:bg-[#1DA851] sm:px-10 sm:py-7 sm:text-lg">
-                <Icons.whatsapp className="h-5 w-5 sm:h-6 sm:w-6" />
+              <Button variant="whatsapp">
+                <Icons.whatsapp />
                 {t("testimonials.ctaButton")}
               </Button>
             </a>
-            <p className="mt-3 text-xs text-[#1E3A5F]/60">
-              {t("testimonials.ctaMicrocopy")}
-            </p>
-          </div>
+            <ButtonMicrocopy>{t("testimonials.ctaMicrocopy")}</ButtonMicrocopy>
+          </ButtonGroup>
         </AnimateOnScroll>
       </Container>
     </Section>

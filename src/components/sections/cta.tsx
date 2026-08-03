@@ -2,7 +2,14 @@
 
 import { useTranslation } from "react-i18next";
 import { siteConfig } from "@/config/site";
-import { Container, Button, Icons, AnimateOnScroll } from "@/components/ui";
+import {
+  Container,
+  Button,
+  ButtonMicrocopy,
+  ButtonGroup,
+  Icons,
+  AnimateOnScroll,
+} from "@/components/ui";
 
 export function CTA() {
   const { t } = useTranslation();
@@ -37,7 +44,7 @@ export function CTA() {
             duration={600}
             easing="smooth"
           >
-            <p className="mx-auto mb-6 max-w-2xl text-sm text-white/80 sm:mb-10 sm:text-base md:text-lg">
+            <p className="mx-auto mb-6 max-w-2xl text-base text-white/80 sm:mb-10 md:text-lg">
               {t("cta.description")}
             </p>
           </AnimateOnScroll>
@@ -49,7 +56,7 @@ export function CTA() {
             duration={500}
             easing="smooth"
           >
-            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+            <ButtonGroup className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <a
                 href={siteConfig.contact.whatsappLink}
                 target="_blank"
@@ -57,10 +64,11 @@ export function CTA() {
                 className="w-full sm:w-auto"
               >
                 <Button
-                  size="lg"
-                  className="w-full gap-3 rounded-full bg-[#25D366] px-8 py-6 text-base font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-[#20BD5A] hover:shadow-2xl active:scale-100 active:bg-[#1DA851] sm:px-10 sm:py-7 sm:text-lg"
+                  variant="whatsapp"
+                  size="full"
+                  className="sm:w-auto sm:min-w-[220px]"
                 >
-                  <Icons.whatsapp className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <Icons.whatsapp />
                   {t("cta.primaryCta")}
                 </Button>
               </a>
@@ -69,15 +77,18 @@ export function CTA() {
                 className="w-full sm:w-auto"
               >
                 <Button
-                  size="lg"
-                  className="w-full gap-3 rounded-full bg-[#38BDF8] px-8 py-6 text-base font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-[#0EA5E9] hover:shadow-2xl active:scale-100 active:bg-[#0284C7] sm:px-10 sm:py-7 sm:text-lg"
+                  variant="primary"
+                  size="full"
+                  className="sm:w-auto sm:min-w-[220px]"
                 >
-                  <Icons.phone className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <Icons.phone />
                   {t("cta.secondaryCta")}
                 </Button>
               </a>
-            </div>
-            <p className="mt-6 text-sm text-white/70">{t("cta.microcopy")}</p>
+            </ButtonGroup>
+            <ButtonMicrocopy className="text-white/70">
+              {t("cta.microcopy")}
+            </ButtonMicrocopy>
           </AnimateOnScroll>
         </div>
       </Container>

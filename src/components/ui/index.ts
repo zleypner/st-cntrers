@@ -1,4 +1,4 @@
-export { Button, buttonVariants } from "./button";
+export { Button, ButtonMicrocopy, ButtonGroup, buttonVariants } from "./button";
 export { Icons, type IconName } from "./icons";
 export {
   AnimateOnScroll,

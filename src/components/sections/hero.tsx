@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 import { siteConfig } from "@/config/site";
 import {
   Button,
+  ButtonMicrocopy,
+  ButtonGroup,
   Icons,
   AnimateOnScroll,
   Container,
@@ -90,31 +92,32 @@ export function Hero() {
               duration={600}
               easing="spring"
             >
-              <div className="mt-6 sm:mt-8">
+              <ButtonGroup>
                 {/* Pre-text */}
-                <p className="mb-4 text-sm font-medium text-[#1E3A5F]/80 sm:text-base">
+                <p className="mb-6 text-base font-medium text-[#1E3A5F]/80">
                   {t("hero.ctaPreText")}
                 </p>
 
-                <div className="flex flex-col justify-center gap-4 lg:justify-start">
+                <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-start">
                   {/* Primary CTA */}
-                  <div className="w-full sm:w-auto">
+                  <div className="w-full lg:w-auto">
                     <a href="#contacto" className="block">
                       <Button
-                        size="lg"
-                        className="w-full gap-2 rounded-full bg-[#38BDF8] px-8 py-6 text-base font-semibold text-white shadow-lg transition-colors duration-200 hover:bg-[#0EA5E9] active:bg-[#0284C7] sm:px-10 sm:py-7 sm:text-lg"
+                        variant="primary"
+                        size="full"
+                        className="lg:w-auto lg:min-w-[220px]"
                       >
-                        <Icons.calendar className="h-5 w-5 sm:h-6 sm:w-6" />
+                        <Icons.calendar />
                         {t("hero.primaryCta")}
                       </Button>
                     </a>
-                    <p className="mt-2 text-center text-xs text-[#1E3A5F]/60 lg:text-left">
+                    <ButtonMicrocopy align="center" className="lg:text-left">
                       {t("hero.primaryCtaMicrocopy")}
-                    </p>
+                    </ButtonMicrocopy>
                   </div>
 
                   {/* Secondary CTA */}
-                  <div className="w-full sm:w-auto">
+                  <div className="w-full lg:w-auto">
                     <a
                       href={siteConfig.contact.whatsappLink}
                       target="_blank"
@@ -122,19 +125,20 @@ export function Hero() {
                       className="block"
                     >
                       <Button
-                        size="lg"
-                        className="w-full gap-2 rounded-full bg-[#25D366] px-8 py-6 text-base font-semibold text-white shadow-lg transition-colors duration-200 hover:bg-[#20BD5A] active:bg-[#1DA851] sm:px-10 sm:py-7 sm:text-lg"
+                        variant="whatsapp"
+                        size="full"
+                        className="lg:w-auto lg:min-w-[220px]"
                       >
-                        <Icons.whatsapp className="h-5 w-5 sm:h-6 sm:w-6" />
+                        <Icons.whatsapp />
                         {t("hero.secondaryCta")}
                       </Button>
                     </a>
-                    <p className="mt-2 text-center text-xs text-[#1E3A5F]/60 lg:text-left">
+                    <ButtonMicrocopy align="center" className="lg:text-left">
                       {t("hero.secondaryCtaMicrocopy")}
-                    </p>
+                    </ButtonMicrocopy>
                   </div>
                 </div>
-              </div>
+              </ButtonGroup>
             </AnimateOnScroll>
 
             {/* Trust badges */}

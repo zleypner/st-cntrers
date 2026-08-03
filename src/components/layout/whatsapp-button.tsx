@@ -72,12 +72,12 @@ export function WhatsAppButton() {
         <div className="absolute right-6 -bottom-2 h-4 w-4 rotate-45 transform border-r border-b border-[#38BDF8]/30 bg-white" />
       </div>
 
-      {/* Botón */}
+      {/* Botón - FAB with consistent design system transitions */}
       <a
         href={siteConfig.contact.whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+        className="group flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-[#20BD5A] hover:shadow-[0_12px_30px_rgba(37,211,102,0.25)] active:translate-y-0 active:scale-[0.98] active:bg-[#1DA851]"
         aria-label={t("whatsapp.ariaLabel")}
       >
         <Icons.whatsapp className="h-7 w-7 text-white" />

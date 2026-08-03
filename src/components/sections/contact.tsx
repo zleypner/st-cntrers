@@ -11,6 +11,7 @@ import {
   Container,
   SectionHeader,
   Button,
+  ButtonMicrocopy,
   Icons,
   AnimateOnScroll,
 } from "@/components/ui";
@@ -261,8 +262,8 @@ export function Contact() {
                 <div>
                   <Button
                     type="submit"
-                    size="lg"
-                    className="w-full gap-2 bg-[#38BDF8] text-white hover:bg-[#0EA5E9]"
+                    variant="primary"
+                    size="full"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
@@ -272,14 +273,14 @@ export function Contact() {
                       </>
                     ) : (
                       <>
-                        <Icons.calendar className="h-5 w-5" />
+                        <Icons.calendar />
                         {t("contact.form.submit")}
                       </>
                     )}
                   </Button>
-                  <p className="mt-3 text-center text-xs text-[#1E3A5F]/60">
+                  <ButtonMicrocopy>
                     {t("contact.form.submitMicrocopy")}
-                  </p>
+                  </ButtonMicrocopy>
                 </div>
 
                 {/* Mensajes de estado */}

@@ -8,6 +8,7 @@ import {
   Container,
   Icons,
   Button,
+  ButtonGroup,
   AnimateOnScroll,
 } from "@/components/ui";
 import { cn } from "@/lib/utils";
@@ -53,16 +54,18 @@ export function FAQ() {
               duration={500}
               easing="smooth"
             >
-              <a
-                href={siteConfig.contact.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="gap-2 rounded-full bg-[#25D366] text-white transition-colors duration-200 hover:bg-[#20BD5A] active:bg-[#1DA851]">
-                  <Icons.whatsapp className="h-4 w-4" />
-                  {t("faq.cta")}
-                </Button>
-              </a>
+              <ButtonGroup>
+                <a
+                  href={siteConfig.contact.whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="whatsapp" size="secondary">
+                    <Icons.whatsapp />
+                    {t("faq.cta")}
+                  </Button>
+                </a>
+              </ButtonGroup>
             </AnimateOnScroll>
           </div>
 
