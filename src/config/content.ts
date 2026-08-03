@@ -221,7 +221,7 @@ export const content = {
     // Footer
     footer: {
       description:
-        "Odontología integral, holística y de emergencias en Costa Rica. Pacientes tratados como personas, nunca como casos.",
+        "Atención dental integral y de emergencias en Costa Rica, guiada por una filosofía holística. Porque cada paciente es una persona, nunca solo un caso.",
       contact: "Contacto",
       hours: "Horarios",
       emergencies: "Emergencias · Mismo día",
@@ -457,7 +457,7 @@ export const content = {
     // Footer
     footer: {
       description:
-        "Holistic, integrative, and emergency dentistry in Costa Rica. Patients treated as people, never as cases.",
+        "Expert integrative and emergency dental care in Costa Rica, guided by a holistic philosophy. Because every patient is a person, never just a case.",
       contact: "Contact",
       hours: "Hours",
       emergencies: "Emergencies · Same day",
