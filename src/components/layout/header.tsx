@@ -103,24 +103,41 @@ export function Header() {
               </a>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              type="button"
-              className="rounded-lg p-2 text-[#1E3A5F] transition-colors hover:bg-[#F5F5F5] lg:hidden"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-expanded={mobileMenuOpen}
-              aria-label={
-                mobileMenuOpen
-                  ? t("accessibility.menuClose")
-                  : t("accessibility.menuOpen")
-              }
-            >
-              {mobileMenuOpen ? (
-                <Icons.x className="h-6 w-6" />
-              ) : (
-                <Icons.menu className="h-6 w-6" />
-              )}
-            </button>
+            {/* Mobile CTA and Menu Button */}
+            <div className="flex items-center gap-2 lg:hidden">
+              {/* Mobile WhatsApp CTA */}
+              <a
+                href={siteConfig.contact.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="whatsapp" size="compact" className="text-xs">
+                  <Icons.whatsapp className="h-4 w-4" />
+                  <span className="xs:inline hidden">
+                    {t("header.mobileCta")}
+                  </span>
+                </Button>
+              </a>
+
+              {/* Menu Button */}
+              <button
+                type="button"
+                className="rounded-lg p-2 text-[#1E3A5F] transition-colors hover:bg-[#F5F5F5]"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-expanded={mobileMenuOpen}
+                aria-label={
+                  mobileMenuOpen
+                    ? t("accessibility.menuClose")
+                    : t("accessibility.menuOpen")
+                }
+              >
+                {mobileMenuOpen ? (
+                  <Icons.x className="h-6 w-6" />
+                ) : (
+                  <Icons.menu className="h-6 w-6" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
 

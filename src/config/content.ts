@@ -15,6 +15,7 @@ export const content = {
     // Header
     header: {
       cta: "Inicia Tu Nueva Sonrisa",
+      mobileCta: "Agenda Tu Cita",
       tagline: "Odontología Integral · Costa Rica",
       nav: {
         treatments: "Tratamientos",
@@ -376,6 +377,7 @@ export const content = {
     // Header
     header: {
       cta: "Start Your Smile Journey",
+      mobileCta: "Schedule Your Visit",
       tagline: "Comprehensive Dentistry · Costa Rica",
       nav: {
         treatments: "Treatments",
