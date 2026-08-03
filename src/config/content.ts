@@ -362,7 +362,7 @@ export const content = {
 
     // Header
     header: {
-      cta: "Chat with Dra. Marcela's Team",
+      cta: "Let's Chat",
       tagline: "Comprehensive Dentistry · Costa Rica",
       nav: {
         treatments: "Treatments",
@@ -384,7 +384,7 @@ export const content = {
       primaryCta: "Request Your Personalized Consultation",
       primaryCtaMicrocopy:
         "Personalized recommendations based on your needs, goals and oral health.",
-      secondaryCta: "Chat with Dra. Marcela's Team",
+      secondaryCta: "Let's Chat",
       secondaryCtaMicrocopy: "We're here to answer your questions.",
       trustBadge1: "5/5 on Google Reviews",
       trustBadge2: "Same-day emergencies",
@@ -591,7 +591,7 @@ export const content = {
       title: "Answers before your first visit.",
       subtitle:
         "Still have questions? A short WhatsApp message is all you need.",
-      cta: "Chat with Dra. Marcela's Team",
+      cta: "Let's Chat",
       items: [
         {
           question: "How quickly can I be seen for a dental emergency?",
@@ -674,7 +674,7 @@ export const content = {
         "Expert integrative and emergency dental care in Costa Rica, guided by a holistic philosophy. Because every patient is a person, never just a case.",
       contact: "Contact",
       callNow: "Call Now",
-      bookNow: "Chat with Dra. Marcela's Team",
+      bookNow: "Let's Chat",
       hours: "Hours",
       emergencies: "Emergencies · Same day",
       copyright: "All rights reserved.",
@@ -684,9 +684,9 @@ export const content = {
 
     // WhatsApp floating
     whatsapp: {
-      tooltip: "Chat with Dra. Marcela's Team",
+      tooltip: "Let's Chat",
       tooltipMicrocopy: "We're here to answer your questions.",
-      ariaLabel: "Chat with Dra. Marcela's Team",
+      ariaLabel: "Let's Chat",
     },
 
     // Accessibility
