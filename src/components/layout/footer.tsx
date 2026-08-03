@@ -10,9 +10,9 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[#E5E7EB] bg-white">
+    <footer className="overflow-x-hidden border-t border-[#E5E7EB] bg-white">
       <Container className="py-8 sm:py-12 md:py-16">
-        <div className="grid gap-8 sm:gap-12 lg:grid-cols-2">
+        <div className="grid gap-8 overflow-hidden sm:gap-12 lg:grid-cols-2">
           {/* Left side - Info */}
           <div className="grid gap-8 sm:grid-cols-2">
             {/* Logo and description */}
@@ -115,7 +115,7 @@ export function Footer() {
           </div>
 
           {/* Right side - Map */}
-          <div className="relative">
+          <div>
             {/* Map title and subtitle */}
             <div className="mb-4">
               <h4 className="mb-1 text-lg font-semibold text-[#1E3A5F]">
@@ -165,9 +165,9 @@ export function Footer() {
         </div>
 
         {/* Social proof and closing message */}
-        <div className="relative z-10 mt-8 border-t border-[#E5E7EB] pt-6 text-center sm:mt-12 sm:pt-8">
+        <div className="mt-10 border-t border-[#E5E7EB] pt-8 text-center sm:mt-12">
           {/* Stars */}
-          <div className="mb-3 flex justify-center gap-1">
+          <div className="mb-4 flex justify-center gap-1">
             {[...Array(5)].map((_, i) => (
               <Icons.star
                 key={i}
