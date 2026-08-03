@@ -223,6 +223,8 @@ export const content = {
       description:
         "Atención dental integral y de emergencias en Costa Rica, guiada por una filosofía holística. Porque cada paciente es una persona, nunca solo un caso.",
       contact: "Contacto",
+      callNow: "Llamar ahora",
+      bookNow: "Agenda ya",
       hours: "Horarios",
       emergencies: "Emergencias · Mismo día",
       copyright: "Todos los derechos reservados.",
@@ -459,6 +461,8 @@ export const content = {
       description:
         "Expert integrative and emergency dental care in Costa Rica, guided by a holistic philosophy. Because every patient is a person, never just a case.",
       contact: "Contact",
+      callNow: "Call Now",
+      bookNow: "Book Now",
       hours: "Hours",
       emergencies: "Emergencies · Same day",
       copyright: "All rights reserved.",

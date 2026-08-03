@@ -59,25 +59,37 @@ export function Footer() {
               <h4 className="mb-4 text-sm font-medium tracking-wider text-[#38BDF8] uppercase">
                 {t("footer.contact")}
               </h4>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href={`tel:${siteConfig.contact.phone}`}
-                    className="flex items-center gap-3 text-sm text-[#1E3A5F]/70 transition-colors hover:text-[#1E3A5F]"
-                  >
-                    <Phone className="h-4 w-4 text-[#38BDF8]" />
-                    {siteConfig.contact.phone}
-                  </a>
-                </li>
-                <li className="flex items-start gap-3 text-sm text-[#1E3A5F]/70">
+              <div className="space-y-3">
+                {/* Call Now Button */}
+                <a
+                  href={`tel:${siteConfig.contact.phone}`}
+                  className="flex items-center justify-center gap-2 rounded-lg bg-[#1E3A5F] px-4 py-3 text-sm font-medium text-white transition-all hover:bg-[#2D4A6F] hover:shadow-md"
+                >
+                  <Phone className="h-4 w-4" />
+                  {t("footer.callNow")}
+                </a>
+
+                {/* WhatsApp Button */}
+                <a
+                  href={siteConfig.contact.whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-4 py-3 text-sm font-medium text-white transition-all hover:bg-[#20BD5A] hover:shadow-md"
+                >
+                  <Icons.whatsapp className="h-4 w-4" />
+                  {t("footer.bookNow")}
+                </a>
+
+                {/* Location */}
+                <div className="flex items-start gap-3 pt-2 text-sm text-[#1E3A5F]/70">
                   <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#38BDF8]" />
                   <span>
                     {siteConfig.location.address}
                     <br />
                     {siteConfig.location.city}
                   </span>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
 
             {/* Hours */}
