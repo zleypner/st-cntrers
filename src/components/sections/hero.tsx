@@ -39,7 +39,7 @@ export function Hero() {
       <Container className="relative z-10 py-8 sm:py-12 md:py-16 lg:py-20">
         <div className="grid items-center gap-12 sm:gap-14 md:gap-16 lg:grid-cols-2 lg:gap-20 xl:gap-24">
           {/* Content */}
-          <div className="text-center lg:text-left">
+          <div className="relative z-10 text-center lg:text-left">
             <AnimateOnScroll
               animation="blur-in"
               mobileAnimation="fade-in"
@@ -177,7 +177,7 @@ export function Hero() {
             duration={800}
             easing="spring"
           >
-            <div className="relative mx-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-md xl:max-w-lg">
+            <div className="relative z-0 mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:mr-0 lg:ml-auto lg:max-w-sm xl:max-w-md">
               {/* Main image */}
               <div className="hover:shadow-3xl relative aspect-[3/4] overflow-hidden rounded-2xl shadow-xl transition-shadow duration-500 sm:aspect-[4/5] sm:rounded-3xl sm:shadow-2xl">
                 <Image
