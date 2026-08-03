@@ -362,7 +362,7 @@ export const content = {
 
     // Header
     header: {
-      cta: "Chat with Dr. Marcela's Team",
+      cta: "Chat with Dra. Marcela's Team",
       tagline: "Comprehensive Dentistry · Costa Rica",
       nav: {
         treatments: "Treatments",
@@ -384,7 +384,7 @@ export const content = {
       primaryCta: "Request Your Personalized Consultation",
       primaryCtaMicrocopy:
         "Personalized recommendations based on your needs, goals and oral health.",
-      secondaryCta: "Chat with Dr. Marcela's Team",
+      secondaryCta: "Chat with Dra. Marcela's Team",
       secondaryCtaMicrocopy: "We're here to answer your questions.",
       trustBadge1: "5/5 on Google Reviews",
       trustBadge2: "Same-day emergencies",
@@ -419,7 +419,7 @@ export const content = {
             "The same professional follows your case at every stage of treatment.",
         },
       ],
-      imageAlt1: "Dr. Marcela Contreras",
+      imageAlt1: "Dra. Marcela Contreras",
       imageAlt2: "Dental office",
       ctaPreText: "Looking for care that goes beyond your teeth?",
       cta: "Discover Our Holistic Approach",
@@ -433,7 +433,7 @@ export const content = {
       subtitle:
         "Dental treatments with personalized attention and professionalism",
       intro:
-        "From preventive visits to complex trauma, every treatment is personally planned by Dr. Contreras.",
+        "From preventive visits to complex trauma, every treatment is personally planned by Dra. Contreras.",
       items: [
         {
           title: "General Dentistry",
@@ -474,19 +474,19 @@ export const content = {
     // About the doctor
     about: {
       badge: "About the Doctor",
-      name: "Dr. Marcela Contreras",
+      name: "Dra. Marcela Contreras",
       credentials:
         "Doctor of Dental Surgery · Comprehensive and Emergency Dentistry",
       paragraphs: [
-        "Dr. Contreras founded her practice in Costa Rica with a simple conviction: dentistry should feel human. Fifteen years of clinical work — much of it in emergency and trauma care — taught her that patients heal faster when they feel understood.",
+        "Dra. Contreras founded her practice in Costa Rica with a simple conviction: dentistry should feel human. Fifteen years of clinical work — much of it in emergency and trauma care — taught her that patients heal faster when they feel understood.",
         "Her approach is holistic and unhurried. Every consultation explores how oral health connects with sleep, nutrition, stress, and long-term wellbeing, and every treatment plan is written for one person alone.",
       ],
       quote:
         "I don't just focus on your smile; I focus on your wellbeing as a person.",
-      quoteAttribution: "— Dr. Marcela Contreras, on her practice philosophy",
-      imageAlt: "Dr. Marcela Contreras explaining dental treatment",
+      quoteAttribution: "— Dra. Marcela Contreras, on her practice philosophy",
+      imageAlt: "Dra. Marcela Contreras explaining dental treatment",
       ctaPreText: "Meet the dentist behind every confident smile.",
-      cta: "Meet Dr. Marcela",
+      cta: "Meet Dra. Marcela",
       ctaMicrocopy:
         "Experience compassionate, personalized dentistry focused on long-term health.",
     },
@@ -496,7 +496,7 @@ export const content = {
       badge: "Dental Emergencies",
       title: "When something goes wrong, experience matters most.",
       description:
-        "Dr. Contreras has dedicated years of training focused on dental trauma and urgent care. Emergencies are handled with priority, calm decision-making, and techniques that protect the long-term life of your teeth.",
+        "Dra. Contreras has dedicated years of training focused on dental trauma and urgent care. Emergencies are handled with priority, calm decision-making, and techniques that protect the long-term life of your teeth.",
       ctaPreText: "Need professional dental care today?",
       cta: "Get Professional Guidance",
       ctaMicrocopy: "Receive expert care when you need it most.",
@@ -517,7 +517,7 @@ export const content = {
       title: "Trust from families across Costa Rica.",
       subtitle: "Real experiences from satisfied patients",
       cta: "See more reviews on Google",
-      ctaPreText: "See why patients trust Dr. Marcela.",
+      ctaPreText: "See why patients trust Dra. Marcela.",
       ctaButton: "Read Patient Stories",
       ctaMicrocopy:
         "Real experiences from patients who placed their confidence in our care.",
@@ -591,7 +591,7 @@ export const content = {
       title: "Answers before your first visit.",
       subtitle:
         "Still have questions? A short WhatsApp message is all you need.",
-      cta: "Chat with Dr. Marcela's Team",
+      cta: "Chat with Dra. Marcela's Team",
       items: [
         {
           question: "How quickly can I be seen for a dental emergency?",
@@ -611,12 +611,12 @@ export const content = {
         {
           question: "Do you treat dental trauma in children and athletes?",
           answer:
-            "Yes, Dr. Contreras has specialized experience in dental trauma. We treat children and athletes with fractured, displaced, or avulsed teeth, always with the goal of long-term tooth preservation.",
+            "Yes, Dra. Contreras has specialized experience in dental trauma. We treat children and athletes with fractured, displaced, or avulsed teeth, always with the goal of long-term tooth preservation.",
         },
         {
           question: "Do you speak English?",
           answer:
-            "Yes, Dr. Contreras and her team offer complete care in both Spanish and English.",
+            "Yes, Dra. Contreras and her team offer complete care in both Spanish and English.",
         },
         {
           question: "What payment options are available?",
@@ -674,7 +674,7 @@ export const content = {
         "Expert integrative and emergency dental care in Costa Rica, guided by a holistic philosophy. Because every patient is a person, never just a case.",
       contact: "Contact",
       callNow: "Call Now",
-      bookNow: "Chat with Dr. Marcela's Team",
+      bookNow: "Chat with Dra. Marcela's Team",
       hours: "Hours",
       emergencies: "Emergencies · Same day",
       copyright: "All rights reserved.",
@@ -684,9 +684,9 @@ export const content = {
 
     // WhatsApp floating
     whatsapp: {
-      tooltip: "Chat with Dr. Marcela's Team",
+      tooltip: "Chat with Dra. Marcela's Team",
       tooltipMicrocopy: "We're here to answer your questions.",
-      ariaLabel: "Chat with Dr. Marcela's Team",
+      ariaLabel: "Chat with Dra. Marcela's Team",
     },
 
     // Accessibility
