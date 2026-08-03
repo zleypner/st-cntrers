@@ -98,7 +98,7 @@ export function Hero() {
                   {t("hero.ctaPreText")}
                 </p>
 
-                <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-start">
+                <div className="flex flex-col items-center">
                   {/* Primary CTA */}
                   <div className="w-full max-w-xs lg:w-auto lg:max-w-none">
                     <a href="#contacto" className="block">
@@ -111,7 +111,7 @@ export function Hero() {
                         {t("hero.primaryCta")}
                       </Button>
                     </a>
-                    <ButtonMicrocopy align="center" className="lg:text-left">
+                    <ButtonMicrocopy align="center">
                       {t("hero.primaryCtaMicrocopy")}
                     </ButtonMicrocopy>
                   </div>

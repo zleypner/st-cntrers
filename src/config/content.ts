@@ -249,10 +249,10 @@ export const content = {
     // FAQ
     faq: {
       badge: "FAQ",
-      title: "Respuestas antes de tu primera visita.",
+      title: "Respuestas Antes de Tu Primera Visita.",
       subtitle:
-        "¿Aún tienes dudas? Un mensaje corto de WhatsApp es todo lo que necesitas.",
-      cta: "Escríbele al Equipo",
+        "¿Aún tienes preguntas? Estamos encantados de ayudarte a entender tus opciones antes de agendar tu visita.",
+      cta: "Pregúntanos por WhatsApp",
       items: [
         {
           question:
@@ -607,10 +607,10 @@ export const content = {
     // FAQ
     faq: {
       badge: "FAQ",
-      title: "Answers before your first visit.",
+      title: "Answers Before Your First Visit.",
       subtitle:
-        "Still have questions? A short WhatsApp message is all you need.",
-      cta: "Let's Talk",
+        "Still have questions? We're happy to help you understand your options before you schedule your visit.",
+      cta: "Ask Us on WhatsApp",
       items: [
         {
           question: "How quickly can I be seen for a dental emergency?",
