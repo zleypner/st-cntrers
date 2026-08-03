@@ -35,7 +35,7 @@ export function About() {
                 <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-lg transition-shadow duration-500 hover:shadow-2xl">
                   <Image
                     src="/assets/dentist/drax3.webp"
-                    alt="Dra. Marcela Contreras explicando tratamiento dental"
+                    alt={t("about.imageAlt")}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
@@ -62,16 +62,15 @@ export function About() {
               easing="smooth"
             >
               <p className="mb-4 text-sm font-medium tracking-wider text-[#38BDF8] uppercase">
-                Sobre la Doctora
+                {t("about.badge")}
               </p>
 
               <h2 className="mb-4 text-4xl font-bold text-[#1E3A5F] sm:text-5xl">
-                Dra. Marcela Contreras
+                {t("about.name")}
               </h2>
 
               <p className="mb-8 text-sm tracking-wider text-[#1E3A5F]/70 uppercase">
-                Doctora en Cirugía Dental · Odontología Integral y de
-                Emergencias
+                {t("about.credentials")}
               </p>
             </AnimateOnScroll>
 
@@ -83,19 +82,11 @@ export function About() {
               easing="smooth"
             >
               <div className="mb-8 space-y-4 text-[#1E3A5F]/70">
-                <p>
-                  La Dra. Contreras fundó su práctica en Costa Rica con una
-                  simple convicción: la odontología debe sentirse humana. Quince
-                  años de trabajo clínico — mucho de ello en cuidado de
-                  urgencias y trauma — le enseñaron que los pacientes sanan más
-                  rápido cuando se sienten comprendidos.
-                </p>
-                <p>
-                  Su enfoque es holístico y sin apuros. Cada consulta explora
-                  cómo la salud oral se conecta con el sueño, la nutrición, el
-                  estrés y el bienestar a largo plazo, y cada plan de
-                  tratamiento está escrito para una sola persona.
-                </p>
+                {(
+                  t("about.paragraphs", { returnObjects: true }) as string[]
+                ).map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
               </div>
             </AnimateOnScroll>
 
@@ -109,11 +100,10 @@ export function About() {
             >
               <div className="group rounded-2xl border border-[#38BDF8]/30 bg-[#38BDF8]/5 p-6 transition-all duration-300 hover:border-[#38BDF8]/50 hover:shadow-lg">
                 <blockquote className="mb-3 text-xl font-medium text-[#1E3A5F] transition-colors duration-300 group-hover:text-[#38BDF8]">
-                  &ldquo;No trato dientes. Cuido a la persona a quien
-                  pertenecen.&rdquo;
+                  &ldquo;{t("about.quote")}&rdquo;
                 </blockquote>
                 <p className="text-sm text-[#1E3A5F]/70">
-                  — Dra. Marcela Contreras, sobre su filosofía de práctica
+                  {t("about.quoteAttribution")}
                 </p>
               </div>
             </AnimateOnScroll>

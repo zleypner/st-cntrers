@@ -74,22 +74,38 @@ export const content = {
 
     // Sobre la doctora
     about: {
-      title: "Experiencia profesional con un trato que se siente personal",
+      badge: "Sobre la Doctora",
+      name: "Dra. Marcela Contreras",
+      credentials:
+        "Doctora en Cirugía Dental · Odontología Integral y de Emergencias",
       paragraphs: [
-        "La Dra. Marcela Contreras se distingue por combinar experiencia odontológica, dedicación y una atención profundamente personalizada.",
-        "Cada tratamiento se realiza escuchando las necesidades del paciente, explicando el proceso con claridad y cuidando cada detalle para alcanzar resultados naturales y funcionales.",
-        "Sus pacientes destacan no solamente su habilidad profesional, sino también su empatía, adaptabilidad y capacidad para devolverles la confianza en su sonrisa.",
+        "La Dra. Contreras fundó su práctica en Costa Rica con una simple convicción: la odontología debe sentirse humana. Quince años de trabajo clínico — mucho de ello en cuidado de urgencias y trauma — le enseñaron que los pacientes sanan más rápido cuando se sienten comprendidos.",
+        "Su enfoque es holístico y sin apuros. Cada consulta explora cómo la salud oral se conecta con el sueño, la nutrición, el estrés y el bienestar a largo plazo, y cada plan de tratamiento está escrito para una sola persona.",
       ],
+      quote:
+        "No me enfoco únicamente en tu sonrisa; me enfoco en tu bienestar como persona.",
+      quoteAttribution:
+        "— Dra. Marcela Contreras, sobre su filosofía de práctica",
+      imageAlt: "Dra. Marcela Contreras explicando tratamiento dental",
+      cta: "Agenda tu cita",
     },
 
     // Emergencias
     emergencies: {
-      title: "Emergencias Dentales",
-      subtitle: "Atención urgente cuando más la necesitas",
+      badge: "Emergencias Dentales",
+      title: "Cuando algo sale mal, la experiencia importa más.",
       description:
-        "Entendemos que las emergencias dentales no esperan. Ofrecemos atención el mismo día para dolor dental agudo, dientes rotos, infecciones y otras situaciones urgentes.",
-      cta: "Llamar ahora",
-      whatsappCta: "WhatsApp de emergencia",
+        "La Dra. Contreras ha dedicado años de entrenamiento enfocado en trauma dental y cuidado urgente. Las emergencias se atienden con prioridad, toma de decisiones calmada y técnicas que protegen la vida a largo plazo de tus dientes.",
+      cta: "Contactar ahora",
+      imageAlt: "Consultorio dental moderno",
+      items: [
+        "Dolor dental severo o repentino",
+        "Diente golpeado por trauma o deportes",
+        "Corona, relleno o restauración perdida",
+        "Dientes fracturados, astillados o desplazados",
+        "Hinchazón, absceso o infección aguda",
+        "Evaluación dental post-accidente",
+      ],
     },
 
     // Testimonios
@@ -175,6 +191,8 @@ export const content = {
     contact: {
       title: "Contacto",
       subtitle: "Estamos aquí para ayudarte",
+      callNow: "Llamar ahora",
+      sendMessage: "Enviar mensaje",
       form: {
         name: "Nombre",
         phone: "Teléfono",
@@ -197,6 +215,7 @@ export const content = {
       weekdays: "Lunes - Viernes",
       saturday: "Sábado",
       sunday: "Domingo",
+      closed: "Cerrado",
     },
 
     // Footer
@@ -293,22 +312,37 @@ export const content = {
 
     // About the doctor
     about: {
-      title: "Professional experience with a personal touch",
+      badge: "About the Doctor",
+      name: "Dr. Marcela Contreras",
+      credentials:
+        "Doctor of Dental Surgery · Comprehensive and Emergency Dentistry",
       paragraphs: [
-        "Dr. Marcela Contreras stands out for combining dental expertise, dedication, and deeply personalized care.",
-        "Each treatment is performed by listening to the patient's needs, clearly explaining the process, and paying attention to every detail to achieve natural and functional results.",
-        "Her patients highlight not only her professional skill, but also her empathy, adaptability, and ability to restore their confidence in their smile.",
+        "Dr. Contreras founded her practice in Costa Rica with a simple conviction: dentistry should feel human. Fifteen years of clinical work — much of it in emergency and trauma care — taught her that patients heal faster when they feel understood.",
+        "Her approach is holistic and unhurried. Every consultation explores how oral health connects with sleep, nutrition, stress, and long-term wellbeing, and every treatment plan is written for one person alone.",
       ],
+      quote:
+        "I don't just focus on your smile; I focus on your wellbeing as a person.",
+      quoteAttribution: "— Dr. Marcela Contreras, on her practice philosophy",
+      imageAlt: "Dr. Marcela Contreras explaining dental treatment",
+      cta: "Book your appointment",
     },
 
     // Emergencies
     emergencies: {
-      title: "Dental Emergencies",
-      subtitle: "Urgent care when you need it most",
+      badge: "Dental Emergencies",
+      title: "When something goes wrong, experience matters most.",
       description:
-        "We understand that dental emergencies don't wait. We offer same-day care for acute dental pain, broken teeth, infections, and other urgent situations.",
-      cta: "Call now",
-      whatsappCta: "Emergency WhatsApp",
+        "Dr. Contreras has dedicated years of training focused on dental trauma and urgent care. Emergencies are handled with priority, calm decision-making, and techniques that protect the long-term life of your teeth.",
+      cta: "Contact now",
+      imageAlt: "Modern dental office",
+      items: [
+        "Severe or sudden dental pain",
+        "Tooth knocked out by trauma or sports",
+        "Lost crown, filling, or restoration",
+        "Fractured, chipped, or displaced teeth",
+        "Swelling, abscess, or acute infection",
+        "Post-accident dental evaluation",
+      ],
     },
 
     // Testimonials
@@ -394,6 +428,8 @@ export const content = {
     contact: {
       title: "Contact",
       subtitle: "We're here to help",
+      callNow: "Call Now",
+      sendMessage: "Send Message",
       form: {
         name: "Name",
         phone: "Phone",
@@ -415,6 +451,7 @@ export const content = {
       weekdays: "Monday - Friday",
       saturday: "Saturday",
       sunday: "Sunday",
+      closed: "Closed",
     },
 
     // Footer

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { siteConfig } from "@/config/site";
 import {
   Section,
@@ -12,16 +13,8 @@ import {
 } from "@/components/ui";
 import { Siren } from "lucide-react";
 
-const emergencyItems = [
-  "Dolor dental severo o repentino",
-  "Diente golpeado por trauma o deportes",
-  "Corona, relleno o restauración perdida",
-  "Dientes fracturados, astillados o desplazados",
-  "Hinchazón, absceso o infección aguda",
-  "Evaluación dental post-accidente",
-];
-
 export function Emergencies() {
+  const { t } = useTranslation();
   return (
     <Section
       id="emergencias"
@@ -51,18 +44,20 @@ export function Emergencies() {
               <div className="animate-pulse-soft mb-6 inline-flex items-center gap-2 rounded-full bg-[#EF4444]/20 px-4 py-2">
                 <Siren className="h-4 w-4 text-[#EF4444]" />
                 <span className="text-sm font-medium tracking-wider text-[#EF4444] uppercase">
-                  Emergencias Dentales
+                  {t("emergencies.badge")}
                 </span>
               </div>
 
               <h2 className="mb-6 text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl">
-                Cuando algo sale mal, la experiencia importa más.
+                {t("emergencies.title")}
               </h2>
             </AnimateOnScroll>
 
             {/* Emergency items with stagger */}
             <div className="mb-8 grid gap-x-8 gap-y-3 sm:grid-cols-2">
-              {emergencyItems.map((item, index) => (
+              {(
+                t("emergencies.items", { returnObjects: true }) as string[]
+              ).map((item, index) => (
                 <AnimateOnScroll
                   key={index}
                   animation="fade-left"
@@ -90,10 +85,7 @@ export function Emergencies() {
               easing="smooth"
             >
               <p className="mb-8 max-w-xl text-lg text-white/80">
-                La Dra. Contreras ha dedicado años de entrenamiento enfocado en
-                trauma dental y cuidado urgente. Las emergencias se atienden con
-                prioridad, toma de decisiones calmada y técnicas que protegen la
-                vida a largo plazo de tus dientes.
+                {t("emergencies.description")}
               </p>
             </AnimateOnScroll>
 
@@ -115,7 +107,7 @@ export function Emergencies() {
                   className="gap-2 rounded-full bg-[#EF4444] px-8 text-white transition-colors duration-200 hover:bg-[#DC2626] active:bg-[#B91C1C]"
                 >
                   <Icons.whatsapp className="h-5 w-5" />
-                  Contactar ahora
+                  {t("emergencies.cta")}
                 </Button>
               </a>
             </AnimateOnScroll>
@@ -133,7 +125,7 @@ export function Emergencies() {
               <div className="hover:shadow-3xl relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl transition-shadow duration-500">
                 <Image
                   src="/assets/dentist/drax8.webp"
-                  alt="Consultorio dental moderno"
+                  alt={t("emergencies.imageAlt")}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"

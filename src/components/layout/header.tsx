@@ -16,7 +16,11 @@ export function Header() {
   const navigation = [
     { label: t("header.nav.treatments"), href: "#servicios" },
     { label: t("header.nav.whyUs"), href: "#por-que" },
-    { label: t("header.nav.emergencies"), href: "#emergencias" },
+    {
+      label: t("header.nav.emergencies"),
+      href: "#emergencias",
+      isEmergency: true,
+    },
     { label: t("header.nav.about"), href: "#sobre" },
     { label: t("header.nav.faq"), href: "#faq" },
   ];
@@ -76,7 +80,9 @@ export function Header() {
                   href={item.href}
                   className={cn(
                     "rounded-lg px-4 py-2 text-sm font-medium transition-colors",
-                    "text-[#1E3A5F]/70 hover:bg-[#F5F5F5] hover:text-[#1E3A5F]"
+                    item.isEmergency
+                      ? "text-[#EF4444] hover:bg-red-50 hover:text-[#DC2626]"
+                      : "text-[#1E3A5F]/70 hover:bg-[#F5F5F5] hover:text-[#1E3A5F]"
                   )}
                 >
                   {item.label}
@@ -134,7 +140,12 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-lg px-4 py-3 text-base font-medium text-[#1E3A5F] transition-colors hover:bg-[#F5F5F5]"
+                className={cn(
+                  "rounded-lg px-4 py-3 text-base font-medium transition-colors",
+                  item.isEmergency
+                    ? "text-[#EF4444] hover:bg-red-50"
+                    : "text-[#1E3A5F] hover:bg-[#F5F5F5]"
+                )}
                 onClick={handleNavClick}
               >
                 {item.label}

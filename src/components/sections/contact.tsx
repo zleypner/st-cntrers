@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { siteConfig } from "@/config/site";
-import { content } from "@/config/content";
 import {
   Section,
   Container,
@@ -30,7 +30,7 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 export function Contact() {
-  const t = content.es.contact;
+  const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
@@ -65,7 +65,10 @@ export function Contact() {
     <Section id="contacto" background="soft">
       <Container>
         <AnimateOnScroll animation="fade-up">
-          <SectionHeader title={t.title} subtitle={t.subtitle} />
+          <SectionHeader
+            title={t("contact.title")}
+            subtitle={t("contact.subtitle")}
+          />
         </AnimateOnScroll>
 
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
@@ -82,7 +85,7 @@ export function Contact() {
                     htmlFor="name"
                     className="mb-2 block text-sm font-medium text-[#1E3A5F]"
                   >
-                    {t.form.name} *
+                    {t("contact.form.name")} *
                   </label>
                   <input
                     type="text"
@@ -110,7 +113,7 @@ export function Contact() {
                       htmlFor="phone"
                       className="mb-2 block text-sm font-medium text-[#1E3A5F]"
                     >
-                      {t.form.phone} *
+                      {t("contact.form.phone")} *
                     </label>
                     <input
                       type="tel"
@@ -136,7 +139,7 @@ export function Contact() {
                       htmlFor="email"
                       className="mb-2 block text-sm font-medium text-[#1E3A5F]"
                     >
-                      {t.form.email} *
+                      {t("contact.form.email")} *
                     </label>
                     <input
                       type="email"
@@ -164,14 +167,16 @@ export function Contact() {
                     htmlFor="treatment"
                     className="mb-2 block text-sm font-medium text-[#1E3A5F]"
                   >
-                    {t.form.treatment}
+                    {t("contact.form.treatment")}
                   </label>
                   <select
                     id="treatment"
                     {...register("treatment")}
                     className="w-full rounded-xl border border-[#38BDF8]/30 bg-white px-4 py-3 text-[#1E3A5F] transition-colors focus:border-[#38BDF8] focus:ring-[#38BDF8]"
                   >
-                    <option value="">{t.form.treatmentPlaceholder}</option>
+                    <option value="">
+                      {t("contact.form.treatmentPlaceholder")}
+                    </option>
                     {siteConfig.services.map((service) => (
                       <option key={service.id} value={service.id}>
                         {service.name}
@@ -187,7 +192,7 @@ export function Contact() {
                     htmlFor="message"
                     className="mb-2 block text-sm font-medium text-[#1E3A5F]"
                   >
-                    {t.form.message} *
+                    {t("contact.form.message")} *
                   </label>
                   <textarea
                     id="message"
@@ -199,7 +204,7 @@ export function Contact() {
                         ? "border-red-500 focus:ring-red-500"
                         : "border-[#38BDF8]/30 focus:border-[#38BDF8] focus:ring-[#38BDF8]"
                     )}
-                    placeholder={t.form.messagePlaceholder}
+                    placeholder={t("contact.form.messagePlaceholder")}
                   />
                   {errors.message && (
                     <p className="mt-1 text-sm text-red-500">
@@ -220,7 +225,7 @@ export function Contact() {
                     htmlFor="consent"
                     className="text-sm text-[#1E3A5F]/70"
                   >
-                    {t.form.consent} *
+                    {t("contact.form.consent")} *
                   </label>
                 </div>
                 {errors.consent && (
@@ -239,12 +244,12 @@ export function Contact() {
                   {isSubmitting ? (
                     <>
                       <span className="animate-spin">⏳</span>
-                      {t.form.submitting}
+                      {t("contact.form.submitting")}
                     </>
                   ) : (
                     <>
                       <Icons.calendar className="h-5 w-5" />
-                      {t.form.submit}
+                      {t("contact.form.submit")}
                     </>
                   )}
                 </Button>
@@ -253,12 +258,12 @@ export function Contact() {
                 {submitStatus === "success" && (
                   <div className="rounded-xl border border-[#38BDF8]/30 bg-[#38BDF8]/10 p-4 text-sm text-[#1E3A5F]">
                     <Icons.check className="mr-2 inline h-4 w-4" />
-                    {t.form.success}
+                    {t("contact.form.success")}
                   </div>
                 )}
                 {submitStatus === "error" && (
                   <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-                    {t.form.error}
+                    {t("contact.form.error")}
                   </div>
                 )}
               </div>
@@ -268,58 +273,51 @@ export function Contact() {
           {/* Información de contacto */}
           <AnimateOnScroll animation="fade-up" delay={200}>
             <div className="space-y-8">
-              {/* Tarjetas de contacto */}
-              <div className="space-y-4">
+              {/* CTA Buttons */}
+              <div className="grid gap-4 sm:grid-cols-2">
+                <a
+                  href={`tel:${siteConfig.contact.phone}`}
+                  className="group flex items-center justify-center gap-3 rounded-xl bg-[#1E3A5F] px-6 py-5 text-white shadow-lg transition-all hover:scale-[1.02] hover:bg-[#2D4A6F] hover:shadow-xl active:scale-[0.98]"
+                >
+                  <Icons.phone className="h-6 w-6" />
+                  <div className="text-left">
+                    <p className="text-lg font-semibold">
+                      {t("contact.callNow")}
+                    </p>
+                    <p className="text-sm text-white/80">
+                      {siteConfig.contact.phone}
+                    </p>
+                  </div>
+                </a>
+
                 <a
                   href={siteConfig.contact.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 rounded-xl border border-[#38BDF8]/30 bg-white p-5 transition-all hover:border-[#25D366] hover:shadow-md"
+                  className="group flex items-center justify-center gap-3 rounded-xl bg-[#25D366] px-6 py-5 text-white shadow-lg transition-all hover:scale-[1.02] hover:bg-[#20BD5A] hover:shadow-xl active:scale-[0.98]"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#25D366] text-white">
-                    <Icons.whatsapp className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-[#1E3A5F] transition-colors group-hover:text-[#25D366]">
-                      WhatsApp
-                    </p>
-                    <p className="text-sm text-[#1E3A5F]/70">
-                      {siteConfig.contact.whatsapp}
+                  <Icons.whatsapp className="h-6 w-6" />
+                  <div className="text-left">
+                    <p className="text-lg font-semibold">WhatsApp</p>
+                    <p className="text-sm text-white/80">
+                      {t("contact.sendMessage")}
                     </p>
                   </div>
-                  <Icons.arrowRight className="ml-auto h-5 w-5 text-[#1E3A5F]/70 transition-all group-hover:translate-x-1 group-hover:text-[#25D366]" />
                 </a>
+              </div>
 
-                <a
-                  href={`tel:${siteConfig.contact.phone}`}
-                  className="group flex items-center gap-4 rounded-xl border border-[#38BDF8]/30 bg-white p-5 transition-all hover:border-[#38BDF8] hover:shadow-md"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1E3A5F] text-white">
-                    <Icons.phone className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-[#1E3A5F] transition-colors group-hover:text-[#38BDF8]">
-                      Teléfono
-                    </p>
-                    <p className="text-sm text-[#1E3A5F]/70">
-                      {siteConfig.contact.phone}
-                    </p>
-                  </div>
-                  <Icons.arrowRight className="ml-auto h-5 w-5 text-[#1E3A5F]/70 transition-all group-hover:translate-x-1 group-hover:text-[#38BDF8]" />
-                </a>
-
-                <div className="flex items-center gap-4 rounded-xl border border-[#38BDF8]/30 bg-white p-5">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#38BDF8]/10 text-[#38BDF8]">
-                    <Icons.shield className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-[#1E3A5F]">
-                      Código Profesional
-                    </p>
-                    <p className="text-sm text-[#1E3A5F]/70">
-                      {siteConfig.doctorCode}
-                    </p>
-                  </div>
+              {/* Info Cards */}
+              <div className="flex items-center gap-4 rounded-xl border border-[#38BDF8]/30 bg-white p-5">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#38BDF8]/10 text-[#38BDF8]">
+                  <Icons.shield className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="font-medium text-[#1E3A5F]">
+                    {t("contact.professionalCode")}
+                  </p>
+                  <p className="text-sm text-[#1E3A5F]/70">
+                    {siteConfig.doctorCode}
+                  </p>
                 </div>
               </div>
 
@@ -331,7 +329,9 @@ export function Contact() {
                       <Icons.mapPin className="h-6 w-6" />
                     </div>
                     <div>
-                      <p className="font-medium text-[#1E3A5F]">Ubicación</p>
+                      <p className="font-medium text-[#1E3A5F]">
+                        {t("contact.location")}
+                      </p>
                       <p className="mt-1 text-sm text-[#1E3A5F]/70">
                         {siteConfig.location.address}
                       </p>
@@ -370,24 +370,24 @@ export function Contact() {
                 <div className="mb-4 flex items-center gap-3">
                   <Icons.clock className="h-5 w-5 text-[#38BDF8]" />
                   <p className="font-medium text-[#1E3A5F]">
-                    Horario de atención
+                    {t("contact.schedule")}
                   </p>
                 </div>
                 <div className="space-y-2 text-sm text-[#1E3A5F]/70">
                   <div className="flex justify-between">
-                    <span>Lunes - Viernes</span>
+                    <span>{t("contact.weekdays")}</span>
                     <span className="font-medium text-[#1E3A5F]">
                       {siteConfig.schedule.weekdays}
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Sábado</span>
+                    <span>{t("contact.saturday")}</span>
                     <span className="font-medium text-[#1E3A5F]">
                       {siteConfig.schedule.saturday}
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Domingo</span>
+                    <span>{t("contact.sunday")}</span>
                     <span className="font-medium text-[#1E3A5F]">
                       {siteConfig.schedule.sunday}
                     </span>
