@@ -99,21 +99,23 @@ export function Emergencies() {
               duration={500}
               easing="smooth"
             >
-              <ButtonGroup>
-                <p className="mb-6 text-base font-medium text-white/80">
+              <ButtonGroup className="text-center">
+                <p className="mb-6 text-center text-base font-medium text-white/80">
                   {t("emergencies.ctaPreText")}
                 </p>
-                <a
-                  href={siteConfig.contact.whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="emergency">
-                    <Icons.whatsapp />
-                    {t("emergencies.cta")}
-                  </Button>
-                </a>
-                <ButtonMicrocopy align="left" className="text-white/60">
+                <div className="flex justify-center">
+                  <a
+                    href={siteConfig.contact.whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="emergency">
+                      <Icons.whatsapp />
+                      {t("emergencies.cta")}
+                    </Button>
+                  </a>
+                </div>
+                <ButtonMicrocopy align="center" className="text-white/60">
                   {t("emergencies.ctaMicrocopy")}
                 </ButtonMicrocopy>
               </ButtonGroup>

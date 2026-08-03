@@ -94,7 +94,7 @@ export function Hero() {
             >
               <ButtonGroup>
                 {/* Pre-text */}
-                <p className="mb-6 text-base font-medium text-[#1E3A5F]/80">
+                <p className="mb-6 text-center text-base font-medium text-[#1E3A5F]/80">
                   {t("hero.ctaPreText")}
                 </p>
 
@@ -127,7 +127,7 @@ export function Hero() {
               duration={500}
               easing="smooth"
             >
-              <div className="mt-6 flex flex-col items-center gap-3 text-xs text-[#1E3A5F]/70 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-6 sm:text-sm lg:justify-start">
+              <div className="mt-6 flex flex-col items-center justify-center gap-3 text-xs text-[#1E3A5F]/70 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-6 sm:text-sm">
                 <div className="flex items-center gap-2">
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (

@@ -118,21 +118,23 @@ export function About() {
               duration={500}
               easing="smooth"
             >
-              <ButtonGroup className="mt-8">
-                <p className="mb-6 text-base font-medium text-[#1E3A5F]/80">
+              <ButtonGroup className="mt-8 text-center">
+                <p className="mb-6 text-center text-base font-medium text-[#1E3A5F]/80">
                   {t("about.ctaPreText")}
                 </p>
-                <a
-                  href={siteConfig.contact.whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="whatsapp">
-                    <Icons.whatsapp />
-                    {t("about.cta")}
-                  </Button>
-                </a>
-                <ButtonMicrocopy align="left">
+                <div className="flex justify-center">
+                  <a
+                    href={siteConfig.contact.whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="whatsapp">
+                      <Icons.whatsapp />
+                      {t("about.cta")}
+                    </Button>
+                  </a>
+                </div>
+                <ButtonMicrocopy align="center">
                   {t("about.ctaMicrocopy")}
                 </ButtonMicrocopy>
               </ButtonGroup>
