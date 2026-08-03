@@ -37,7 +37,7 @@ export function Hero() {
       </div>
 
       <Container className="relative z-10 py-8 sm:py-12 md:py-16 lg:py-20">
-        <div className="grid items-center gap-8 sm:gap-10 md:gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-center gap-12 sm:gap-14 md:gap-16 lg:grid-cols-2 lg:gap-16">
           {/* Content */}
           <div className="text-center lg:text-left">
             <AnimateOnScroll
@@ -197,7 +197,7 @@ export function Hero() {
                 duration={600}
                 easing="bounce"
               >
-                <div className="absolute -bottom-3 left-2 rounded-xl bg-[#1E3A5F] px-4 py-3 text-white shadow-lg transition-transform duration-300 hover:scale-105 sm:-bottom-4 sm:left-4 sm:rounded-2xl sm:px-6 sm:py-4 sm:shadow-xl md:bottom-8 md:left-8">
+                <div className="absolute bottom-4 left-4 rounded-xl bg-[#1E3A5F] px-4 py-3 text-white shadow-lg transition-transform duration-300 hover:scale-105 sm:bottom-6 sm:left-6 sm:rounded-2xl sm:px-6 sm:py-4 sm:shadow-xl lg:bottom-8 lg:left-8">
                   <p className="text-2xl font-bold sm:text-3xl">
                     <Counter end={20} duration={2000} delay={1000} suffix="+" />
                   </p>
