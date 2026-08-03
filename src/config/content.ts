@@ -74,10 +74,11 @@ export const content = {
       ],
       imageAlt1: "Dra. Marcela Contreras",
       imageAlt2: "Consultorio dental",
-      ctaPreText: "¿Buscas un cuidado que va más allá de tus dientes?",
-      cta: "Descubre Nuestro Enfoque Holístico",
+      ctaPreText:
+        "Experimenta un cuidado dental que va más allá de tu sonrisa.",
+      cta: "Obtén Tu Plan de Tratamiento Personalizado",
       ctaMicrocopy:
-        "Porque la odontología excepcional comienza cuidando a la persona completa.",
+        "Recibe orientación experta y un plan de tratamiento adaptado a tu salud oral, estilo de vida y bienestar a largo plazo.",
     },
 
     // Servicios
@@ -119,10 +120,10 @@ export const content = {
             "Rellenos, inlays y coronas usando materiales biocompatibles modernos y técnicas de precisión.",
         },
       ],
-      ctaPreText: "¿No sabes qué tratamiento es el adecuado para ti?",
-      cta: "Explora Tus Opciones de Tratamiento",
+      ctaPreText: "¿No sabes cuál tratamiento es el mejor para ti?",
+      cta: "Obtén Tu Plan de Tratamiento Personalizado",
       ctaMicrocopy:
-        "Cada plan de tratamiento está diseñado específicamente para ti.",
+        "Recibe orientación experta y un plan de tratamiento adaptado a tus necesidades, metas y salud oral.",
     },
 
     // Sobre la doctora
@@ -422,10 +423,10 @@ export const content = {
       ],
       imageAlt1: "Dra. Marcela Contreras",
       imageAlt2: "Dental office",
-      ctaPreText: "Looking for care that goes beyond your teeth?",
-      cta: "Let's Start a Conversation",
+      ctaPreText: "Experience dental care that goes beyond your smile.",
+      cta: "Get Your Personalized Treatment Plan",
       ctaMicrocopy:
-        "Because exceptional dentistry begins by caring for the whole person.",
+        "Receive expert guidance and a treatment plan tailored to your oral health, lifestyle, and long-term wellbeing.",
     },
 
     // Services
@@ -467,9 +468,10 @@ export const content = {
             "Fillings, inlays, and crowns using modern biocompatible materials and precision techniques.",
         },
       ],
-      ctaPreText: "Not sure which treatment is right for you?",
-      cta: "Explore Your Treatment Options",
-      ctaMicrocopy: "Every treatment plan is tailored specifically to you.",
+      ctaPreText: "Not sure which treatment is best for you?",
+      cta: "Get Your Personalized Treatment Plan",
+      ctaMicrocopy:
+        "Receive expert guidance and a treatment plan tailored to your needs, goals, and oral health.",
     },
 
     // About the doctor
