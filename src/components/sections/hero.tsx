@@ -100,13 +100,9 @@ export function Hero() {
 
                 <div className="flex flex-col items-center">
                   {/* Primary CTA */}
-                  <div className="w-full max-w-xs lg:w-auto lg:max-w-none">
-                    <a href="#contacto" className="block">
-                      <Button
-                        variant="primary"
-                        size="full"
-                        className="lg:w-auto"
-                      >
+                  <div className="flex flex-col items-center">
+                    <a href="#contacto">
+                      <Button variant="primary">
                         <Icons.calendar />
                         {t("hero.primaryCta")}
                       </Button>
