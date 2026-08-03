@@ -90,30 +90,50 @@ export function Hero() {
               duration={600}
               easing="spring"
             >
-              <div className="mt-6 flex flex-col justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4 lg:justify-start">
-                <a href="#contacto" className="w-full sm:w-auto">
-                  <Button
-                    size="lg"
-                    className="w-full gap-2 rounded-full bg-[#38BDF8] px-8 py-6 text-base font-semibold text-white shadow-lg transition-colors duration-200 hover:bg-[#0EA5E9] active:bg-[#0284C7] sm:px-10 sm:py-7 sm:text-lg"
-                  >
-                    <Icons.calendar className="h-5 w-5 sm:h-6 sm:w-6" />
-                    {t("hero.primaryCta")}
-                  </Button>
-                </a>
-                <a
-                  href={siteConfig.contact.whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto"
-                >
-                  <Button
-                    size="lg"
-                    className="w-full gap-2 rounded-full bg-[#25D366] px-8 py-6 text-base font-semibold text-white shadow-lg transition-colors duration-200 hover:bg-[#20BD5A] active:bg-[#1DA851] sm:px-10 sm:py-7 sm:text-lg"
-                  >
-                    <Icons.whatsapp className="h-5 w-5 sm:h-6 sm:w-6" />
-                    {t("hero.secondaryCta")}
-                  </Button>
-                </a>
+              <div className="mt-6 sm:mt-8">
+                {/* Pre-text */}
+                <p className="mb-4 text-sm font-medium text-[#1E3A5F]/80 sm:text-base">
+                  {t("hero.ctaPreText")}
+                </p>
+
+                <div className="flex flex-col justify-center gap-4 lg:justify-start">
+                  {/* Primary CTA */}
+                  <div className="w-full sm:w-auto">
+                    <a href="#contacto" className="block">
+                      <Button
+                        size="lg"
+                        className="w-full gap-2 rounded-full bg-[#38BDF8] px-8 py-6 text-base font-semibold text-white shadow-lg transition-colors duration-200 hover:bg-[#0EA5E9] active:bg-[#0284C7] sm:px-10 sm:py-7 sm:text-lg"
+                      >
+                        <Icons.calendar className="h-5 w-5 sm:h-6 sm:w-6" />
+                        {t("hero.primaryCta")}
+                      </Button>
+                    </a>
+                    <p className="mt-2 text-center text-xs text-[#1E3A5F]/60 lg:text-left">
+                      {t("hero.primaryCtaMicrocopy")}
+                    </p>
+                  </div>
+
+                  {/* Secondary CTA */}
+                  <div className="w-full sm:w-auto">
+                    <a
+                      href={siteConfig.contact.whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <Button
+                        size="lg"
+                        className="w-full gap-2 rounded-full bg-[#25D366] px-8 py-6 text-base font-semibold text-white shadow-lg transition-colors duration-200 hover:bg-[#20BD5A] active:bg-[#1DA851] sm:px-10 sm:py-7 sm:text-lg"
+                      >
+                        <Icons.whatsapp className="h-5 w-5 sm:h-6 sm:w-6" />
+                        {t("hero.secondaryCta")}
+                      </Button>
+                    </a>
+                    <p className="mt-2 text-center text-xs text-[#1E3A5F]/60 lg:text-left">
+                      {t("hero.secondaryCtaMicrocopy")}
+                    </p>
+                  </div>
+                </div>
               </div>
             </AnimateOnScroll>
 

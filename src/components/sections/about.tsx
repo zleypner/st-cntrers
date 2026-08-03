@@ -117,6 +117,9 @@ export function About() {
               easing="smooth"
             >
               <div className="mt-8">
+                <p className="mb-4 text-sm font-medium text-[#1E3A5F]/80 sm:text-base">
+                  {t("about.ctaPreText")}
+                </p>
                 <a
                   href={siteConfig.contact.whatsappLink}
                   target="_blank"
@@ -127,6 +130,9 @@ export function About() {
                     {t("about.cta")}
                   </Button>
                 </a>
+                <p className="mt-3 text-xs text-[#1E3A5F]/60">
+                  {t("about.ctaMicrocopy")}
+                </p>
               </div>
             </AnimateOnScroll>
           </div>

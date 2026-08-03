@@ -97,19 +97,27 @@ export function Emergencies() {
               duration={500}
               easing="smooth"
             >
-              <a
-                href={siteConfig.contact.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="lg"
-                  className="gap-3 rounded-full bg-[#EF4444] px-10 py-7 text-lg font-bold text-white shadow-xl transition-all duration-200 hover:scale-105 hover:bg-[#DC2626] hover:shadow-2xl active:scale-100 active:bg-[#B91C1C] sm:px-12 sm:py-8 sm:text-xl"
+              <div>
+                <p className="mb-4 text-sm font-medium text-white/80 sm:text-base">
+                  {t("emergencies.ctaPreText")}
+                </p>
+                <a
+                  href={siteConfig.contact.whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <Icons.whatsapp className="h-6 w-6 sm:h-7 sm:w-7" />
-                  {t("emergencies.cta")}
-                </Button>
-              </a>
+                  <Button
+                    size="lg"
+                    className="gap-3 rounded-full bg-[#EF4444] px-10 py-7 text-lg font-bold text-white shadow-xl transition-all duration-200 hover:scale-105 hover:bg-[#DC2626] hover:shadow-2xl active:scale-100 active:bg-[#B91C1C] sm:px-12 sm:py-8 sm:text-xl"
+                  >
+                    <Icons.whatsapp className="h-6 w-6 sm:h-7 sm:w-7" />
+                    {t("emergencies.cta")}
+                  </Button>
+                </a>
+                <p className="mt-3 text-xs text-white/60">
+                  {t("emergencies.ctaMicrocopy")}
+                </p>
+              </div>
             </AnimateOnScroll>
           </div>
 

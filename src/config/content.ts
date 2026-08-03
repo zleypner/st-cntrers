@@ -13,7 +13,7 @@ export const content = {
 
     // Header
     header: {
-      cta: "Agendar una cita",
+      cta: "Escríbele al Equipo",
       tagline: "Odontología Integral · Costa Rica",
       nav: {
         treatments: "Tratamientos",
@@ -31,8 +31,13 @@ export const content = {
       titleHighlight: "confianza.",
       subtitle:
         "Mereces atención dental integral de una profesional que entiende la salud oral como parte de tu bienestar general — consultas sin prisa y planes personalizados.",
-      primaryCta: "Agendar cita",
-      secondaryCta: "WhatsApp",
+      ctaPreText:
+        "¿Listo para dar el primer paso hacia una sonrisa más saludable?",
+      primaryCta: "Solicita Tu Consulta Personalizada",
+      primaryCtaMicrocopy:
+        "Recomendaciones personalizadas según tus necesidades, metas y salud oral.",
+      secondaryCta: "Escríbenos por WhatsApp",
+      secondaryCtaMicrocopy: "Estamos aquí para responder tus preguntas.",
       trustBadge1: "5/5 en Google Reviews",
       trustBadge2: "Emergencias el mismo día",
       yearsLabel: "años cuidando sonrisas",
@@ -40,7 +45,7 @@ export const content = {
 
     // Sección de confianza
     trust: {
-      badge: "Por qué elegirnos",
+      badge: "Odontología Holística",
       title: "Cuidado integral que considera tu bienestar completo.",
       subtitle:
         "La salud oral está profundamente conectada con el sueño, la nutrición, la postura y el estrés. Por eso cada plan aquí comienza con el panorama completo — y luego se enfoca en lo que realmente necesitas.",
@@ -68,7 +73,10 @@ export const content = {
       ],
       imageAlt1: "Dra. Marcela Contreras",
       imageAlt2: "Consultorio dental",
-      cta: "Agenda tu cita",
+      ctaPreText: "¿Buscas un cuidado que va más allá de tus dientes?",
+      cta: "Descubre Nuestro Enfoque Holístico",
+      ctaMicrocopy:
+        "Porque la odontología excepcional comienza cuidando a la persona completa.",
     },
 
     // Servicios
@@ -110,7 +118,10 @@ export const content = {
             "Rellenos, inlays y coronas usando materiales biocompatibles modernos y técnicas de precisión.",
         },
       ],
-      cta: "Consultar tratamiento",
+      ctaPreText: "¿No sabes qué tratamiento es el adecuado para ti?",
+      cta: "Explora Tus Opciones de Tratamiento",
+      ctaMicrocopy:
+        "Cada plan de tratamiento está diseñado específicamente para ti.",
     },
 
     // Sobre la doctora
@@ -128,7 +139,10 @@ export const content = {
       quoteAttribution:
         "— Dra. Marcela Contreras, sobre su filosofía de práctica",
       imageAlt: "Dra. Marcela Contreras explicando tratamiento dental",
-      cta: "Agenda tu cita",
+      ctaPreText: "Conoce a la dentista detrás de cada sonrisa segura.",
+      cta: "Conoce a la Dra. Marcela",
+      ctaMicrocopy:
+        "Experimenta una odontología compasiva y personalizada enfocada en tu salud a largo plazo.",
     },
 
     // Emergencias
@@ -137,7 +151,9 @@ export const content = {
       title: "Cuando algo sale mal, la experiencia importa más.",
       description:
         "La Dra. Contreras ha dedicado años de entrenamiento enfocado en trauma dental y cuidado urgente. Las emergencias se atienden con prioridad, toma de decisiones calmada y técnicas que protegen la vida a largo plazo de tus dientes.",
-      cta: "Contactar ahora",
+      ctaPreText: "¿Necesitas atención dental profesional hoy?",
+      cta: "Recibe Orientación Profesional",
+      ctaMicrocopy: "Recibe atención experta cuando más lo necesitas.",
       imageAlt: "Consultorio dental moderno",
       items: [
         "Dolor dental severo o repentino",
@@ -155,7 +171,10 @@ export const content = {
       title: "Confianza de familias en toda Costa Rica.",
       subtitle: "Experiencias reales de pacientes satisfechos",
       cta: "Ver más experiencias en Google",
-      ctaButton: "Agenda tu cita",
+      ctaPreText: "Descubre por qué los pacientes confían en la Dra. Marcela.",
+      ctaButton: "Lee Historias de Pacientes",
+      ctaMicrocopy:
+        "Experiencias reales de pacientes que depositaron su confianza en nuestro cuidado.",
       translatedNote: "(Traducido del inglés)",
       bannerTitle: "5/5 en Google Reviews",
       bannerDescription:
@@ -211,11 +230,13 @@ export const content = {
 
     // CTA
     cta: {
-      title: "Tu sonrisa más saludable comienza hoy.",
+      title: "Las sonrisas excepcionales comienzan con una conversación.",
       description:
-        "Envía un mensaje y encontraremos un horario que funcione para ti — sin salas de espera, sin presión.",
-      primaryCta: "WhatsApp",
-      secondaryCta: "Llamar ahora",
+        "Experimenta una odontología que combina experiencia clínica avanzada con un cuidado genuino y personalizado. Ya sea que vivas en Costa Rica o vengas del extranjero, te ayudaremos a tomar decisiones informadas con confianza.",
+      primaryCta: "Solicita Tu Consulta Personalizada",
+      secondaryCta: "Planifica Tu Visita Dental",
+      microcopy:
+        "Cuidado holístico • Tratamiento personalizado • Pacientes internacionales bienvenidos",
     },
 
     // FAQ
@@ -224,7 +245,7 @@ export const content = {
       title: "Respuestas antes de tu primera visita.",
       subtitle:
         "¿Aún tienes dudas? Un mensaje corto de WhatsApp es todo lo que necesitas.",
-      cta: "Enviar mensaje",
+      cta: "Escríbele al Equipo",
       items: [
         {
           question:
@@ -264,6 +285,9 @@ export const content = {
     contact: {
       title: "Contacto",
       subtitle: "Estamos aquí para ayudarte",
+      introTitle: "Tu sonrisa merece un cuidado personalizado.",
+      introText:
+        "Cada paciente es único. Por eso cada tratamiento comienza entendiendo tus metas, tus preocupaciones y tu salud general antes de recomendar la mejor solución.",
       callNow: "Llamar ahora",
       sendMessage: "Enviar mensaje",
       form: {
@@ -282,7 +306,9 @@ export const content = {
         messageRequired: "El mensaje debe tener al menos 10 caracteres",
         consent: "Acepto ser contactado para dar seguimiento a mi solicitud",
         consentRequired: "Debes aceptar ser contactado",
-        submit: "Solicitar una cita",
+        submit: "Agenda Tu Consulta Personalizada",
+        submitMicrocopy:
+          "Descubre tus opciones de tratamiento con orientación diseñada específicamente para ti.",
         submitting: "Enviando...",
         success:
           "¡Gracias! Tu solicitud ha sido enviada. Te contactaremos pronto.",
@@ -304,7 +330,7 @@ export const content = {
         "Atención dental integral y de emergencias en Costa Rica, guiada por una filosofía holística. Porque cada paciente es una persona, nunca solo un caso.",
       contact: "Contacto",
       callNow: "Llamar ahora",
-      bookNow: "Agenda ya",
+      bookNow: "Escríbele al Equipo",
       hours: "Horarios",
       emergencies: "Emergencias · Mismo día",
       copyright: "Todos los derechos reservados.",
@@ -314,7 +340,8 @@ export const content = {
 
     // WhatsApp flotante
     whatsapp: {
-      tooltip: "¿Necesitas ayuda? Escríbenos",
+      tooltip: "Escríbele al equipo de la Dra. Marcela",
+      tooltipMicrocopy: "Estamos aquí para responder tus preguntas.",
       ariaLabel: "Contactar por WhatsApp",
     },
 
@@ -335,7 +362,7 @@ export const content = {
 
     // Header
     header: {
-      cta: "Book an appointment",
+      cta: "Chat with Dr. Marcela's Team",
       tagline: "Comprehensive Dentistry · Costa Rica",
       nav: {
         treatments: "Treatments",
@@ -353,16 +380,20 @@ export const content = {
       titleHighlight: "trust.",
       subtitle:
         "You deserve comprehensive dental care from a professional who understands oral health as part of your overall wellbeing — unhurried consultations and personalized treatment plans.",
-      primaryCta: "Book appointment",
-      secondaryCta: "WhatsApp",
+      ctaPreText: "Ready to take the first step toward a healthier smile?",
+      primaryCta: "Request Your Personalized Consultation",
+      primaryCtaMicrocopy:
+        "Personalized recommendations based on your needs, goals and oral health.",
+      secondaryCta: "Chat with Dr. Marcela's Team",
+      secondaryCtaMicrocopy: "We're here to answer your questions.",
       trustBadge1: "5/5 on Google Reviews",
       trustBadge2: "Same-day emergencies",
       yearsLabel: "years caring for smiles",
     },
 
-    // Trust section
+    // Trust section (Holistic Dentistry)
     trust: {
-      badge: "Why choose us",
+      badge: "Holistic Dentistry",
       title: "Comprehensive care that considers your complete wellbeing.",
       subtitle:
         "Oral health is deeply connected to sleep, nutrition, posture, and stress. That's why every plan here begins with the full picture — and then focuses on what you truly need.",
@@ -390,7 +421,10 @@ export const content = {
       ],
       imageAlt1: "Dr. Marcela Contreras",
       imageAlt2: "Dental office",
-      cta: "Book your appointment",
+      ctaPreText: "Looking for care that goes beyond your teeth?",
+      cta: "Discover Our Holistic Approach",
+      ctaMicrocopy:
+        "Because exceptional dentistry begins by caring for the whole person.",
     },
 
     // Services
@@ -432,7 +466,9 @@ export const content = {
             "Fillings, inlays, and crowns using modern biocompatible materials and precision techniques.",
         },
       ],
-      cta: "Inquire about treatment",
+      ctaPreText: "Not sure which treatment is right for you?",
+      cta: "Explore Your Treatment Options",
+      ctaMicrocopy: "Every treatment plan is tailored specifically to you.",
     },
 
     // About the doctor
@@ -449,7 +485,10 @@ export const content = {
         "I don't just focus on your smile; I focus on your wellbeing as a person.",
       quoteAttribution: "— Dr. Marcela Contreras, on her practice philosophy",
       imageAlt: "Dr. Marcela Contreras explaining dental treatment",
-      cta: "Book your appointment",
+      ctaPreText: "Meet the dentist behind every confident smile.",
+      cta: "Meet Dr. Marcela",
+      ctaMicrocopy:
+        "Experience compassionate, personalized dentistry focused on long-term health.",
     },
 
     // Emergencies
@@ -458,7 +497,9 @@ export const content = {
       title: "When something goes wrong, experience matters most.",
       description:
         "Dr. Contreras has dedicated years of training focused on dental trauma and urgent care. Emergencies are handled with priority, calm decision-making, and techniques that protect the long-term life of your teeth.",
-      cta: "Contact now",
+      ctaPreText: "Need professional dental care today?",
+      cta: "Get Professional Guidance",
+      ctaMicrocopy: "Receive expert care when you need it most.",
       imageAlt: "Modern dental office",
       items: [
         "Severe or sudden dental pain",
@@ -476,7 +517,10 @@ export const content = {
       title: "Trust from families across Costa Rica.",
       subtitle: "Real experiences from satisfied patients",
       cta: "See more reviews on Google",
-      ctaButton: "Book your appointment",
+      ctaPreText: "See why patients trust Dr. Marcela.",
+      ctaButton: "Read Patient Stories",
+      ctaMicrocopy:
+        "Real experiences from patients who placed their confidence in our care.",
       translatedNote: "(Translated from Spanish)",
       bannerTitle: "5/5 on Google Reviews",
       bannerDescription:
@@ -530,13 +574,15 @@ export const content = {
       ],
     },
 
-    // CTA
+    // CTA (Final section - Premium)
     cta: {
-      title: "Your healthiest smile starts today.",
+      title: "Exceptional smiles begin with a conversation.",
       description:
-        "Send a message and we'll find a time that works for you — no waiting rooms, no pressure.",
-      primaryCta: "WhatsApp",
-      secondaryCta: "Call now",
+        "Experience dentistry that combines advanced clinical expertise with genuine, personalized care. Whether you live in Costa Rica or are traveling from abroad, we'll help you make informed decisions with confidence.",
+      primaryCta: "Request Your Personalized Consultation",
+      secondaryCta: "Plan Your Dental Visit",
+      microcopy:
+        "Holistic care • Personalized treatment • International patients welcome",
     },
 
     // FAQ
@@ -545,7 +591,7 @@ export const content = {
       title: "Answers before your first visit.",
       subtitle:
         "Still have questions? A short WhatsApp message is all you need.",
-      cta: "Send message",
+      cta: "Chat with Dr. Marcela's Team",
       items: [
         {
           question: "How quickly can I be seen for a dental emergency?",
@@ -584,6 +630,9 @@ export const content = {
     contact: {
       title: "Contact",
       subtitle: "We're here to help",
+      introTitle: "Your smile deserves personalized care.",
+      introText:
+        "Every patient is unique. That is why every treatment begins with understanding your goals, your concerns and your overall health before recommending the best solution.",
       callNow: "Call Now",
       sendMessage: "Send Message",
       form: {
@@ -602,7 +651,9 @@ export const content = {
         messageRequired: "Message must be at least 10 characters",
         consent: "I agree to be contacted for follow-up on my request",
         consentRequired: "You must agree to be contacted",
-        submit: "Request an appointment",
+        submit: "Schedule Your Personalized Consultation",
+        submitMicrocopy:
+          "Discover your treatment options with guidance tailored specifically to you.",
         submitting: "Sending...",
         success:
           "Thank you! Your request has been sent. We'll contact you soon.",
@@ -623,7 +674,7 @@ export const content = {
         "Expert integrative and emergency dental care in Costa Rica, guided by a holistic philosophy. Because every patient is a person, never just a case.",
       contact: "Contact",
       callNow: "Call Now",
-      bookNow: "Book Now",
+      bookNow: "Chat with Dr. Marcela's Team",
       hours: "Hours",
       emergencies: "Emergencies · Same day",
       copyright: "All rights reserved.",
@@ -633,8 +684,9 @@ export const content = {
 
     // WhatsApp floating
     whatsapp: {
-      tooltip: "Need help? Write to us",
-      ariaLabel: "Contact via WhatsApp",
+      tooltip: "Chat with Dr. Marcela's Team",
+      tooltipMicrocopy: "We're here to answer your questions.",
+      ariaLabel: "Chat with Dr. Marcela's Team",
     },
 
     // Accessibility

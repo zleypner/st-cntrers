@@ -120,6 +120,9 @@ export function Trust() {
               easing="smooth"
             >
               <div className="mt-8">
+                <p className="mb-4 text-sm font-medium text-[#1E3A5F]/80 sm:text-base">
+                  {t("trust.ctaPreText")}
+                </p>
                 <a
                   href={siteConfig.contact.whatsappLink}
                   target="_blank"
@@ -130,6 +133,9 @@ export function Trust() {
                     {t("trust.cta")}
                   </Button>
                 </a>
+                <p className="mt-3 text-xs text-[#1E3A5F]/60">
+                  {t("trust.ctaMicrocopy")}
+                </p>
               </div>
             </AnimateOnScroll>
           </div>

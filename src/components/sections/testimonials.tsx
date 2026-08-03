@@ -126,6 +126,9 @@ export function Testimonials() {
           easing="smooth"
         >
           <div className="mt-12 text-center">
+            <p className="mb-4 text-sm font-medium text-[#1E3A5F]/80 sm:text-base">
+              {t("testimonials.ctaPreText")}
+            </p>
             <a
               href={siteConfig.contact.whatsappLink}
               target="_blank"
@@ -136,6 +139,9 @@ export function Testimonials() {
                 {t("testimonials.ctaButton")}
               </Button>
             </a>
+            <p className="mt-3 text-xs text-[#1E3A5F]/60">
+              {t("testimonials.ctaMicrocopy")}
+            </p>
           </div>
         </AnimateOnScroll>
       </Container>

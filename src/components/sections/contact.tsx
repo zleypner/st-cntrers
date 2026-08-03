@@ -82,6 +82,16 @@ export function Contact() {
           />
         </AnimateOnScroll>
 
+        {/* Pre-contact intro block */}
+        <AnimateOnScroll animation="fade-up" delay={50}>
+          <div className="mx-auto mb-12 max-w-2xl rounded-2xl border border-[#38BDF8]/20 bg-white p-6 text-center shadow-sm sm:p-8">
+            <h3 className="mb-3 text-xl font-semibold text-[#1E3A5F] sm:text-2xl">
+              {t("contact.introTitle")}
+            </h3>
+            <p className="text-[#1E3A5F]/70">{t("contact.introText")}</p>
+          </div>
+        </AnimateOnScroll>
+
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Formulario */}
           <AnimateOnScroll animation="fade-up" delay={100}>
@@ -248,24 +258,29 @@ export function Contact() {
                 )}
 
                 {/* Botón de envío */}
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full gap-2 bg-[#38BDF8] text-white hover:bg-[#0EA5E9]"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <span className="animate-spin">⏳</span>
-                      {t("contact.form.submitting")}
-                    </>
-                  ) : (
-                    <>
-                      <Icons.calendar className="h-5 w-5" />
-                      {t("contact.form.submit")}
-                    </>
-                  )}
-                </Button>
+                <div>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full gap-2 bg-[#38BDF8] text-white hover:bg-[#0EA5E9]"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <span className="animate-spin">⏳</span>
+                        {t("contact.form.submitting")}
+                      </>
+                    ) : (
+                      <>
+                        <Icons.calendar className="h-5 w-5" />
+                        {t("contact.form.submit")}
+                      </>
+                    )}
+                  </Button>
+                  <p className="mt-3 text-center text-xs text-[#1E3A5F]/60">
+                    {t("contact.form.submitMicrocopy")}
+                  </p>
+                </div>
 
                 {/* Mensajes de estado */}
                 {submitStatus === "success" && (

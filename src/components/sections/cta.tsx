@@ -77,6 +77,7 @@ export function CTA() {
                 </Button>
               </a>
             </div>
+            <p className="mt-6 text-sm text-white/70">{t("cta.microcopy")}</p>
           </AnimateOnScroll>
         </div>
       </Container>
