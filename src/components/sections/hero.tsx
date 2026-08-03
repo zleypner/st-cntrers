@@ -19,7 +19,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative flex h-screen items-center overflow-hidden bg-gradient-to-br from-white via-[#F5F5F5] to-[#EFEFEF] pt-20"
+      className="relative flex min-h-screen items-center overflow-hidden bg-gradient-to-br from-white via-[#F5F5F5] to-[#EFEFEF] pt-24 pb-12 md:pt-20 md:pb-0"
     >
       {/* Background decorations with floating animation */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -34,8 +34,8 @@ export function Hero() {
         </Floating>
       </div>
 
-      <Container className="relative z-10 py-12 md:py-20">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <Container className="relative z-10 py-8 sm:py-12 md:py-16 lg:py-20">
+        <div className="grid items-center gap-8 sm:gap-10 md:gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Content */}
           <div className="text-center lg:text-left">
             <AnimateOnScroll
@@ -153,14 +153,14 @@ export function Hero() {
             duration={800}
             easing="spring"
           >
-            <div className="relative">
+            <div className="relative mx-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-none">
               {/* Main image */}
-              <div className="hover:shadow-3xl relative aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl transition-shadow duration-500">
+              <div className="hover:shadow-3xl relative aspect-[3/4] overflow-hidden rounded-2xl shadow-xl transition-shadow duration-500 sm:aspect-[4/5] sm:rounded-3xl sm:shadow-2xl">
                 <Image
                   src="/assets/dentist/drax4.webp"
                   alt="Dra. Marcela Contreras explicando tratamiento dental"
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 640px) 90vw, (max-width: 768px) 70vw, 50vw"
                   className="object-cover"
                   priority={false}
                 />
@@ -173,11 +173,11 @@ export function Hero() {
                 duration={600}
                 easing="bounce"
               >
-                <div className="absolute -bottom-4 left-4 rounded-2xl bg-[#1E3A5F] px-6 py-4 text-white shadow-xl transition-transform duration-300 hover:scale-105 md:bottom-8 md:left-8">
-                  <p className="text-3xl font-bold">
+                <div className="absolute -bottom-3 left-2 rounded-xl bg-[#1E3A5F] px-4 py-3 text-white shadow-lg transition-transform duration-300 hover:scale-105 sm:-bottom-4 sm:left-4 sm:rounded-2xl sm:px-6 sm:py-4 sm:shadow-xl md:bottom-8 md:left-8">
+                  <p className="text-2xl font-bold sm:text-3xl">
                     <Counter end={20} duration={2000} delay={1000} suffix="+" />
                   </p>
-                  <p className="text-xs tracking-wider text-white/70 uppercase">
+                  <p className="text-[10px] tracking-wider text-white/70 uppercase sm:text-xs">
                     {t("hero.yearsLabel")}
                   </p>
                 </div>
@@ -185,8 +185,8 @@ export function Hero() {
 
               {/* Floating decorative element */}
               <Floating amplitude={8} duration={4} delay={0.5}>
-                <div className="absolute -top-4 -right-4 flex hidden h-20 w-20 rotate-12 items-center justify-center rounded-2xl bg-[#38BDF8] text-white shadow-lg md:top-8 md:right-8 md:flex">
-                  <Icons.tooth className="h-10 w-10" />
+                <div className="absolute -top-2 -right-2 hidden h-14 w-14 rotate-12 items-center justify-center rounded-xl bg-[#38BDF8] text-white shadow-lg sm:-top-4 sm:-right-4 sm:flex sm:h-16 sm:w-16 md:top-8 md:right-8 md:h-20 md:w-20 md:rounded-2xl">
+                  <Icons.tooth className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10" />
                 </div>
               </Floating>
             </div>
