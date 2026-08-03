@@ -1,6 +1,7 @@
 /**
  * Contenido centralizado para la landing page
  * Soporte para internacionalización (i18n) - Español e Inglés
+ * Updated: Force rebuild - all WhatsApp CTAs should say "Let's Chat"
  */
 
 export const content = {
