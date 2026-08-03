@@ -1,21 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useSyncExternalStore } from "react";
 
 export function useScrollHeader(threshold = 50) {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const subscribe = useCallback((callback: () => void) => {
+    window.addEventListener("scroll", callback, { passive: true });
+    return () => window.removeEventListener("scroll", callback);
+  }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > threshold);
-    };
-
-    // Verificar estado inicial
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+  const getSnapshot = useCallback(() => {
+    return window.scrollY > threshold;
   }, [threshold]);
 
-  return isScrolled;
+  const getServerSnapshot = useCallback(() => {
+    return false;
+  }, []);
+
+  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }

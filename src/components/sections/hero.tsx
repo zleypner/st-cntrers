@@ -115,28 +115,6 @@ export function Hero() {
                       {t("hero.primaryCtaMicrocopy")}
                     </ButtonMicrocopy>
                   </div>
-
-                  {/* Secondary CTA */}
-                  <div className="w-full max-w-xs lg:w-auto lg:max-w-none">
-                    <a
-                      href={siteConfig.contact.whatsappLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block"
-                    >
-                      <Button
-                        variant="whatsapp"
-                        size="full"
-                        className="lg:w-auto"
-                      >
-                        <Icons.whatsapp />
-                        {t("hero.secondaryCta")}
-                      </Button>
-                    </a>
-                    <ButtonMicrocopy align="center" className="lg:text-left">
-                      {t("hero.secondaryCtaMicrocopy")}
-                    </ButtonMicrocopy>
-                  </div>
                 </div>
               </ButtonGroup>
             </AnimateOnScroll>
@@ -186,7 +164,7 @@ export function Hero() {
                   fill
                   sizes="(max-width: 640px) 90vw, (max-width: 768px) 70vw, 50vw"
                   className="object-cover"
-                  priority={false}
+                  priority
                 />
               </div>
 

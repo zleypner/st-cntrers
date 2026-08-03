@@ -173,18 +173,20 @@ export function Header() {
 
             <hr className="my-4 w-full border-[#E5E7EB]" />
 
-            <a
-              href={siteConfig.contact.whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleNavClick}
-              className="w-full max-w-xs px-4"
-            >
-              <Button variant="whatsapp" size="full">
-                <Icons.whatsapp />
-                {t("header.cta")}
-              </Button>
-            </a>
+            <div className="flex w-full justify-center px-4">
+              <a
+                href={siteConfig.contact.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleNavClick}
+                className="w-full max-w-xs"
+              >
+                <Button variant="whatsapp" size="full">
+                  <Icons.whatsapp />
+                  {t("header.cta")}
+                </Button>
+              </a>
+            </div>
           </nav>
         </div>
       </header>
