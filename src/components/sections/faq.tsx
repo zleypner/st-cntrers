@@ -38,13 +38,15 @@ export function FAQ() {
               duration={600}
               easing="smooth"
             >
-              <p className="mb-4 text-sm font-medium tracking-wider text-[#38BDF8] uppercase">
+              <p className="mb-4 text-center text-sm font-medium tracking-wider text-[#38BDF8] uppercase lg:text-left">
                 {t("faq.badge")}
               </p>
-              <h2 className="mb-6 text-3xl font-bold text-[#1E3A5F] sm:text-4xl">
+              <h2 className="mb-6 text-center text-3xl font-bold text-[#1E3A5F] sm:text-4xl lg:text-left">
                 {t("faq.title")}
               </h2>
-              <p className="mb-6 text-[#1E3A5F]/70">{t("faq.subtitle")}</p>
+              <p className="mb-6 text-center text-[#1E3A5F]/70 lg:text-left">
+                {t("faq.subtitle")}
+              </p>
             </AnimateOnScroll>
 
             <AnimateOnScroll
@@ -54,7 +56,7 @@ export function FAQ() {
               duration={500}
               easing="smooth"
             >
-              <ButtonGroup>
+              <ButtonGroup className="flex justify-center lg:justify-start">
                 <a
                   href={siteConfig.contact.whatsappLink}
                   target="_blank"
