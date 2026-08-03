@@ -62,6 +62,7 @@ export const content = {
             "Una experiencia tranquila, respetuosa y comprensible durante cada etapa del tratamiento.",
         },
       ],
+      cta: "Agenda tu cita",
     },
 
     // Servicios
@@ -113,6 +114,7 @@ export const content = {
       title: "Sonrisas que cuentan nuestra historia",
       subtitle: "Experiencias reales de pacientes satisfechos",
       cta: "Ver más experiencias en Google",
+      ctaButton: "Agenda tu cita",
       translatedNote: "(Traducido del inglés)",
     },
 
@@ -302,6 +304,7 @@ export const content = {
             "A calm, respectful, and understandable experience throughout each stage of treatment.",
         },
       ],
+      cta: "Book your appointment",
     },
 
     // Services
@@ -352,6 +355,7 @@ export const content = {
       title: "Smiles that tell our story",
       subtitle: "Real experiences from satisfied patients",
       cta: "See more reviews on Google",
+      ctaButton: "Book your appointment",
       translatedNote: "(Translated from Spanish)",
     },
 
