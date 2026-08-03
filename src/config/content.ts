@@ -25,7 +25,7 @@ export const content = {
 
     // Hero
     hero: {
-      badge: "Integral · Holística · Personal",
+      badge: "Cuidado Excepcional. Sonrisas Extraordinarias.",
       title: "Una sonrisa comienza con",
       titleHighlight: "confianza.",
       subtitle:
@@ -267,7 +267,7 @@ export const content = {
 
     // Hero
     hero: {
-      badge: "Holistic · Integrative · Personal",
+      badge: "Exceptional Care. Extraordinary Smiles.",
       title: "A smile begins with",
       titleHighlight: "trust.",
       subtitle:
