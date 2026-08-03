@@ -127,7 +127,7 @@ export function Footer() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Ubicación de la clínica"
+                  title={t("footer.mapTitle")}
                 />
               </div>
               {/* Navigation buttons */}

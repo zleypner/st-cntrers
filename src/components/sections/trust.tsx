@@ -13,35 +13,14 @@ import {
 } from "@/components/ui";
 import { HeartHandshake, ScanLine, Clock, UserCheck } from "lucide-react";
 
-const features = [
-  {
-    icon: HeartHandshake,
-    title: "Tratada como persona",
-    description:
-      "Las consultas comienzan escuchando. Tu historia, miedos y metas dan forma al plan.",
-  },
-  {
-    icon: ScanLine,
-    title: "Diagnósticos modernos",
-    description:
-      "Escaneo digital e imágenes hacen cada diagnóstico visible, explicable y preciso.",
-  },
-  {
-    icon: Clock,
-    title: "Tiempo, sin apuros",
-    description:
-      "Las citas se programan generosamente para que ningún procedimiento sea apresurado.",
-  },
-  {
-    icon: UserCheck,
-    title: "Una doctora, de inicio a fin",
-    description:
-      "La misma profesional sigue tu caso en cada etapa del tratamiento.",
-  },
-];
+const featureIcons = [HeartHandshake, ScanLine, Clock, UserCheck];
 
 export function Trust() {
   const { t } = useTranslation();
+  const features = t("trust.features", { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
 
   return (
     <Section id="por-que" className="overflow-hidden bg-white">
@@ -59,7 +38,7 @@ export function Trust() {
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg transition-shadow duration-500 hover:shadow-xl">
                 <Image
                   src="/assets/dentist/drax7.webp"
-                  alt="Dra. Marcela Contreras"
+                  alt={t("trust.imageAlt1")}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
@@ -71,7 +50,7 @@ export function Trust() {
                 <div className="absolute -right-8 -bottom-8 hidden h-48 w-48 overflow-hidden rounded-2xl border-4 border-white shadow-xl transition-transform duration-300 hover:scale-105 md:block">
                   <Image
                     src="/assets/dentist/drax8.webp"
-                    alt="Consultorio dental"
+                    alt={t("trust.imageAlt2")}
                     fill
                     sizes="192px"
                     className="object-cover"
@@ -90,26 +69,23 @@ export function Trust() {
               easing="smooth"
             >
               <p className="mb-4 text-sm font-medium tracking-wider text-[#38BDF8] uppercase">
-                Por qué elegirnos
+                {t("trust.badge")}
               </p>
               <h2 className="mb-6 text-3xl font-bold text-[#1E3A5F] sm:text-4xl">
-                Cuidado integral que considera tu bienestar completo.
+                {t("trust.title")}
               </h2>
               <p className="mb-10 text-lg text-[#1E3A5F]/70">
-                La salud oral está profundamente conectada con el sueño, la
-                nutrición, la postura y el estrés. Por eso cada plan aquí
-                comienza con el panorama completo — y luego se enfoca en lo que
-                realmente necesitas.
+                {t("trust.subtitle")}
               </p>
             </AnimateOnScroll>
 
             {/* Features grid */}
             <div className="grid gap-6 sm:grid-cols-2">
               {features.map((feature, index) => {
-                const Icon = feature.icon;
+                const Icon = featureIcons[index];
                 return (
                   <AnimateOnScroll
-                    key={feature.title}
+                    key={index}
                     animation="scale-up"
                     mobileAnimation="fade-in"
                     staggerIndex={index}

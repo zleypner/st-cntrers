@@ -158,7 +158,7 @@ export function Hero() {
               <div className="hover:shadow-3xl relative aspect-[3/4] overflow-hidden rounded-2xl shadow-xl transition-shadow duration-500 sm:aspect-[4/5] sm:rounded-3xl sm:shadow-2xl">
                 <Image
                   src="/assets/dentist/drax4.webp"
-                  alt="Dra. Marcela Contreras explicando tratamiento dental"
+                  alt={t("about.imageAlt")}
                   fill
                   sizes="(max-width: 640px) 90vw, (max-width: 768px) 70vw, 50vw"
                   className="object-cover"

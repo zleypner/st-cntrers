@@ -18,53 +18,15 @@ import {
   Activity,
 } from "lucide-react";
 
-const services = [
-  {
-    icon: Stethoscope,
-    title: "Odontología General",
-    description:
-      "Diagnóstico completo, chequeos sin prisa y planes de tratamiento construidos alrededor de tu salud integral.",
-    featured: false,
-  },
-  {
-    icon: Gem,
-    title: "Odontología Estética",
-    description:
-      "Blanqueamiento, carillas y restauraciones estéticas diseñadas para verse naturales, nunca artificiales.",
-    featured: true,
-  },
-  {
-    icon: Siren,
-    title: "Emergencias Dentales",
-    description:
-      "Dolor agudo, fracturas e infecciones atendidas con prioridad y disponibilidad el mismo día.",
-    featured: false,
-  },
-  {
-    icon: AlertCircle,
-    title: "Trauma Dental",
-    description:
-      "Manejo avanzado de dientes lesionados, desplazados o avulsionados con preservación a largo plazo en mente.",
-    featured: false,
-  },
-  {
-    icon: Sparkles,
-    title: "Limpieza y Periodoncia",
-    description:
-      "Higiene profesional profunda y programas de salud de encías que protegen todo tu cuerpo.",
-    featured: false,
-  },
-  {
-    icon: Activity,
-    title: "Restauraciones",
-    description:
-      "Rellenos, inlays y coronas usando materiales biocompatibles modernos y técnicas de precisión.",
-    featured: false,
-  },
-];
+const serviceIcons = [Stethoscope, Gem, Siren, AlertCircle, Sparkles, Activity];
+const featuredIndex = 1; // Cosmetic Dentistry is featured
 
 export function Services() {
   const { t } = useTranslation();
+  const services = t("services.items", { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
 
   return (
     <Section
@@ -74,17 +36,17 @@ export function Services() {
       <Container>
         <AnimateOnScroll animation="blur-in" easing="smooth" duration={600}>
           <p className="mb-12 max-w-3xl text-lg text-[#1E3A5F]/70">
-            Desde visitas preventivas hasta trauma complejo, cada tratamiento es
-            planificado personalmente por la Dra. Contreras.
+            {t("services.intro")}
           </p>
         </AnimateOnScroll>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
-            const Icon = service.icon;
+            const Icon = serviceIcons[index];
+            const isFeatured = index === featuredIndex;
             return (
               <AnimateOnScroll
-                key={service.title}
+                key={index}
                 animation="scale-up"
                 mobileAnimation="fade-up"
                 staggerIndex={index}
@@ -95,7 +57,7 @@ export function Services() {
               >
                 <div
                   className={`group relative h-full cursor-pointer rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl active:scale-[0.98] ${
-                    service.featured
+                    isFeatured
                       ? "border-[#38BDF8] bg-white shadow-md"
                       : "border-[#E5E7EB] bg-white hover:border-[#38BDF8]/50"
                   }`}
@@ -103,7 +65,7 @@ export function Services() {
                   {/* Icon */}
                   <div
                     className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl transition-colors ${
-                      service.featured
+                      isFeatured
                         ? "bg-[#38BDF8] text-white"
                         : "bg-[#38BDF8]/10 text-[#38BDF8] group-hover:bg-[#38BDF8] group-hover:text-white"
                     }`}

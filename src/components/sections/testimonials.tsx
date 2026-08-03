@@ -7,31 +7,19 @@ import {
   Container,
   Icons,
   AnimateOnScroll,
-  Counter,
   Floating,
   Button,
 } from "@/components/ui";
 
-const testimonials = [
-  {
-    text: "Llegué a las 9pm con un diente roto después de un accidente. Me atendió esa misma noche, me calmó y salvó el diente. No iré a ningún otro lado.",
-    name: "Andrés M.",
-    role: "Paciente de emergencia · San José",
-  },
-  {
-    text: "La primera dentista que me explicó todo en una pantalla, sin presión y sin venderme tratamientos que no necesitaba. Absolutamente profesional.",
-    name: "Laura V.",
-    role: "Cuidado integral",
-  },
-  {
-    text: "Mis hijos están relajados aquí, lo cual dice todo. La clínica es impecable y la atención al detalle está en otro nivel.",
-    name: "Carolina S.",
-    role: "Paciente familiar",
-  },
-];
-
 export function Testimonials() {
   const { t } = useTranslation();
+  const testimonials = t("testimonials.items", {
+    returnObjects: true,
+  }) as Array<{
+    text: string;
+    name: string;
+    role: string;
+  }>;
 
   return (
     <Section id="testimonios" className="overflow-hidden bg-white">
@@ -43,10 +31,10 @@ export function Testimonials() {
           easing="smooth"
         >
           <p className="mb-4 text-sm font-medium tracking-wider text-[#38BDF8] uppercase">
-            Historias de Pacientes
+            {t("testimonials.badge")}
           </p>
           <h2 className="mb-12 max-w-lg text-3xl font-bold text-[#1E3A5F] sm:text-4xl">
-            Confianza de familias en toda Costa Rica.
+            {t("testimonials.title")}
           </h2>
         </AnimateOnScroll>
 
@@ -107,13 +95,10 @@ export function Testimonials() {
             <div className="relative grid items-center gap-8 md:grid-cols-2">
               <div>
                 <h3 className="mb-2 text-3xl font-bold text-[#1E3A5F] sm:text-4xl">
-                  <Counter end={4} duration={1500} suffix="." />
-                  <Counter end={9} duration={1500} delay={200} /> / 5 en Google
-                  Reviews
+                  {t("testimonials.bannerTitle")}
                 </h3>
                 <p className="text-[#1E3A5F]/70">
-                  Cientos de pacientes describen la misma experiencia: escucha
-                  atenta, explicaciones transparentes y resultados que duran.
+                  {t("testimonials.bannerDescription")}
                 </p>
               </div>
               <div className="hidden justify-end md:flex">

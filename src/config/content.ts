@@ -39,29 +39,34 @@ export const content = {
 
     // Sección de confianza
     trust: {
-      title: "¿Por qué elegirnos?",
-      items: [
+      badge: "Por qué elegirnos",
+      title: "Cuidado integral que considera tu bienestar completo.",
+      subtitle:
+        "La salud oral está profundamente conectada con el sueño, la nutrición, la postura y el estrés. Por eso cada plan aquí comienza con el panorama completo — y luego se enfoca en lo que realmente necesitas.",
+      features: [
         {
-          title: "Atención verdaderamente personalizada",
+          title: "Tratada como persona",
           description:
-            "Cada paciente recibe un tratamiento adaptado a sus necesidades, preocupaciones y objetivos.",
+            "Las consultas comienzan escuchando. Tu historia, miedos y metas dan forma al plan.",
         },
         {
-          title: "Experiencia y dedicación",
+          title: "Diagnósticos modernos",
           description:
-            "Un enfoque cuidadoso que combina conocimiento clínico, precisión y atención a los detalles.",
+            "Escaneo digital e imágenes hacen cada diagnóstico visible, explicable y preciso.",
         },
         {
-          title: "Resultados que devuelven confianza",
+          title: "Tiempo, sin apuros",
           description:
-            "El objetivo no es solamente tratar los dientes, sino ayudar a cada paciente a sentirse seguro con su sonrisa.",
+            "Las citas se programan generosamente para que ningún procedimiento sea apresurado.",
         },
         {
-          title: "Trato humano y cercano",
+          title: "Una doctora, de inicio a fin",
           description:
-            "Una experiencia tranquila, respetuosa y comprensible durante cada etapa del tratamiento.",
+            "La misma profesional sigue tu caso en cada etapa del tratamiento.",
         },
       ],
+      imageAlt1: "Dra. Marcela Contreras",
+      imageAlt2: "Consultorio dental",
       cta: "Agenda tu cita",
     },
 
@@ -70,6 +75,40 @@ export const content = {
       title: "Nuestros Servicios",
       subtitle:
         "Tratamientos dentales con atención personalizada y profesionalismo",
+      intro:
+        "Desde visitas preventivas hasta trauma complejo, cada tratamiento es planificado personalmente por la Dra. Contreras.",
+      items: [
+        {
+          title: "Odontología General",
+          description:
+            "Diagnóstico completo, chequeos sin prisa y planes de tratamiento construidos alrededor de tu salud integral.",
+        },
+        {
+          title: "Odontología Estética",
+          description:
+            "Blanqueamiento, carillas y restauraciones estéticas diseñadas para verse naturales, nunca artificiales.",
+        },
+        {
+          title: "Emergencias Dentales",
+          description:
+            "Dolor agudo, fracturas e infecciones atendidas con prioridad y disponibilidad el mismo día.",
+        },
+        {
+          title: "Trauma Dental",
+          description:
+            "Manejo avanzado de dientes lesionados, desplazados o avulsionados con preservación a largo plazo en mente.",
+        },
+        {
+          title: "Limpieza y Periodoncia",
+          description:
+            "Higiene profesional profunda y programas de salud de encías que protegen todo tu cuerpo.",
+        },
+        {
+          title: "Restauraciones",
+          description:
+            "Rellenos, inlays y coronas usando materiales biocompatibles modernos y técnicas de precisión.",
+        },
+      ],
       cta: "Consultar tratamiento",
     },
 
@@ -111,11 +150,32 @@ export const content = {
 
     // Testimonios
     testimonials: {
-      title: "Sonrisas que cuentan nuestra historia",
+      badge: "Historias de Pacientes",
+      title: "Confianza de familias en toda Costa Rica.",
       subtitle: "Experiencias reales de pacientes satisfechos",
       cta: "Ver más experiencias en Google",
       ctaButton: "Agenda tu cita",
       translatedNote: "(Traducido del inglés)",
+      bannerTitle: "5/5 en Google Reviews",
+      bannerDescription:
+        "Cientos de pacientes describen la misma experiencia: escucha atenta, explicaciones transparentes y resultados que duran.",
+      items: [
+        {
+          text: "Llegué a las 9pm con un diente roto después de un accidente. Me atendió esa misma noche, me calmó y salvó el diente. No iré a ningún otro lado.",
+          name: "Andrés M.",
+          role: "Paciente de emergencia · San José",
+        },
+        {
+          text: "La primera dentista que me explicó todo en una pantalla, sin presión y sin venderme tratamientos que no necesitaba. Absolutamente profesional.",
+          name: "Laura V.",
+          role: "Cuidado integral",
+        },
+        {
+          text: "Mis hijos están relajados aquí, lo cual dice todo. La clínica es impecable y la atención al detalle está en otro nivel.",
+          name: "Carolina S.",
+          role: "Paciente familiar",
+        },
+      ],
     },
 
     // Proceso
@@ -159,32 +219,42 @@ export const content = {
 
     // FAQ
     faq: {
-      title: "Preguntas Frecuentes",
+      badge: "FAQ",
+      title: "Respuestas antes de tu primera visita.",
+      subtitle:
+        "¿Aún tienes dudas? Un mensaje corto de WhatsApp es todo lo que necesitas.",
+      cta: "Enviar mensaje",
       items: [
         {
-          question: "¿Cómo puedo agendar una cita?",
+          question:
+            "¿Qué tan rápido puedo ser atendido por una emergencia dental?",
           answer:
-            "Puedes agendar tu cita contactándonos por WhatsApp, llamada telefónica o completando el formulario de contacto en esta página. Te responderemos a la brevedad para confirmar tu cita.",
+            "Las emergencias dentales se atienden el mismo día siempre que sea posible. Si tienes dolor severo, trauma o una infección, contáctanos inmediatamente por WhatsApp y te daremos prioridad.",
         },
         {
-          question: "¿Qué tratamientos ofrece la clínica?",
+          question: "¿Qué incluye la primera consulta?",
           answer:
-            "Ofrecemos una amplia gama de tratamientos dentales, incluyendo limpiezas profesionales, tratamiento de caries, restauraciones dentales, puentes y cuidado general de la salud oral. Cada tratamiento se personaliza según las necesidades del paciente.",
+            "La primera consulta incluye una evaluación completa de tu salud oral, radiografías digitales si son necesarias, y un plan de tratamiento personalizado. También es un espacio para que compartas tus preocupaciones y objetivos.",
         },
         {
-          question: "¿Cómo sé cuál tratamiento necesito?",
+          question: "¿Qué significa realmente un enfoque holístico?",
           answer:
-            "Durante la primera consulta, la Dra. Marcela Contreras realizará una evaluación completa de tu salud dental y te explicará las opciones de tratamiento disponibles de manera clara y comprensible.",
+            "Significa que consideramos tu salud oral como parte de tu bienestar general. Evaluamos cómo factores como el estrés, la nutrición y el sueño pueden afectar tu salud dental, y creamos planes que consideran todo el panorama.",
         },
         {
-          question: "¿Atienden emergencias dentales?",
+          question: "¿Tratan trauma dental en niños y atletas?",
           answer:
-            "Sí, atendemos emergencias dentales el mismo día. Contáctanos inmediatamente si tienes dolor dental agudo, un diente roto o cualquier otra situación urgente.",
+            "Sí, la Dra. Contreras tiene experiencia especializada en trauma dental. Atendemos niños y atletas con dientes fracturados, desplazados o avulsionados, siempre con el objetivo de preservar el diente a largo plazo.",
         },
         {
-          question: "¿Atienden pacientes internacionales?",
+          question: "¿Hablan inglés?",
           answer:
-            "Sí, atendemos pacientes internacionales. La Dra. Marcela Contreras habla inglés y español, lo que facilita la comunicación con pacientes de diferentes países.",
+            "Sí, la Dra. Contreras y su equipo ofrecen atención completa en español e inglés.",
+        },
+        {
+          question: "¿Qué opciones de pago están disponibles?",
+          answer:
+            "Aceptamos efectivo, transferencia bancaria y tarjetas de crédito/débito. También trabajamos con varios seguros dentales. Contáctanos para más detalles sobre tu caso específico.",
         },
       ],
     },
@@ -230,6 +300,7 @@ export const content = {
       hours: "Horarios",
       emergencies: "Emergencias · Mismo día",
       copyright: "Todos los derechos reservados.",
+      mapTitle: "Ubicación de la clínica",
     },
 
     // WhatsApp flotante
@@ -281,29 +352,34 @@ export const content = {
 
     // Trust section
     trust: {
-      title: "Why choose us?",
-      items: [
+      badge: "Why choose us",
+      title: "Comprehensive care that considers your complete wellbeing.",
+      subtitle:
+        "Oral health is deeply connected to sleep, nutrition, posture, and stress. That's why every plan here begins with the full picture — and then focuses on what you truly need.",
+      features: [
         {
-          title: "Truly personalized care",
+          title: "Treated as a person",
           description:
-            "Each patient receives treatment tailored to their needs, concerns, and goals.",
+            "Consultations begin by listening. Your story, fears, and goals shape the plan.",
         },
         {
-          title: "Experience and dedication",
+          title: "Modern diagnostics",
           description:
-            "A careful approach that combines clinical knowledge, precision, and attention to detail.",
+            "Digital scanning and imaging make every diagnosis visible, explainable, and precise.",
         },
         {
-          title: "Results that restore confidence",
+          title: "Time, unhurried",
           description:
-            "The goal is not just to treat teeth, but to help each patient feel confident with their smile.",
+            "Appointments are scheduled generously so no procedure is rushed.",
         },
         {
-          title: "Warm and personal treatment",
+          title: "One doctor, start to finish",
           description:
-            "A calm, respectful, and understandable experience throughout each stage of treatment.",
+            "The same professional follows your case at every stage of treatment.",
         },
       ],
+      imageAlt1: "Dr. Marcela Contreras",
+      imageAlt2: "Dental office",
       cta: "Book your appointment",
     },
 
@@ -312,6 +388,40 @@ export const content = {
       title: "Our Services",
       subtitle:
         "Dental treatments with personalized attention and professionalism",
+      intro:
+        "From preventive visits to complex trauma, every treatment is personally planned by Dr. Contreras.",
+      items: [
+        {
+          title: "General Dentistry",
+          description:
+            "Complete diagnosis, unhurried checkups, and treatment plans built around your overall health.",
+        },
+        {
+          title: "Cosmetic Dentistry",
+          description:
+            "Whitening, veneers, and aesthetic restorations designed to look natural, never artificial.",
+        },
+        {
+          title: "Dental Emergencies",
+          description:
+            "Acute pain, fractures, and infections handled with priority and same-day availability.",
+        },
+        {
+          title: "Dental Trauma",
+          description:
+            "Advanced management of injured, displaced, or avulsed teeth with long-term preservation in mind.",
+        },
+        {
+          title: "Cleaning & Periodontics",
+          description:
+            "Deep professional hygiene and gum health programs that protect your whole body.",
+        },
+        {
+          title: "Restorations",
+          description:
+            "Fillings, inlays, and crowns using modern biocompatible materials and precision techniques.",
+        },
+      ],
       cta: "Inquire about treatment",
     },
 
@@ -352,11 +462,32 @@ export const content = {
 
     // Testimonials
     testimonials: {
-      title: "Smiles that tell our story",
+      badge: "Patient Stories",
+      title: "Trust from families across Costa Rica.",
       subtitle: "Real experiences from satisfied patients",
       cta: "See more reviews on Google",
       ctaButton: "Book your appointment",
       translatedNote: "(Translated from Spanish)",
+      bannerTitle: "5/5 on Google Reviews",
+      bannerDescription:
+        "Hundreds of patients describe the same experience: attentive listening, transparent explanations, and results that last.",
+      items: [
+        {
+          text: "I arrived at 9pm with a broken tooth after an accident. She treated me that same night, calmed me down, and saved the tooth. I won't go anywhere else.",
+          name: "Andrés M.",
+          role: "Emergency patient · San José",
+        },
+        {
+          text: "The first dentist who explained everything on a screen, without pressure and without selling me treatments I didn't need. Absolutely professional.",
+          name: "Laura V.",
+          role: "Comprehensive care",
+        },
+        {
+          text: "My kids are relaxed here, which says everything. The clinic is impeccable and the attention to detail is on another level.",
+          name: "Carolina S.",
+          role: "Family patient",
+        },
+      ],
     },
 
     // Process
@@ -400,32 +531,41 @@ export const content = {
 
     // FAQ
     faq: {
-      title: "Frequently Asked Questions",
+      badge: "FAQ",
+      title: "Answers before your first visit.",
+      subtitle:
+        "Still have questions? A short WhatsApp message is all you need.",
+      cta: "Send message",
       items: [
         {
-          question: "How can I book an appointment?",
+          question: "How quickly can I be seen for a dental emergency?",
           answer:
-            "You can book your appointment by contacting us via WhatsApp, phone call, or completing the contact form on this page. We'll respond promptly to confirm your appointment.",
+            "Dental emergencies are handled the same day whenever possible. If you have severe pain, trauma, or an infection, contact us immediately via WhatsApp and we'll prioritize you.",
         },
         {
-          question: "What treatments does the clinic offer?",
+          question: "What does the first consultation include?",
           answer:
-            "We offer a wide range of dental treatments, including professional cleanings, cavity treatment, dental restorations, bridges, and general oral health care. Each treatment is personalized according to the patient's needs.",
+            "The first consultation includes a complete evaluation of your oral health, digital X-rays if needed, and a personalized treatment plan. It's also a space for you to share your concerns and goals.",
         },
         {
-          question: "How do I know what treatment I need?",
+          question: "What does a holistic approach really mean?",
           answer:
-            "During the first consultation, Dr. Marcela Contreras will perform a complete evaluation of your dental health and explain the available treatment options in a clear and understandable manner.",
+            "It means we consider your oral health as part of your overall wellbeing. We evaluate how factors like stress, nutrition, and sleep can affect your dental health, and create plans that consider the full picture.",
         },
         {
-          question: "Do you handle dental emergencies?",
+          question: "Do you treat dental trauma in children and athletes?",
           answer:
-            "Yes, we handle dental emergencies the same day. Contact us immediately if you have acute dental pain, a broken tooth, or any other urgent situation.",
+            "Yes, Dr. Contreras has specialized experience in dental trauma. We treat children and athletes with fractured, displaced, or avulsed teeth, always with the goal of long-term tooth preservation.",
         },
         {
-          question: "Do you treat international patients?",
+          question: "Do you speak English?",
           answer:
-            "Yes, we treat international patients. Dr. Marcela Contreras speaks English and Spanish, which facilitates communication with patients from different countries.",
+            "Yes, Dr. Contreras and her team offer complete care in both Spanish and English.",
+        },
+        {
+          question: "What payment options are available?",
+          answer:
+            "We accept cash, bank transfer, and credit/debit cards. We also work with various dental insurance plans. Contact us for more details about your specific case.",
         },
       ],
     },
@@ -470,6 +610,7 @@ export const content = {
       hours: "Hours",
       emergencies: "Emergencies · Same day",
       copyright: "All rights reserved.",
+      mapTitle: "Clinic location",
     },
 
     // WhatsApp floating

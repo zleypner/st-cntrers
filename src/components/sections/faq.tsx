@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { siteConfig } from "@/config/site";
 import {
   Section,
@@ -12,41 +13,13 @@ import {
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
 
-const faqs = [
-  {
-    question: "¿Qué tan rápido puedo ser atendido por una emergencia dental?",
-    answer:
-      "Las emergencias dentales se atienden el mismo día siempre que sea posible. Si tienes dolor severo, trauma o una infección, contáctanos inmediatamente por WhatsApp y te daremos prioridad.",
-  },
-  {
-    question: "¿Qué incluye la primera consulta?",
-    answer:
-      "La primera consulta incluye una evaluación completa de tu salud oral, radiografías digitales si son necesarias, y un plan de tratamiento personalizado. También es un espacio para que compartas tus preocupaciones y objetivos.",
-  },
-  {
-    question: "¿Qué significa realmente un enfoque holístico?",
-    answer:
-      "Significa que consideramos tu salud oral como parte de tu bienestar general. Evaluamos cómo factores como el estrés, la nutrición y el sueño pueden afectar tu salud dental, y creamos planes que consideran todo el panorama.",
-  },
-  {
-    question: "¿Tratan trauma dental en niños y atletas?",
-    answer:
-      "Sí, la Dra. Contreras tiene experiencia especializada en trauma dental. Atendemos niños y atletas con dientes fracturados, desplazados o avulsionados, siempre con el objetivo de preservar el diente a largo plazo.",
-  },
-  {
-    question: "¿Hablan inglés?",
-    answer:
-      "Sí, la Dra. Contreras y su equipo ofrecen atención completa en español e inglés.",
-  },
-  {
-    question: "¿Qué opciones de pago están disponibles?",
-    answer:
-      "Aceptamos efectivo, transferencia bancaria y tarjetas de crédito/débito. También trabajamos con varios seguros dentales. Contáctanos para más detalles sobre tu caso específico.",
-  },
-];
-
 export function FAQ() {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const faqs = t("faq.items", { returnObjects: true }) as Array<{
+    question: string;
+    answer: string;
+  }>;
 
   const toggleItem = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -65,15 +38,12 @@ export function FAQ() {
               easing="smooth"
             >
               <p className="mb-4 text-sm font-medium tracking-wider text-[#38BDF8] uppercase">
-                FAQ
+                {t("faq.badge")}
               </p>
               <h2 className="mb-6 text-3xl font-bold text-[#1E3A5F] sm:text-4xl">
-                Respuestas antes de tu primera visita.
+                {t("faq.title")}
               </h2>
-              <p className="mb-6 text-[#1E3A5F]/70">
-                ¿Aún tienes dudas? Un mensaje corto de WhatsApp es todo lo que
-                necesitas.
-              </p>
+              <p className="mb-6 text-[#1E3A5F]/70">{t("faq.subtitle")}</p>
             </AnimateOnScroll>
 
             <AnimateOnScroll
@@ -90,7 +60,7 @@ export function FAQ() {
               >
                 <Button className="gap-2 rounded-full bg-[#25D366] text-white transition-colors duration-200 hover:bg-[#20BD5A] active:bg-[#1DA851]">
                   <Icons.whatsapp className="h-4 w-4" />
-                  Enviar mensaje
+                  {t("faq.cta")}
                 </Button>
               </a>
             </AnimateOnScroll>
