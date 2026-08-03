@@ -422,7 +422,7 @@ export const content = {
       imageAlt1: "Dra. Marcela Contreras",
       imageAlt2: "Dental office",
       ctaPreText: "Looking for care that goes beyond your teeth?",
-      cta: "Discover Our Holistic Approach",
+      cta: "Let's Start a Conversation",
       ctaMicrocopy:
         "Because exceptional dentistry begins by caring for the whole person.",
     },
