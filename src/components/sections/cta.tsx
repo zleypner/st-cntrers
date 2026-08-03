@@ -8,7 +8,7 @@ export function CTA() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative flex min-h-[80vh] items-center overflow-hidden">
+    <section className="relative flex h-screen items-center overflow-hidden">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
