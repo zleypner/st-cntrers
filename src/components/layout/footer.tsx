@@ -97,20 +97,41 @@ export function Footer() {
               <h4 className="mb-4 text-sm font-medium tracking-wider text-[#38BDF8] uppercase">
                 {t("footer.hours")}
               </h4>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-3 text-sm text-[#1E3A5F]/70">
-                  <Clock className="h-4 w-4 text-[#38BDF8]" />
-                  {t("contact.weekdays")} · {siteConfig.schedule.weekdays}
-                </li>
-                <li className="flex items-center gap-3 text-sm text-[#1E3A5F]/70">
-                  <Clock className="h-4 w-4 text-[#38BDF8]" />
-                  {t("contact.saturday")} · {siteConfig.schedule.saturday}
-                </li>
-                <li className="flex items-center gap-3 text-sm text-[#1E3A5F]/70">
-                  <Clock className="h-4 w-4 text-[#38BDF8]" />
-                  {t("footer.emergencies")}
-                </li>
-              </ul>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Clock className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#38BDF8]" />
+                  <div className="text-sm">
+                    <p className="font-medium text-[#1E3A5F]">
+                      {t("contact.weekdays")}
+                    </p>
+                    <p className="text-[#1E3A5F]/70">
+                      {siteConfig.schedule.weekdays}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Clock className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#38BDF8]" />
+                  <div className="text-sm">
+                    <p className="font-medium text-[#1E3A5F]">
+                      {t("contact.saturday")}
+                    </p>
+                    <p className="text-[#1E3A5F]/70">
+                      {siteConfig.schedule.saturday}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Clock className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#38BDF8]" />
+                  <div className="text-sm">
+                    <p className="font-medium text-[#1E3A5F]">
+                      {t("contact.emergencies")}
+                    </p>
+                    <p className="text-[#1E3A5F]/70">
+                      {t("footer.emergencies")}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
