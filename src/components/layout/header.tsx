@@ -45,9 +45,7 @@ export function Header() {
       <header
         className={cn(
           "fixed top-0 right-0 left-0 z-50 transition-all duration-300",
-          isScrolled
-            ? "bg-white/95 shadow-sm backdrop-blur-md"
-            : "bg-transparent"
+          isScrolled || mobileMenuOpen ? "bg-white shadow-sm" : "bg-transparent"
         )}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
