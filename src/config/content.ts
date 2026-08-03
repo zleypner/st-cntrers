@@ -291,11 +291,11 @@ export const content = {
     contact: {
       title: "Contacto",
       subtitle: "Estamos aquí para ayudarte",
-      introTitle: "Tu sonrisa merece un cuidado personalizado.",
+      introTitle: "Dra. Marcela Contreras",
       introText:
-        "Cada paciente es único. Por eso cada tratamiento comienza entendiendo tus metas, tus preocupaciones y tu salud general antes de recomendar la mejor solución.",
-      callNow: "Llamar ahora",
-      sendMessage: "Enviar mensaje",
+        "Ayudando a las personas a sonreír con confianza a través de un cuidado dental personalizado y compasivo. Cada tratamiento comienza escuchando, entendiendo y cuidando a la persona detrás de la sonrisa.",
+      callNow: "Llamar a la Clínica",
+      sendMessage: "Chatear por WhatsApp",
       form: {
         name: "Nombre",
         namePlaceholder: "Tu nombre",
@@ -335,13 +335,20 @@ export const content = {
       description:
         "Atención dental integral y de emergencias en Costa Rica, guiada por una filosofía holística. Porque cada paciente es una persona, nunca solo un caso.",
       contact: "Contacto",
-      callNow: "Llamar ahora",
-      bookNow: "Escríbele al Equipo",
-      hours: "Horarios",
-      emergencies: "Emergencias · Mismo día",
-      copyright: "Todos los derechos reservados.",
-      mapTitle: "Ubicación de la clínica",
+      callNow: "Llamar a la Clínica",
+      bookNow: "Chatear por WhatsApp",
+      hours: "Horario de la Clínica",
+      emergencies: "Emergencias Dentales · Citas el mismo día disponibles",
+      copyright: "Dra. Marcela Contreras. Todos los derechos reservados.",
+      socialProof:
+        "Confianza de pacientes de Costa Rica, Estados Unidos y Canadá.",
+      mapTitle: "Visita Nuestra Clínica en Santa Teresa",
+      mapSubtitle: "Fácil de encontrar con Google Maps o Waze.",
       location: "Santa Teresa · Costa Rica",
+      openInMaps: "Abrir en Google Maps",
+      openInWaze: "Abrir en Waze",
+      closingMessage:
+        "Estamos aquí cuando estés listo para dar el siguiente paso hacia una sonrisa más saludable y feliz.",
     },
 
     // WhatsApp flotante
@@ -640,11 +647,11 @@ export const content = {
     contact: {
       title: "Contact",
       subtitle: "We're here to help",
-      introTitle: "Your smile deserves personalized care.",
+      introTitle: "Dra. Marcela Contreras",
       introText:
-        "Every patient is unique. That is why every treatment begins with understanding your goals, your concerns and your overall health before recommending the best solution.",
-      callNow: "Call Now",
-      sendMessage: "Send Message",
+        "Helping people smile with confidence through personalized, compassionate dental care. Every treatment begins with listening, understanding, and caring for the person behind the smile.",
+      callNow: "Call the Clinic",
+      sendMessage: "Chat on WhatsApp",
       form: {
         name: "Name",
         namePlaceholder: "Your name",
@@ -683,13 +690,20 @@ export const content = {
       description:
         "Expert integrative and emergency dental care in Costa Rica, guided by a holistic philosophy. Because every patient is a person, never just a case.",
       contact: "Contact",
-      callNow: "Call Now",
-      bookNow: "Let's Talk",
-      hours: "Hours",
-      emergencies: "Emergencies · Same day",
-      copyright: "All rights reserved.",
-      mapTitle: "Clinic location",
+      callNow: "Call the Clinic",
+      bookNow: "Chat on WhatsApp",
+      hours: "Clinic Hours",
+      emergencies: "Dental Emergencies · Same-day appointments available",
+      copyright: "Dra. Marcela Contreras. All rights reserved.",
+      socialProof:
+        "Trusted by patients from Costa Rica, the United States, and Canada.",
+      mapTitle: "Visit Our Clinic in Santa Teresa",
+      mapSubtitle: "Easy to find with Google Maps or Waze.",
       location: "Santa Teresa · Costa Rica",
+      openInMaps: "Open in Google Maps",
+      openInWaze: "Open in Waze",
+      closingMessage:
+        "We're here whenever you're ready to take the next step toward a healthier, happier smile.",
     },
 
     // WhatsApp floating

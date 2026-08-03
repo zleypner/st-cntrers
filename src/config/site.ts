@@ -36,8 +36,8 @@ export const siteConfig = {
 
   // Ubicación
   location: {
-    address: "Santa Teresa, Cobano",
-    city: "Puntarenas",
+    address: "Santa Teresa, Cóbano",
+    city: "Puntarenas, Costa Rica",
     country: "Costa Rica",
     mapsUrl:
       "https://www.google.com/maps/place/Clinica+Dental+dra+Marcela+Contreras/@9.6371451,-85.1614267,17z",
@@ -46,9 +46,9 @@ export const siteConfig = {
 
   // Horarios
   schedule: {
-    weekdays: "9:30am - 5:00pm",
-    saturday: "Cerrado",
-    sunday: "Cerrado",
+    weekdays: "9:30 AM – 5:00 PM",
+    saturday: "Closed",
+    sunday: "Closed",
   },
 
   // Enlaces externos

@@ -116,6 +116,15 @@ export function Footer() {
 
           {/* Right side - Map */}
           <div className="relative">
+            {/* Map title and subtitle */}
+            <div className="mb-4">
+              <h4 className="mb-1 text-lg font-semibold text-[#1E3A5F]">
+                {t("footer.mapTitle")}
+              </h4>
+              <p className="text-sm text-[#1E3A5F]/70">
+                {t("footer.mapSubtitle")}
+              </p>
+            </div>
             <div className="flex h-full flex-col overflow-hidden rounded-xl border border-[#E5E7EB] bg-[#F5F5F5] sm:rounded-2xl">
               {/* Map image/embed area */}
               <div className="relative min-h-[180px] flex-1 sm:min-h-[200px]">
@@ -139,7 +148,7 @@ export function Footer() {
                   className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#F5F5F5] px-2 py-2.5 text-xs font-medium text-[#1E3A5F] transition-colors hover:bg-[#E5E7EB] sm:gap-2 sm:px-3 sm:text-sm"
                 >
                   <MapPin className="h-3.5 w-3.5 text-[#EA4335] sm:h-4 sm:w-4" />
-                  Google Maps
+                  {t("footer.openInMaps")}
                 </a>
                 <a
                   href={siteConfig.location.wazeUrl}
@@ -148,17 +157,38 @@ export function Footer() {
                   className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#F5F5F5] px-2 py-2.5 text-xs font-medium text-[#1E3A5F] transition-colors hover:bg-[#E5E7EB] sm:gap-2 sm:px-3 sm:text-sm"
                 >
                   <MapPin className="h-3.5 w-3.5 text-[#33CCFF] sm:h-4 sm:w-4" />
-                  Waze
+                  {t("footer.openInWaze")}
                 </a>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Social proof and closing message */}
+        <div className="mt-8 border-t border-[#E5E7EB] pt-6 text-center sm:mt-12 sm:pt-8">
+          {/* Stars */}
+          <div className="mb-3 flex justify-center gap-1">
+            {[...Array(5)].map((_, i) => (
+              <Icons.star
+                key={i}
+                className="h-5 w-5 fill-[#38BDF8] text-[#38BDF8]"
+              />
+            ))}
+          </div>
+          {/* Social proof */}
+          <p className="mb-4 text-sm font-medium text-[#1E3A5F]/80">
+            {t("footer.socialProof")}
+          </p>
+          {/* Closing message */}
+          <p className="mb-6 text-sm text-[#1E3A5F]/60">
+            {t("footer.closingMessage")}
+          </p>
+        </div>
+
         {/* Bottom bar */}
-        <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-[#E5E7EB] pt-6 sm:mt-12 sm:gap-4 sm:pt-8 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-3 border-t border-[#E5E7EB] pt-6 sm:gap-4 md:flex-row">
           <p className="text-sm text-[#9CA3AF]">
-            &copy; {currentYear} {siteConfig.name}. {t("footer.copyright")}
+            &copy; {currentYear} {t("footer.copyright")}
           </p>
           <p className="text-sm text-[#9CA3AF]">{t("footer.location")}</p>
         </div>
