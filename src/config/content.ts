@@ -153,9 +153,10 @@ export const content = {
       title: "Cuando algo sale mal, la experiencia importa más.",
       description:
         "La Dra. Contreras ha dedicado años de entrenamiento enfocado en trauma dental y cuidado urgente. Las emergencias se atienden con prioridad, toma de decisiones calmada y técnicas que protegen la vida a largo plazo de tus dientes.",
-      ctaPreText: "¿Necesitas atención dental profesional hoy?",
-      cta: "Recibe Orientación Profesional",
-      ctaMicrocopy: "Recibe atención experta cuando más lo necesitas.",
+      ctaPreText: "¿Emergencia dental? Recibe la atención que necesitas hoy.",
+      cta: "Recibe Atención Dental de Emergencia",
+      ctaMicrocopy:
+        "Cuéntanos qué está pasando y te ayudaremos con los siguientes pasos.",
       imageAlt: "Consultorio dental moderno",
       items: [
         "Dolor dental severo o repentino",
@@ -173,10 +174,12 @@ export const content = {
       title: "Confianza de familias en toda Costa Rica.",
       subtitle: "Experiencias reales de pacientes satisfechos",
       cta: "Ver más experiencias en Google",
-      ctaPreText: "Descubre por qué los pacientes confían en la Dra. Marcela.",
-      ctaButton: "Lee Historias de Pacientes",
+      ctaPreText: "5/5 en Google Reviews",
+      ctaDescription:
+        "Cientos de pacientes confían en la Dra. Marcela para un cuidado dental personalizado y compasivo.",
+      ctaButton: "Chatea Con Nuestro Equipo",
       ctaMicrocopy:
-        "Experiencias reales de pacientes que depositaron su confianza en nuestro cuidado.",
+        "¿Tienes preguntas? Estamos aquí para ayudarte a elegir el tratamiento adecuado.",
       translatedNote: "(Traducido del inglés)",
       bannerTitle: "5/5 en Google Reviews",
       bannerDescription:
@@ -232,13 +235,14 @@ export const content = {
 
     // CTA
     cta: {
-      title: "Las sonrisas excepcionales comienzan con una conversación.",
+      title:
+        "Cada Sonrisa Saludable Comienza Sintiéndote Verdaderamente Cuidado.",
       description:
-        "Experimenta una odontología que combina experiencia clínica avanzada con un cuidado genuino y personalizado. Ya sea que vivas en Costa Rica o vengas del extranjero, te ayudaremos a tomar decisiones informadas con confianza.",
-      primaryCta: "Solicita Tu Consulta Personalizada",
-      secondaryCta: "Planifica Tu Visita Dental",
+        "Tu sonrisa es parte de tu bienestar integral—no solo tus dientes. Nos tomamos el tiempo para escucharte, entender tus metas y crear planes de tratamiento personalizados que cuidan tu salud, comodidad y confianza en cada paso.",
+      primaryCta: "Agenda Tu Consulta Personalizada",
+      secondaryCta: "Planifica Tu Visita a Costa Rica",
       microcopy:
-        "Cuidado holístico • Tratamiento personalizado • Pacientes internacionales bienvenidos",
+        "Cuidado holístico • Odontología personalizada • Confianza de pacientes locales e internacionales",
     },
 
     // FAQ
@@ -500,9 +504,10 @@ export const content = {
       title: "When something goes wrong, experience matters most.",
       description:
         "Dra. Contreras has dedicated years of training focused on dental trauma and urgent care. Emergencies are handled with priority, calm decision-making, and techniques that protect the long-term life of your teeth.",
-      ctaPreText: "Need professional dental care today?",
-      cta: "Get Professional Guidance",
-      ctaMicrocopy: "Receive expert care when you need it most.",
+      ctaPreText: "Dental emergency? Get the care you need today.",
+      cta: "Get Emergency Dental Care",
+      ctaMicrocopy:
+        "Tell us what's happening and we'll help you with the next steps.",
       imageAlt: "Modern dental office",
       items: [
         "Severe or sudden dental pain",
@@ -520,10 +525,12 @@ export const content = {
       title: "Trust from families across Costa Rica.",
       subtitle: "Real experiences from satisfied patients",
       cta: "See more reviews on Google",
-      ctaPreText: "See why patients trust Dra. Marcela.",
-      ctaButton: "Read Patient Stories",
+      ctaPreText: "5/5 on Google Reviews",
+      ctaDescription:
+        "Hundreds of patients trust Dr. Marcela for personalized, compassionate dental care.",
+      ctaButton: "Chat With Our Team",
       ctaMicrocopy:
-        "Real experiences from patients who placed their confidence in our care.",
+        "Have questions? We're here to help you choose the right treatment.",
       translatedNote: "(Translated from Spanish)",
       bannerTitle: "5/5 on Google Reviews",
       bannerDescription:
@@ -579,13 +586,13 @@ export const content = {
 
     // CTA (Final section - Premium)
     cta: {
-      title: "Exceptional smiles begin with a conversation.",
+      title: "Every Healthy Smile Begins with Feeling Truly Cared For.",
       description:
-        "Experience dentistry that combines advanced clinical expertise with genuine, personalized care. Whether you live in Costa Rica or are traveling from abroad, we'll help you make informed decisions with confidence.",
-      primaryCta: "Request Your Personalized Consultation",
-      secondaryCta: "Plan Your Dental Visit",
+        "Your smile is part of your overall wellbeing—not just your teeth. We take the time to listen, understand your goals, and create personalized treatment plans that care for your health, comfort, and confidence at every step.",
+      primaryCta: "Book Your Personalized Consultation",
+      secondaryCta: "Plan Your Visit to Costa Rica",
       microcopy:
-        "Holistic care • Personalized treatment • International patients welcome",
+        "Holistic care • Personalized dentistry • Trusted by local and international patients",
     },
 
     // FAQ

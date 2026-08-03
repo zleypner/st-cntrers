@@ -128,8 +128,11 @@ export function Testimonials() {
           easing="smooth"
         >
           <ButtonGroup className="mt-12 flex flex-col items-center text-center">
-            <p className="mb-6 text-base font-medium text-[#1E3A5F]/80">
+            <p className="mb-2 text-lg font-bold text-[#1E3A5F]">
               {t("testimonials.ctaPreText")}
+            </p>
+            <p className="mb-6 text-base text-[#1E3A5F]/70">
+              {t("testimonials.ctaDescription")}
             </p>
             <a
               href={siteConfig.contact.whatsappLink}
