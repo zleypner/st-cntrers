@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   Section,
   Container,
@@ -26,11 +27,13 @@ export function About() {
           >
             <div className="relative">
               <Parallax speed={0.3} direction="up">
-                <div className="aspect-[3/4] overflow-hidden rounded-2xl shadow-lg transition-shadow duration-500 hover:shadow-2xl">
-                  <img
-                    src="/assets/dentist/drax3.png"
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-lg transition-shadow duration-500 hover:shadow-2xl">
+                  <Image
+                    src="/assets/dentist/drax3.webp"
                     alt="Dra. Marcela Contreras explicando tratamiento dental"
-                    className="h-full w-full object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
                   />
                 </div>
               </Parallax>

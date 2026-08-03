@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   Section,
   Container,
@@ -51,20 +52,24 @@ export function Trust() {
             <div className="relative">
               {/* Main image - Doctora */}
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg transition-shadow duration-500 hover:shadow-xl">
-                <img
-                  src="/assets/dentist/drax7.png"
+                <Image
+                  src="/assets/dentist/drax7.webp"
                   alt="Dra. Marcela Contreras"
-                  className="h-full w-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
 
               {/* Secondary image - Clínica */}
               <Floating amplitude={6} duration={4} delay={0.5}>
                 <div className="absolute -right-8 -bottom-8 hidden h-48 w-48 overflow-hidden rounded-2xl border-4 border-white shadow-xl transition-transform duration-300 hover:scale-105 md:block">
-                  <img
-                    src="/assets/dentist/drax8.png"
+                  <Image
+                    src="/assets/dentist/drax8.webp"
                     alt="Consultorio dental"
-                    className="h-full w-full object-cover"
+                    fill
+                    sizes="192px"
+                    className="object-cover"
                   />
                 </div>
               </Floating>

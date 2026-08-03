@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { siteConfig } from "@/config/site";
 import {
@@ -155,10 +156,13 @@ export function Hero() {
             <div className="relative">
               {/* Main image */}
               <div className="hover:shadow-3xl relative aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl transition-shadow duration-500">
-                <img
-                  src="/assets/dentist/drax4.png"
+                <Image
+                  src="/assets/dentist/drax4.webp"
                   alt="Dra. Marcela Contreras explicando tratamiento dental"
-                  className="h-full w-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                  priority={false}
                 />
               </div>
 

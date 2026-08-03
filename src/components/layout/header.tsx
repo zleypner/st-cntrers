@@ -38,10 +38,6 @@ export function Header() {
 
   return (
     <>
-      <a href="#inicio" className="skip-link">
-        {t("accessibility.skipToContent")}
-      </a>
-
       <header
         className={cn(
           "fixed top-0 right-0 left-0 z-50 transition-all duration-300",
@@ -97,7 +93,7 @@ export function Header() {
                 rel="noopener noreferrer"
               >
                 <Button className="gap-2 rounded-full bg-[#25D366] px-6 text-white hover:bg-[#20BD5A]">
-                  <Icons.messageCircle className="h-4 w-4" />
+                  <Icons.whatsapp className="h-4 w-4" />
                   {t("header.cta")}
                 </Button>
               </a>
@@ -162,7 +158,7 @@ export function Header() {
               className="px-4"
             >
               <Button className="w-full gap-2 rounded-full bg-[#25D366] text-white hover:bg-[#20BD5A]">
-                <Icons.messageCircle className="h-5 w-5" />
+                <Icons.whatsapp className="h-5 w-5" />
                 {t("header.cta")}
               </Button>
             </a>

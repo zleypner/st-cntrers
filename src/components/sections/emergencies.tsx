@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import {
   Section,
@@ -121,11 +122,13 @@ export function Emergencies() {
             easing="spring"
           >
             <div className="relative">
-              <div className="hover:shadow-3xl aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl transition-shadow duration-500">
-                <img
-                  src="/assets/dentist/drax8.png"
+              <div className="hover:shadow-3xl relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl transition-shadow duration-500">
+                <Image
+                  src="/assets/dentist/drax8.webp"
                   alt="Consultorio dental moderno"
-                  className="h-full w-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
 
