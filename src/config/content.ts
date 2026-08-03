@@ -28,15 +28,15 @@ export const content = {
     // Hero
     hero: {
       badge: "Cuidado Excepcional. Sonrisas Extraordinarias.",
-      title: "Una sonrisa comienza con",
-      titleHighlight: "confianza.",
+      title: "Sonrisas Hermosas Comienzan con",
+      titleHighlight: "Cuidado Excepcional.",
       subtitle:
-        "Mereces atención dental integral de una profesional que entiende la salud oral como parte de tu bienestar general — consultas sin prisa y planes personalizados.",
+        "Experimenta una odontología donde la excelencia clínica se encuentra con la compasión genuina. Cada consulta está cuidadosamente diseñada en torno a tu salud, comodidad y bienestar a largo plazo—porque tu sonrisa merece un cuidado tan único como tú.",
       ctaPreText:
         "¿Listo para dar el primer paso hacia una sonrisa más saludable?",
-      primaryCta: "Solicita Tu Consulta Personalizada",
+      primaryCta: "Agenda Tu Consulta",
       primaryCtaMicrocopy:
-        "Recomendaciones personalizadas según tus necesidades, metas y salud oral.",
+        "Cuidado personalizado • Odontología compasiva • Confianza de pacientes de Costa Rica, EE.UU. y Canadá",
       secondaryCta: "Escríbenos por WhatsApp",
       secondaryCtaMicrocopy: "Estamos aquí para responder tus preguntas.",
       trustBadge1: "5/5 en Google Reviews",
@@ -389,14 +389,14 @@ export const content = {
     // Hero
     hero: {
       badge: "Exceptional Care. Extraordinary Smiles.",
-      title: "A smile begins with",
-      titleHighlight: "trust.",
+      title: "Beautiful Smiles Begin with",
+      titleHighlight: "Exceptional Care.",
       subtitle:
-        "You deserve comprehensive dental care from a professional who understands oral health as part of your overall wellbeing — unhurried consultations and personalized treatment plans.",
+        "Experience dentistry where clinical excellence meets genuine compassion. Every consultation is thoughtfully designed around your health, comfort, and long-term wellbeing—because your smile deserves care as unique as you are.",
       ctaPreText: "Ready to take the first step toward a healthier smile?",
-      primaryCta: "Request Your Personalized Consultation",
+      primaryCta: "Schedule Your Consultation",
       primaryCtaMicrocopy:
-        "Personalized recommendations based on your needs, goals and oral health.",
+        "Personalized care • Compassionate dentistry • Trusted by patients from Costa Rica, the U.S., and Canada",
       secondaryCta: "Let's Talk",
       secondaryCtaMicrocopy: "We're here to answer your questions.",
       trustBadge1: "5/5 on Google Reviews",
