@@ -16,7 +16,7 @@ export const content = {
     header: {
       cta: "Inicia Tu Nueva Sonrisa",
       mobileCta: "Agenda Tu Cita",
-      tagline: "Odontología Integral · Costa Rica",
+      tagline: "Ayudando a Sonreír con Confianza",
       nav: {
         treatments: "Tratamientos",
         whyUs: "Por qué elegirnos",
@@ -379,7 +379,7 @@ export const content = {
     header: {
       cta: "Start Your Smile Journey",
       mobileCta: "Schedule Your Visit",
-      tagline: "Comprehensive Dentistry · Costa Rica",
+      tagline: "Helping People Smile With Confidence",
       nav: {
         treatments: "Treatments",
         whyUs: "Why choose us",
