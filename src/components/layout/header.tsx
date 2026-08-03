@@ -103,41 +103,38 @@ export function Header() {
               </a>
             </div>
 
-            {/* Mobile CTA and Menu Button */}
-            <div className="flex items-center gap-2 lg:hidden">
-              {/* Mobile WhatsApp CTA */}
+            {/* Mobile CTA - Centered */}
+            <div className="absolute left-1/2 -translate-x-1/2 lg:hidden">
               <a
                 href={siteConfig.contact.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button variant="whatsapp" size="compact" className="text-xs">
-                  <Icons.whatsapp className="h-4 w-4" />
-                  <span className="xs:inline hidden">
-                    {t("header.mobileCta")}
-                  </span>
+                <Button variant="whatsapp" size="small">
+                  <Icons.whatsapp />
+                  {t("header.mobileCta")}
                 </Button>
               </a>
-
-              {/* Menu Button */}
-              <button
-                type="button"
-                className="rounded-lg p-2 text-[#1E3A5F] transition-colors hover:bg-[#F5F5F5]"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                aria-expanded={mobileMenuOpen}
-                aria-label={
-                  mobileMenuOpen
-                    ? t("accessibility.menuClose")
-                    : t("accessibility.menuOpen")
-                }
-              >
-                {mobileMenuOpen ? (
-                  <Icons.x className="h-6 w-6" />
-                ) : (
-                  <Icons.menu className="h-6 w-6" />
-                )}
-              </button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              type="button"
+              className="rounded-lg p-2 text-[#1E3A5F] transition-colors hover:bg-[#F5F5F5] lg:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-expanded={mobileMenuOpen}
+              aria-label={
+                mobileMenuOpen
+                  ? t("accessibility.menuClose")
+                  : t("accessibility.menuOpen")
+              }
+            >
+              {mobileMenuOpen ? (
+                <Icons.x className="h-6 w-6" />
+              ) : (
+                <Icons.menu className="h-6 w-6" />
+              )}
+            </button>
           </div>
         </div>
 
@@ -150,13 +147,13 @@ export function Header() {
               : "pointer-events-none -translate-y-4 opacity-0"
           )}
         >
-          <nav className="flex flex-col gap-1 p-4">
+          <nav className="flex flex-col items-center gap-1 p-4">
             {navigation.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "rounded-lg px-4 py-3 text-base font-medium transition-colors",
+                  "w-full rounded-lg px-4 py-3 text-center text-base font-medium transition-colors",
                   item.isEmergency
                     ? "text-[#EF4444] hover:bg-red-50"
                     : "text-[#1E3A5F] hover:bg-[#F5F5F5]"
@@ -167,21 +164,21 @@ export function Header() {
               </Link>
             ))}
 
-            <hr className="my-4 border-[#E5E7EB]" />
+            <hr className="my-4 w-full border-[#E5E7EB]" />
 
             {/* Mobile Language Switcher */}
             <div className="flex items-center justify-center gap-2 px-4 py-2">
               <LanguageSwitcher />
             </div>
 
-            <hr className="my-4 border-[#E5E7EB]" />
+            <hr className="my-4 w-full border-[#E5E7EB]" />
 
             <a
               href={siteConfig.contact.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavClick}
-              className="px-4"
+              className="w-full max-w-xs px-4"
             >
               <Button variant="whatsapp" size="full">
                 <Icons.whatsapp />

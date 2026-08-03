@@ -60,7 +60,7 @@ export function FAQ() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button variant="whatsapp" size="secondary">
+                  <Button variant="whatsapp">
                     <Icons.whatsapp />
                     {t("faq.cta")}
                   </Button>

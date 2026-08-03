@@ -100,12 +100,12 @@ export function Hero() {
 
                 <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-start">
                   {/* Primary CTA */}
-                  <div className="w-full lg:w-auto">
+                  <div className="w-full max-w-xs lg:w-auto lg:max-w-none">
                     <a href="#contacto" className="block">
                       <Button
                         variant="primary"
                         size="full"
-                        className="lg:w-auto lg:min-w-[220px]"
+                        className="lg:w-auto"
                       >
                         <Icons.calendar />
                         {t("hero.primaryCta")}
@@ -117,7 +117,7 @@ export function Hero() {
                   </div>
 
                   {/* Secondary CTA */}
-                  <div className="w-full lg:w-auto">
+                  <div className="w-full max-w-xs lg:w-auto lg:max-w-none">
                     <a
                       href={siteConfig.contact.whatsappLink}
                       target="_blank"
@@ -127,7 +127,7 @@ export function Hero() {
                       <Button
                         variant="whatsapp"
                         size="full"
-                        className="lg:w-auto lg:min-w-[220px]"
+                        className="lg:w-auto"
                       >
                         <Icons.whatsapp />
                         {t("hero.secondaryCta")}

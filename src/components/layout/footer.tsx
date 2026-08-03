@@ -63,9 +63,9 @@ export function Footer() {
                 {/* Call Now Button */}
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
-                  className="flex items-center justify-center gap-2 rounded-lg bg-[#1E3A5F] px-4 py-3 text-sm font-medium text-white transition-all hover:bg-[#2D4A6F] hover:shadow-md"
+                  className="flex h-12 items-center justify-center gap-2 rounded-full bg-[#1E3A5F] px-6 text-[15px] font-semibold text-white transition-all duration-200 hover:bg-[#2D4A6F] hover:shadow-lg active:scale-[0.98]"
                 >
-                  <Phone className="h-4 w-4" />
+                  <Phone className="h-[18px] w-[18px]" />
                   {t("footer.callNow")}
                 </a>
 
@@ -74,9 +74,9 @@ export function Footer() {
                   href={siteConfig.contact.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-4 py-3 text-sm font-medium text-white transition-all hover:bg-[#20BD5A] hover:shadow-md"
+                  className="flex h-12 items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 text-[15px] font-semibold text-white transition-all duration-200 hover:bg-[#20BD5A] hover:shadow-lg active:scale-[0.98]"
                 >
-                  <Icons.whatsapp className="h-4 w-4" />
+                  <Icons.whatsapp className="h-[18px] w-[18px]" />
                   {t("footer.bookNow")}
                 </a>
 
@@ -140,23 +140,23 @@ export function Footer() {
                 />
               </div>
               {/* Navigation buttons */}
-              <div className="flex gap-2 bg-white p-2 sm:p-3">
+              <div className="flex gap-2 bg-white p-3">
                 <a
                   href={siteConfig.location.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#F5F5F5] px-2 py-2.5 text-xs font-medium text-[#1E3A5F] transition-colors hover:bg-[#E5E7EB] sm:gap-2 sm:px-3 sm:text-sm"
+                  className="flex h-11 flex-1 items-center justify-center gap-2 rounded-full bg-[#F5F5F5] px-4 text-[15px] font-medium text-[#1E3A5F] transition-all duration-200 hover:bg-[#E5E7EB] active:scale-[0.98]"
                 >
-                  <MapPin className="h-3.5 w-3.5 text-[#EA4335] sm:h-4 sm:w-4" />
+                  <MapPin className="h-[18px] w-[18px] text-[#EA4335]" />
                   {t("footer.openInMaps")}
                 </a>
                 <a
                   href={siteConfig.location.wazeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#F5F5F5] px-2 py-2.5 text-xs font-medium text-[#1E3A5F] transition-colors hover:bg-[#E5E7EB] sm:gap-2 sm:px-3 sm:text-sm"
+                  className="flex h-11 flex-1 items-center justify-center gap-2 rounded-full bg-[#F5F5F5] px-4 text-[15px] font-medium text-[#1E3A5F] transition-all duration-200 hover:bg-[#E5E7EB] active:scale-[0.98]"
                 >
-                  <MapPin className="h-3.5 w-3.5 text-[#33CCFF] sm:h-4 sm:w-4" />
+                  <MapPin className="h-[18px] w-[18px] text-[#33CCFF]" />
                   {t("footer.openInWaze")}
                 </a>
               </div>
@@ -165,7 +165,7 @@ export function Footer() {
         </div>
 
         {/* Social proof and closing message */}
-        <div className="mt-8 border-t border-[#E5E7EB] pt-6 text-center sm:mt-12 sm:pt-8">
+        <div className="relative z-10 mt-8 border-t border-[#E5E7EB] pt-6 text-center sm:mt-12 sm:pt-8">
           {/* Stars */}
           <div className="mb-3 flex justify-center gap-1">
             {[...Array(5)].map((_, i) => (

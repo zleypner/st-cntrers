@@ -377,19 +377,19 @@ export function Contact() {
                     href={siteConfig.location.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-medium text-[#1E3A5F] shadow-sm transition-all hover:shadow-md"
+                    className="flex h-11 flex-1 items-center justify-center gap-2 rounded-full bg-white px-4 text-[15px] font-medium text-[#1E3A5F] shadow-sm transition-all duration-200 hover:shadow-md active:scale-[0.98]"
                   >
-                    <Icons.googleMaps className="h-5 w-5 text-[#EA4335]" />
-                    Google Maps
+                    <Icons.googleMaps className="h-[18px] w-[18px] text-[#EA4335]" />
+                    {t("footer.openInMaps")}
                   </a>
                   <a
                     href={siteConfig.location.wazeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-medium text-[#1E3A5F] shadow-sm transition-all hover:shadow-md"
+                    className="flex h-11 flex-1 items-center justify-center gap-2 rounded-full bg-white px-4 text-[15px] font-medium text-[#1E3A5F] shadow-sm transition-all duration-200 hover:shadow-md active:scale-[0.98]"
                   >
-                    <Icons.waze className="h-5 w-5 text-[#33CCFF]" />
-                    Waze
+                    <Icons.waze className="h-[18px] w-[18px] text-[#33CCFF]" />
+                    {t("footer.openInWaze")}
                   </a>
                 </div>
               </div>

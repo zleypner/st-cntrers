@@ -61,26 +61,18 @@ export function CTA() {
                 href={siteConfig.contact.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto"
+                className="w-full max-w-xs sm:w-auto sm:max-w-none"
               >
-                <Button
-                  variant="whatsapp"
-                  size="full"
-                  className="sm:w-auto sm:min-w-[220px]"
-                >
+                <Button variant="whatsapp" size="full" className="sm:w-auto">
                   <Icons.whatsapp />
                   {t("cta.primaryCta")}
                 </Button>
               </a>
               <a
                 href={`tel:${siteConfig.contact.phone}`}
-                className="w-full sm:w-auto"
+                className="w-full max-w-xs sm:w-auto sm:max-w-none"
               >
-                <Button
-                  variant="primary"
-                  size="full"
-                  className="sm:w-auto sm:min-w-[220px]"
-                >
+                <Button variant="secondary" size="full" className="sm:w-auto">
                   <Icons.phone />
                   {t("cta.secondaryCta")}
                 </Button>
