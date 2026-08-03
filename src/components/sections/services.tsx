@@ -21,7 +21,6 @@ import {
 } from "lucide-react";
 
 const serviceIcons = [Stethoscope, Gem, Siren, AlertCircle, Sparkles, Activity];
-const featuredIndex = 1; // Cosmetic Dentistry is featured
 
 export function Services() {
   const { t } = useTranslation();
@@ -45,7 +44,6 @@ export function Services() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
             const Icon = serviceIcons[index];
-            const isFeatured = index === featuredIndex;
             return (
               <AnimateOnScroll
                 key={index}
@@ -57,29 +55,20 @@ export function Services() {
                 easing="spring"
                 className="h-full"
               >
-                <div
-                  className={`group relative h-full cursor-pointer rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl active:scale-[0.98] ${
-                    isFeatured
-                      ? "border-[#38BDF8] bg-white shadow-md"
-                      : "border-[#E5E7EB] bg-white hover:border-[#38BDF8]/50"
-                  }`}
-                >
-                  {/* Icon */}
-                  <div
-                    className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl transition-colors ${
-                      isFeatured
-                        ? "bg-[#38BDF8] text-white"
-                        : "bg-[#38BDF8]/10 text-[#38BDF8] group-hover:bg-[#38BDF8] group-hover:text-white"
-                    }`}
-                  >
-                    <Icon className="h-6 w-6" />
+                {/* Premium Service Card */}
+                <div className="group relative flex h-full flex-col rounded-2xl border border-[#38BDF8]/30 bg-white p-6 shadow-sm transition-all duration-[250ms] ease-out focus-within:border-[#38BDF8] focus-within:ring-2 focus-within:ring-[#38BDF8]/20 hover:-translate-y-1 hover:border-[#38BDF8] hover:shadow-lg">
+                  {/* Icon Container - Unified Design */}
+                  <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#38BDF8] text-white shadow-sm transition-all duration-[250ms] group-hover:bg-[#0EA5E9] group-hover:shadow-md">
+                    <Icon className="h-6 w-6" strokeWidth={1.5} />
                   </div>
 
-                  {/* Content */}
-                  <h3 className="mb-2 text-xl font-semibold text-[#1E3A5F]">
+                  {/* Title - Consistent Typography */}
+                  <h3 className="mb-4 text-xl leading-tight font-semibold text-[#1E3A5F]">
                     {service.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-[#1E3A5F]/70">
+
+                  {/* Description - Consistent Typography */}
+                  <p className="text-[15px] leading-relaxed text-[#1E3A5F]/70">
                     {service.description}
                   </p>
                 </div>

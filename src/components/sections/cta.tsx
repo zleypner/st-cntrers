@@ -69,7 +69,7 @@ export function CTA() {
                 </Button>
               </a>
               <a
-                href={`tel:${siteConfig.contact.phone}`}
+                href={`tel:${siteConfig.contact.phoneLink}`}
                 className="w-full max-w-xs sm:w-auto sm:max-w-none"
               >
                 <Button variant="secondary" size="full" className="sm:w-auto">

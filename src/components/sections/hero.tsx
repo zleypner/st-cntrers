@@ -101,9 +101,13 @@ export function Hero() {
                 <div className="flex flex-col items-center">
                   {/* Primary CTA */}
                   <div className="flex flex-col items-center">
-                    <a href="#contacto">
+                    <a
+                      href={siteConfig.contact.whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Button variant="primary">
-                        <Icons.calendar />
+                        <Icons.whatsapp />
                         {t("hero.primaryCta")}
                       </Button>
                     </a>

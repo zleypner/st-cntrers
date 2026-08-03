@@ -28,7 +28,8 @@ export const siteConfig = {
 
   // Contacto
   contact: {
-    phone: "8842 1641",
+    phone: "+506 8842 1641",
+    phoneLink: "+50688421641",
     whatsapp: "8842 1641",
     whatsappLink: "https://wa.me/50688421641",
     email: "[EMAIL]", // TODO: Agregar correo electrónico

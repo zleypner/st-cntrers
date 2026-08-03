@@ -305,7 +305,7 @@ export function Contact() {
               {/* CTA Buttons */}
               <div className="grid gap-4 sm:grid-cols-2">
                 <a
-                  href={`tel:${siteConfig.contact.phone}`}
+                  href={`tel:${siteConfig.contact.phoneLink}`}
                   className="group flex items-center justify-center gap-3 rounded-xl bg-[#1E3A5F] px-6 py-5 text-white shadow-lg transition-all hover:scale-[1.02] hover:bg-[#2D4A6F] hover:shadow-xl active:scale-[0.98]"
                 >
                   <Icons.phone className="h-6 w-6" />

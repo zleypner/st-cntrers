@@ -62,7 +62,7 @@ export function Footer() {
               <div className="space-y-3">
                 {/* Call Now Button */}
                 <a
-                  href={`tel:${siteConfig.contact.phone}`}
+                  href={`tel:${siteConfig.contact.phoneLink}`}
                   className="flex h-12 items-center justify-center gap-2 rounded-full bg-[#1E3A5F] px-6 text-[15px] font-semibold text-white transition-all duration-200 hover:bg-[#2D4A6F] hover:shadow-lg active:scale-[0.98]"
                 >
                   <Phone className="h-[18px] w-[18px]" />
