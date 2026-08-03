@@ -1,6 +1,14 @@
 "use client";
 
-import { Section, Container, AnimateOnScroll } from "@/components/ui";
+import { useTranslation } from "react-i18next";
+import { siteConfig } from "@/config/site";
+import {
+  Section,
+  Container,
+  AnimateOnScroll,
+  Button,
+  Icons,
+} from "@/components/ui";
 import {
   Stethoscope,
   Gem,
@@ -56,6 +64,8 @@ const services = [
 ];
 
 export function Services() {
+  const { t } = useTranslation();
+
   return (
     <Section
       id="servicios"
@@ -113,6 +123,28 @@ export function Services() {
             );
           })}
         </div>
+
+        {/* CTA */}
+        <AnimateOnScroll
+          animation="fade-up"
+          mobileAnimation="fade-up"
+          delay={400}
+          duration={500}
+          easing="smooth"
+        >
+          <div className="mt-12 text-center">
+            <a
+              href={siteConfig.contact.whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="gap-2 rounded-full bg-[#25D366] px-8 py-6 text-base font-semibold text-white shadow-lg transition-colors hover:bg-[#20BD5A] active:bg-[#1DA851]">
+                <Icons.whatsapp className="h-5 w-5" />
+                {t("services.cta")}
+              </Button>
+            </a>
+          </div>
+        </AnimateOnScroll>
       </Container>
     </Section>
   );

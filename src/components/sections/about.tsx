@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
+import { siteConfig } from "@/config/site";
 import {
   Section,
   Container,
@@ -8,9 +10,12 @@ import {
   AnimateOnScroll,
   Floating,
   Parallax,
+  Button,
 } from "@/components/ui";
 
 export function About() {
+  const { t } = useTranslation();
+
   return (
     <Section
       id="sobre"
@@ -110,6 +115,28 @@ export function About() {
                 <p className="text-sm text-[#1E3A5F]/70">
                   — Dra. Marcela Contreras, sobre su filosofía de práctica
                 </p>
+              </div>
+            </AnimateOnScroll>
+
+            {/* CTA */}
+            <AnimateOnScroll
+              animation="fade-up"
+              mobileAnimation="fade-up"
+              delay={400}
+              duration={500}
+              easing="smooth"
+            >
+              <div className="mt-8">
+                <a
+                  href={siteConfig.contact.whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="gap-2 rounded-full bg-[#25D366] px-6 py-5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-[#20BD5A] active:bg-[#1DA851]">
+                    <Icons.whatsapp className="h-4 w-4" />
+                    {t("about.cta")}
+                  </Button>
+                </a>
               </div>
             </AnimateOnScroll>
           </div>

@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 export function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
+  const [isContactVisible, setIsContactVisible] = useState(false);
   const t = content.es.whatsapp;
 
   useEffect(() => {
@@ -20,9 +21,25 @@ export function WhatsAppButton() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Detectar cuando la sección Contact está visible
+  useEffect(() => {
+    const contactSection = document.getElementById("contacto");
+    if (!contactSection) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsContactVisible(entry.isIntersecting);
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(contactSection);
+    return () => observer.disconnect();
+  }, []);
+
   // Mostrar tooltip después de 5 segundos, solo una vez
   useEffect(() => {
-    if (isVisible) {
+    if (isVisible && !isContactVisible) {
       const tooltipTimer = setTimeout(() => {
         setShowTooltip(true);
         // Ocultar tooltip después de 4 segundos
@@ -31,13 +48,15 @@ export function WhatsAppButton() {
 
       return () => clearTimeout(tooltipTimer);
     }
-  }, [isVisible]);
+  }, [isVisible, isContactVisible]);
 
   return (
     <div
       className={cn(
         "fixed right-6 bottom-6 z-50 transition-all duration-500",
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+        isVisible && !isContactVisible
+          ? "translate-y-0 opacity-100"
+          : "pointer-events-none translate-y-8 opacity-0"
       )}
     >
       {/* Tooltip */}
