@@ -48,9 +48,9 @@ export function Emergencies() {
               easing="smooth"
             >
               {/* Badge */}
-              <div className="animate-pulse-soft mb-6 inline-flex items-center gap-2 rounded-full bg-[#38BDF8]/20 px-4 py-2">
-                <Siren className="h-4 w-4 text-[#38BDF8]" />
-                <span className="text-sm font-medium tracking-wider text-[#38BDF8] uppercase">
+              <div className="animate-pulse-soft mb-6 inline-flex items-center gap-2 rounded-full bg-[#EF4444]/20 px-4 py-2">
+                <Siren className="h-4 w-4 text-[#EF4444]" />
+                <span className="text-sm font-medium tracking-wider text-[#EF4444] uppercase">
                   Emergencias Dentales
                 </span>
               </div>
@@ -58,13 +58,6 @@ export function Emergencies() {
               <h2 className="mb-6 text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl">
                 Cuando algo sale mal, la experiencia importa más.
               </h2>
-
-              <p className="mb-8 max-w-xl text-lg text-white/80">
-                La Dra. Contreras ha dedicado años de entrenamiento enfocado en
-                trauma dental y cuidado urgente. Las emergencias se atienden con
-                prioridad, toma de decisiones calmada y técnicas que protegen la
-                vida a largo plazo de tus dientes.
-              </p>
             </AnimateOnScroll>
 
             {/* Emergency items with stagger */}
@@ -80,7 +73,7 @@ export function Emergencies() {
                   easing="snappy"
                 >
                   <div className="group flex cursor-default items-start gap-3">
-                    <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#38BDF8]/60 transition-all duration-300 group-hover:scale-125 group-hover:bg-[#38BDF8]" />
+                    <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#EF4444]/60 transition-all duration-300 group-hover:scale-125 group-hover:bg-[#EF4444]" />
                     <span className="text-white/90 transition-colors group-hover:text-white">
                       {item}
                     </span>
@@ -88,6 +81,21 @@ export function Emergencies() {
                 </AnimateOnScroll>
               ))}
             </div>
+
+            <AnimateOnScroll
+              animation="fade-up"
+              mobileAnimation="fade-in"
+              delay={300}
+              duration={500}
+              easing="smooth"
+            >
+              <p className="mb-8 max-w-xl text-lg text-white/80">
+                La Dra. Contreras ha dedicado años de entrenamiento enfocado en
+                trauma dental y cuidado urgente. Las emergencias se atienden con
+                prioridad, toma de decisiones calmada y técnicas que protegen la
+                vida a largo plazo de tus dientes.
+              </p>
+            </AnimateOnScroll>
 
             {/* CTA */}
             <AnimateOnScroll
@@ -104,7 +112,7 @@ export function Emergencies() {
               >
                 <Button
                   size="lg"
-                  className="gap-2 rounded-full bg-[#25D366] px-8 text-white transition-colors duration-200 hover:bg-[#20BD5A] active:bg-[#1DA851]"
+                  className="gap-2 rounded-full bg-[#EF4444] px-8 text-white transition-colors duration-200 hover:bg-[#DC2626] active:bg-[#B91C1C]"
                 >
                   <Icons.whatsapp className="h-5 w-5" />
                   Contactar ahora
@@ -134,7 +142,7 @@ export function Emergencies() {
 
               {/* Decorative badge */}
               <Floating amplitude={5} duration={3} delay={0.3}>
-                <div className="absolute -top-4 -left-4 flex hidden h-16 w-16 rotate-[-8deg] items-center justify-center rounded-xl bg-[#38BDF8] text-white shadow-lg md:top-6 md:left-6 md:flex">
+                <div className="absolute -top-4 -left-4 flex hidden h-16 w-16 rotate-[-8deg] items-center justify-center rounded-xl bg-[#EF4444] text-white shadow-lg md:top-6 md:left-6 md:flex">
                   <Siren className="h-8 w-8" />
                 </div>
               </Floating>
