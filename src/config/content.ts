@@ -1,7 +1,7 @@
 /**
  * Contenido centralizado para la landing page
  * Soporte para internacionalización (i18n) - Español e Inglés
- * Updated: Force rebuild - all WhatsApp CTAs should say "Let's Chat"
+ * Updated: Force rebuild - all WhatsApp CTAs should say "Let's Talk"
  */
 
 export const content = {
@@ -363,7 +363,7 @@ export const content = {
 
     // Header
     header: {
-      cta: "Let's Chat",
+      cta: "Let's Talk",
       tagline: "Comprehensive Dentistry · Costa Rica",
       nav: {
         treatments: "Treatments",
@@ -385,7 +385,7 @@ export const content = {
       primaryCta: "Request Your Personalized Consultation",
       primaryCtaMicrocopy:
         "Personalized recommendations based on your needs, goals and oral health.",
-      secondaryCta: "Let's Chat",
+      secondaryCta: "Let's Talk",
       secondaryCtaMicrocopy: "We're here to answer your questions.",
       trustBadge1: "5/5 on Google Reviews",
       trustBadge2: "Same-day emergencies",
@@ -592,7 +592,7 @@ export const content = {
       title: "Answers before your first visit.",
       subtitle:
         "Still have questions? A short WhatsApp message is all you need.",
-      cta: "Let's Chat",
+      cta: "Let's Talk",
       items: [
         {
           question: "How quickly can I be seen for a dental emergency?",
@@ -675,7 +675,7 @@ export const content = {
         "Expert integrative and emergency dental care in Costa Rica, guided by a holistic philosophy. Because every patient is a person, never just a case.",
       contact: "Contact",
       callNow: "Call Now",
-      bookNow: "Let's Chat",
+      bookNow: "Let's Talk",
       hours: "Hours",
       emergencies: "Emergencies · Same day",
       copyright: "All rights reserved.",
@@ -685,9 +685,9 @@ export const content = {
 
     // WhatsApp floating
     whatsapp: {
-      tooltip: "Let's Chat",
+      tooltip: "Let's Talk",
       tooltipMicrocopy: "We're here to answer your questions.",
-      ariaLabel: "Let's Chat",
+      ariaLabel: "Let's Talk",
     },
 
     // Accessibility
