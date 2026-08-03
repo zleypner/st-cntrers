@@ -58,9 +58,9 @@ export function CTA() {
               >
                 <Button
                   size="lg"
-                  className="w-full gap-2 rounded-full bg-[#25D366] px-6 py-5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-[#20BD5A] active:bg-[#1DA851] sm:px-8 sm:py-6 sm:text-base"
+                  className="w-full gap-3 rounded-full bg-[#25D366] px-8 py-6 text-base font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-[#20BD5A] hover:shadow-2xl active:scale-100 active:bg-[#1DA851] sm:px-10 sm:py-7 sm:text-lg"
                 >
-                  <Icons.whatsapp className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <Icons.whatsapp className="h-5 w-5 sm:h-6 sm:w-6" />
                   {t("cta.primaryCta")}
                 </Button>
               </a>
@@ -70,9 +70,9 @@ export function CTA() {
               >
                 <Button
                   size="lg"
-                  className="w-full gap-2 rounded-full bg-[#38BDF8] px-6 py-5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-[#0EA5E9] active:bg-[#0284C7] sm:px-8 sm:py-6 sm:text-base"
+                  className="w-full gap-3 rounded-full bg-[#38BDF8] px-8 py-6 text-base font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-[#0EA5E9] hover:shadow-2xl active:scale-100 active:bg-[#0284C7] sm:px-10 sm:py-7 sm:text-lg"
                 >
-                  <Icons.phone className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <Icons.phone className="h-5 w-5 sm:h-6 sm:w-6" />
                   {t("cta.secondaryCta")}
                 </Button>
               </a>

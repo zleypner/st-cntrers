@@ -104,9 +104,9 @@ export function Emergencies() {
               >
                 <Button
                   size="lg"
-                  className="gap-2 rounded-full bg-[#EF4444] px-8 text-white transition-colors duration-200 hover:bg-[#DC2626] active:bg-[#B91C1C]"
+                  className="gap-3 rounded-full bg-[#EF4444] px-10 py-7 text-lg font-bold text-white shadow-xl transition-all duration-200 hover:scale-105 hover:bg-[#DC2626] hover:shadow-2xl active:scale-100 active:bg-[#B91C1C] sm:px-12 sm:py-8 sm:text-xl"
                 >
-                  <Icons.whatsapp className="h-5 w-5" />
+                  <Icons.whatsapp className="h-6 w-6 sm:h-7 sm:w-7" />
                   {t("emergencies.cta")}
                 </Button>
               </a>
