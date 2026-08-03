@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -16,18 +16,14 @@ import {
 } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
-const contactSchema = z.object({
-  name: z.string().min(2, "El nombre es requerido"),
-  phone: z.string().min(8, "El teléfono es requerido"),
-  email: z.string().email("Correo electrónico inválido"),
-  treatment: z.string().optional(),
-  message: z.string().min(10, "El mensaje debe tener al menos 10 caracteres"),
-  consent: z.boolean().refine((val) => val === true, {
-    message: "Debes aceptar ser contactado",
-  }),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+type ContactFormData = {
+  name: string;
+  phone: string;
+  email: string;
+  treatment?: string;
+  message: string;
+  consent: boolean;
+};
 
 export function Contact() {
   const { t } = useTranslation();
@@ -35,6 +31,21 @@ export function Contact() {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+
+  const contactSchema = useMemo(
+    () =>
+      z.object({
+        name: z.string().min(2, t("contact.form.nameRequired")),
+        phone: z.string().min(8, t("contact.form.phoneRequired")),
+        email: z.string().email(t("contact.form.emailInvalid")),
+        treatment: z.string().optional(),
+        message: z.string().min(10, t("contact.form.messageRequired")),
+        consent: z.boolean().refine((val) => val === true, {
+          message: t("contact.form.consentRequired"),
+        }),
+      }),
+    [t]
+  );
 
   const {
     register,
@@ -97,7 +108,7 @@ export function Contact() {
                         ? "border-red-500 focus:ring-red-500"
                         : "border-[#38BDF8]/30 focus:border-[#38BDF8] focus:ring-[#38BDF8]"
                     )}
-                    placeholder="Tu nombre"
+                    placeholder={t("contact.form.namePlaceholder")}
                   />
                   {errors.name && (
                     <p className="mt-1 text-sm text-red-500">
@@ -182,7 +193,9 @@ export function Contact() {
                         {service.name}
                       </option>
                     ))}
-                    <option value="other">Otro</option>
+                    <option value="other">
+                      {t("contact.form.treatmentOther")}
+                    </option>
                   </select>
                 </div>
 

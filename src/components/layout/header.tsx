@@ -65,7 +65,7 @@ export function Header() {
                   Dra. Marcela Contreras
                 </p>
                 <p className="text-xs tracking-wider text-[#1E3A5F]/70 uppercase">
-                  Odontología Integral · Costa Rica
+                  {t("header.tagline")}
                 </p>
               </div>
             </Link>

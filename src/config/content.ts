@@ -14,6 +14,7 @@ export const content = {
     // Header
     header: {
       cta: "Agendar una cita",
+      tagline: "Odontología Integral · Costa Rica",
       nav: {
         treatments: "Tratamientos",
         whyUs: "Por qué elegirnos",
@@ -267,13 +268,20 @@ export const content = {
       sendMessage: "Enviar mensaje",
       form: {
         name: "Nombre",
+        namePlaceholder: "Tu nombre",
+        nameRequired: "El nombre es requerido",
         phone: "Teléfono",
+        phoneRequired: "El teléfono es requerido",
         email: "Correo electrónico",
+        emailInvalid: "Correo electrónico inválido",
         treatment: "Tratamiento de interés",
         treatmentPlaceholder: "Selecciona un tratamiento",
+        treatmentOther: "Otro",
         message: "Mensaje",
         messagePlaceholder: "¿En qué podemos ayudarte?",
+        messageRequired: "El mensaje debe tener al menos 10 caracteres",
         consent: "Acepto ser contactado para dar seguimiento a mi solicitud",
+        consentRequired: "Debes aceptar ser contactado",
         submit: "Solicitar una cita",
         submitting: "Enviando...",
         success:
@@ -301,6 +309,7 @@ export const content = {
       emergencies: "Emergencias · Mismo día",
       copyright: "Todos los derechos reservados.",
       mapTitle: "Ubicación de la clínica",
+      location: "Santa Teresa · Costa Rica",
     },
 
     // WhatsApp flotante
@@ -327,6 +336,7 @@ export const content = {
     // Header
     header: {
       cta: "Book an appointment",
+      tagline: "Comprehensive Dentistry · Costa Rica",
       nav: {
         treatments: "Treatments",
         whyUs: "Why choose us",
@@ -578,13 +588,20 @@ export const content = {
       sendMessage: "Send Message",
       form: {
         name: "Name",
+        namePlaceholder: "Your name",
+        nameRequired: "Name is required",
         phone: "Phone",
+        phoneRequired: "Phone is required",
         email: "Email",
+        emailInvalid: "Invalid email address",
         treatment: "Treatment of interest",
         treatmentPlaceholder: "Select a treatment",
+        treatmentOther: "Other",
         message: "Message",
         messagePlaceholder: "How can we help you?",
+        messageRequired: "Message must be at least 10 characters",
         consent: "I agree to be contacted for follow-up on my request",
+        consentRequired: "You must agree to be contacted",
         submit: "Request an appointment",
         submitting: "Sending...",
         success:
@@ -611,6 +628,7 @@ export const content = {
       emergencies: "Emergencies · Same day",
       copyright: "All rights reserved.",
       mapTitle: "Clinic location",
+      location: "Santa Teresa · Costa Rica",
     },
 
     // WhatsApp floating

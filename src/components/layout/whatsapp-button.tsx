@@ -1,16 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { siteConfig } from "@/config/site";
-import { content } from "@/config/content";
 import { Icons } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 export function WhatsAppButton() {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
   const [isContactVisible, setIsContactVisible] = useState(false);
-  const t = content.es.whatsapp;
 
   useEffect(() => {
     // Mostrar botón después de 2 segundos
@@ -68,7 +68,7 @@ export function WhatsAppButton() {
             : "pointer-events-none translate-y-2 opacity-0"
         )}
       >
-        {t.tooltip}
+        {t("whatsapp.tooltip")}
         <div className="absolute right-6 -bottom-2 h-4 w-4 rotate-45 transform border-r border-b border-[#38BDF8]/30 bg-white" />
       </div>
 
@@ -78,7 +78,7 @@ export function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         className="group flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
-        aria-label={t.ariaLabel}
+        aria-label={t("whatsapp.ariaLabel")}
       >
         <Icons.whatsapp className="h-7 w-7 text-white" />
       </a>

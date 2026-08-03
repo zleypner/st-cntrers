@@ -160,7 +160,7 @@ export function Footer() {
           <p className="text-sm text-[#9CA3AF]">
             &copy; {currentYear} {siteConfig.name}. {t("footer.copyright")}
           </p>
-          <p className="text-sm text-[#9CA3AF]">Santa Teresa · Costa Rica</p>
+          <p className="text-sm text-[#9CA3AF]">{t("footer.location")}</p>
         </div>
       </Container>
     </footer>

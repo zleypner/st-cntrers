@@ -1,6 +1,6 @@
 "use client";
 
-import { content } from "@/config/content";
+import { useTranslation } from "react-i18next";
 import {
   Section,
   Container,
@@ -17,13 +17,18 @@ const stepIcons = [
 ];
 
 export function Process() {
-  const t = content.es.process;
+  const { t } = useTranslation();
+  const steps = t("process.steps", { returnObjects: true }) as Array<{
+    number: number;
+    title: string;
+    description: string;
+  }>;
 
   return (
     <Section id="proceso" background="white">
       <Container>
         <AnimateOnScroll animation="fade-up">
-          <SectionHeader title={t.title} />
+          <SectionHeader title={t("process.title")} />
         </AnimateOnScroll>
 
         <div className="relative">
@@ -31,7 +36,7 @@ export function Process() {
           <div className="absolute top-24 right-[10%] left-[10%] hidden h-0.5 bg-gradient-to-r from-[#38BDF8]/30 via-[#38BDF8] to-[#38BDF8]/30 lg:block" />
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {t.steps.map((step, index) => {
+            {steps.map((step, index) => {
               const Icon = stepIcons[index];
               return (
                 <AnimateOnScroll
